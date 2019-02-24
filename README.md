@@ -69,7 +69,7 @@ tadashi-aikawaのITに関するメモまとめ。
         * config.md
         * key.md
         * trouble.md
-* concept
+* concepts
     * ddd
         * index.md
         * trouble.md
@@ -82,7 +82,7 @@ tadashi-aikawaのITに関するメモまとめ。
 | languages      | プログラミング言語                   |
 | tools          | ローカルで使用するツール             |
 | services       | クラウドで使用するWEBサービス/アプリ |
-| concept        | 概念。設計思想とか言語によらないもの |
+| concepts        | 概念。設計思想とか言語によらないもの |
 
 ### languages配下の構成
 
@@ -113,7 +113,7 @@ tadashi-aikawaのITに関するメモまとめ。
 | keys.md    | よく使うショートカットキー                       |
 | trouble.md | トラブルシューティング                           |
 
-### concept配下の構成
+### concepts配下の構成
 
 配下に書籍などのディレクトリが存在する。
 
