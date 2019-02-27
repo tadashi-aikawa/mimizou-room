@@ -42,12 +42,13 @@ tadashi-aikawaのITに関するメモまとめ。
 
 ### tools配下の構成
 
-| ファイル名 |                     記載する内容                     |
-| ---------- | ---------------------------------------------------- |
-| index.md   | インストール方法や動作、オススメリンクなどの基本情報 |
-| config.md  | よく使う設定                                         |
-| keys.md    | よく使うショートカットキー                           |
-| trouble.md | トラブルシューティング                               |
+| ファイル名  |                     記載する内容                     |
+| ----------- | ---------------------------------------------------- |
+| index.md    | インストール方法や動作、オススメリンクなどの基本情報 |
+| config.md   | よく使う設定                                         |
+| keys.md     | よく使うショートカットキー                           |
+| snippets.md | よく使う表現や設定                                   |
+| trouble.md  | トラブルシューティング                               |
 
 ### services配下の構成
 
@@ -106,6 +107,9 @@ tadashi-aikawaのITに関するメモまとめ。
         * index.md
         * config.md
         * key.md
+        * trouble.md
+    * git
+        * snippets.md
         * trouble.md
 * services
     * sourcegraph
