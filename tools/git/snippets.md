@@ -180,10 +180,18 @@ git rebase HEAD~2 --committer-date-is-author-date
 git clean -f
 ```
 
-### ブランチ削除
+### ローカルブランチ削除
 
 ```bash
 git branch -d <branch_name>
+```
+
+### リモートブランチを削除
+
+```bash
+git push --delete origin <branch_name>
+# または
+git push origin :<branch_name>
 ```
 
 ### マージ済みのローカルブランチを全て削除
@@ -205,12 +213,6 @@ git push --delete origin 1.0.0
 
 ```bash
 git push -f origin HEAD~:master
-```
-
-### リモートのブランチを削除する
-
-```bash
-git push --delete origin <branch_name>
 ```
 
 
