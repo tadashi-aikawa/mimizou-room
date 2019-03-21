@@ -91,3 +91,20 @@ this.getterFoo // -> store.getters.foo
 ```
 
 https://github.com/ktsn/vuex-class
+
+
+### @State
+
+```ts
+@State foo
+@State('foo') stateFoo
+@State(state => state.bar) stateBar
+
+this.stateFoo // -> store.state.foo
+this.stateBar // -> store.state.bar
+```
+
+State直下でない場合は引数が必要。
+
+https://github.com/ktsn/vuex-class
+
