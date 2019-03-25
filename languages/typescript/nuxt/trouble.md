@@ -10,3 +10,9 @@ Actionは非同期前提の処理なので、戻り値は`Promise<any>`です。
 
 * action functionをasyncしていること
 * dispatchをawaitしていること
+
+
+v-ifやv-forが上手く動かない
+---------------------------
+
+コロンがついていないことを確認してください。 `:v-for`や`:v-if`はNG。
