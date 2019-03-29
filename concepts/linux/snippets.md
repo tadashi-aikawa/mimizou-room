@@ -222,6 +222,10 @@ $ dirname $0
 ```bash
 # ディレクトリ容量確認
 $ du -sh
+# バイト表示
+$ du -b
+# 最終行にTotalを表示
+$ du -c
 ```
 
 ### echo
