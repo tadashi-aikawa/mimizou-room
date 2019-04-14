@@ -1,3 +1,33 @@
+installのオプション
+-------------------
+
+### Pipfile.lockやPythonバージョンを確認してインストール
+
+```
+$ pipenv install --deploy
+```
+
+### Pipfile.lockの内容をインストール
+
+Pipfileの内容は無視して完全に同じバージョンをインストールする。
+
+```
+$ pipenv install --ignore-pipfile
+```
+
+### Pipfile.lockはいじらない
+
+```
+$ pipenv install --skip-lock
+```
+
+### preversionも対象にしてインストール
+
+```
+$ pipenv install --pre
+```
+
+
 packageのバージョンアップ
 -------------------------
 
