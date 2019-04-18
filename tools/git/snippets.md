@@ -148,6 +148,12 @@ git checkout .
 git reset HEAD <file>
 ```
 
+HEADがない場合は
+
+```bash
+git rm --cached <file>
+```
+
 ### ある時点のコミットに戻す
 
 ```bash
