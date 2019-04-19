@@ -108,3 +108,11 @@ State直下でない場合は引数が必要。
 
 https://github.com/ktsn/vuex-class
 
+
+CSS(style)の切り替え
+--------------------
+
+### bool値の結果によってclassをつける
+
+付けるか付けないかの場合
+https://jp.vuejs.org/v2/guide/class-and-style.html
