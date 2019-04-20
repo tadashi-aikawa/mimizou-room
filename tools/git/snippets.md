@@ -46,6 +46,12 @@ git tag -n
 git log --pretty=fuller
 ```
 
+### コミットメッセージをgrepしてログを探す
+
+```bash
+git log --grep <word>
+```
+
 ### ファイルの変更情報を表示
 
 ```
