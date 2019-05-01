@@ -749,6 +749,13 @@ $ systemctl disable ${service}
 $ systemctl is-enabled ${service}
 ```
 
+Ubuntuで使うもの
+
+```bash
+# DNSサーバ変えた時の再起動
+$ systemctl restart systemd-resolved
+```
+
 ### tar
 
 **絶対パスで圧縮/解凍されるので注意**
