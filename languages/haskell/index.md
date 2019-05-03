@@ -33,3 +33,14 @@ fileに`.hs`は含まない。
 > triple 9
 27
 ```
+
+`:{`と`:}`で括ると複数行で書ける。
+
+```haskell
+> :{
+| lucky :: Int -> String
+| lucky 7 = "lucky"
+| lucky x = "unlucky"
+| :}
+>
+```
