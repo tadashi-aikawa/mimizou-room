@@ -31,6 +31,8 @@ $ pipenv install --pre
 packageのバージョンアップ
 -------------------------
 
+lockファイルで指定されたバージョンより新しいバージョンがある場合に更新する。
+
 https://pipenv-ja.readthedocs.io/ja/translate-ja/basics.html#example-pipenv-upgrade-workflow
 
 ### 更新の確認
