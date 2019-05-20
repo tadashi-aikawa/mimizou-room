@@ -1,7 +1,26 @@
+`.pylintrc`ファイル作成
+-----------------------
+
+```
+$ pylint --generate-rcfile > .pylintrc
+```
+
+ドット付けない方が主流なのかもしれぬ...
+
+
 メッセージと番号
 ----------------
 
 http://pylint-messages.wikidot.com/ で調べる。
+
+###よ く見るもの
+
+| エラーコード |        エラー名        |                     説明                      |
+| ------------ | ---------------------- | --------------------------------------------- |
+| C0413        | wrong-import-position  | Import文の場所が適切ではない                  |
+| W0511        | fixme                  | notesで指定されたprefixのコメントが残っている |
+| W0611        | unused-import          | 使われていないimportがある                    |
+| R0903        | too-few-public-methods | 公開メソッドが少なすぎる                      |
 
 
 特定行だけ無視
@@ -9,4 +28,16 @@ http://pylint-messages.wikidot.com/ で調べる。
 
 ```bash
 # pylint: disable=W0611
+# pylint: disable=wrong-import-position
 ```
+
+
+IDEAへの設定
+------------
+
+* Scope: `Current File`
+* Program: `$PyInterpreterDirectory$\pylint.exe`
+* Arguments: `--rcfile $ContentRoot$/.pylintrc $FilePath$`
+
+`Working directory`に`$ContentRoot`を指定しないのは、ターミナルに出力される絶対パスへクリックでリンクできないから。  
+それが問題なければ`Working directory`に指定すれば良い。
