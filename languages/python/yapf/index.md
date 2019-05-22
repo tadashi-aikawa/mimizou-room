@@ -10,6 +10,7 @@ column_limit = 120
 spaces_before_comment = 4
 split_before_logical_operator = true
 dedent_closing_brackets = true
+coalesce_brackets = true
 ``` 
 
 ### 有効オプション一覧
