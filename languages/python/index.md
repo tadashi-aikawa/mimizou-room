@@ -32,3 +32,9 @@ Formatter
 [yapf]: https://github.com/google/yapf
 [autopep8]: https://pypi.org/project/autopep8/
 [black]: https://github.com/python/black
+
+
+Gitリポジトリにあるパッケージのインストール
+-------------------------------------------
+
+📖 https://www.lifewithpython.com/2018/07/python-install-package-dev-versions.html
