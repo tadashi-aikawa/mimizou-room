@@ -13,7 +13,7 @@ $ pylint --generate-rcfile > .pylintrc
 
 http://pylint-messages.wikidot.com/ で調べる。
 
-###よ く見るもの
+###よく見るもの
 
 | エラーコード |        エラー名        |                     説明                      |
 | ------------ | ---------------------- | --------------------------------------------- |
@@ -23,13 +23,23 @@ http://pylint-messages.wikidot.com/ で調べる。
 | R0903        | too-few-public-methods | 公開メソッドが少なすぎる                      |
 
 
-特定行だけ無視
+特定箇所だけ無視
 --------------
 
+### 行
+
 ```bash
-# pylint: disable=W0611
-# pylint: disable=wrong-import-position
+yourcode # pylint: disable=W0611
+yourcode # pylint: disable=wrong-import-position
 ```
+
+### ブロック
+
+TODO:
+
+### ファイル
+
+TODO:
 
 
 IDEAへの設定
