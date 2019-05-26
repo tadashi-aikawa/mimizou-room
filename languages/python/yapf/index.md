@@ -5,12 +5,13 @@
 
 ```
 [style]
+allow_split_before_dict_value = false
 based_on_style = pep8
+coalesce_brackets = true
 column_limit = 120
+dedent_closing_brackets = true
 spaces_before_comment = 4
 split_before_logical_operator = true
-dedent_closing_brackets = true
-coalesce_brackets = true
 ``` 
 
 ### 有効オプション一覧
