@@ -28,6 +28,8 @@ http://pylint-messages.wikidot.com/ で調べる。
 
 ### 行
 
+行の *最後* に
+
 ```bash
 yourcode # pylint: disable=W0611
 yourcode # pylint: disable=wrong-import-position
@@ -35,11 +37,19 @@ yourcode # pylint: disable=wrong-import-position
 
 ### ブロック
 
-TODO:
+ブロックの *最後* に
+
+```
+# pylint: disable=wrong-import-position
+```
 
 ### ファイル
 
-TODO:
+ファイルの *最初* に
+
+```
+# pylint: disable=wrong-import-position
+```
 
 
 IDEAへの設定
