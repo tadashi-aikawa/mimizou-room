@@ -8,6 +8,16 @@ Pacakge Manager
 [Poetry]: https://poetry.eustace.io/
 
 
+Test
+----
+
+* ★[Pytest]
+
+[Pytest]: https://docs.pytest.org/en/latest/
+
+Doctestも併用する
+
+
 Linter
 ------
 
@@ -25,13 +35,13 @@ Linter
 Formatter
 ---------
 
-* ★[yapf]
+* ★[black]
+* [yapf]
 * [autopep8]
-* [black]
 
+[black]: https://github.com/python/black
 [yapf]: https://github.com/google/yapf
 [autopep8]: https://pypi.org/project/autopep8/
-[black]: https://github.com/python/black
 
 
 Gitリポジトリにあるパッケージのインストール
