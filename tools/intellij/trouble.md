@@ -1,3 +1,18 @@
+全般
+----
+
+### カッコ、クォート、タグのペアが勝手に補完されるのをやめたい
+
+設定にて
+
+1. `Editor` > `General` > `Smart Kes` を開く
+2. 以下のチェックを外す
+
+* `Insert paired brackets`
+* `Insert pair quote`
+* `Insert closing tag on tag completion`
+
+
 Python
 ------
 
