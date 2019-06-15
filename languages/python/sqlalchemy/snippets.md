@@ -74,3 +74,26 @@ class AnotherMany(Base):
 
     manys = relation('Many', uselist=True, back_populates='another_manys', secondary=cross_table)
 ```
+
+### 結合条件を複数定義したいとき
+
+複数のキーとjoinしたり、外部キーと結合する列が一意に定まらないときに`primaryjoin`を使う。
+
+```python
+class One(Base):
+    __tablename__ = 'one_t'
+    id = Column(Integer, ForeignKey('another_one_t.id'), primary_key=True)
+
+    another_one = relation(
+        'AnotherOne',
+        uselist=False,
+        primaryjoin="and_(AnotherOne.id==One.id,"
+        "AnotherOne.type=='man')",)
+
+class AnotherOne(Base):
+    __tablename__ = 'another_one_t'
+    id = Column(Integer, primary_key=True)
+    type = Column(String, primary_key=True)
+
+    one = relation('One', uselist=False, back_populates='another_one')
+```
