@@ -6,6 +6,7 @@ verify_ssl = true
 [packages]
 mkdocs = "*"
 mkdocs-material = "*"
+pygments = "*"
 
 [requires]
 python_version = "3.7"

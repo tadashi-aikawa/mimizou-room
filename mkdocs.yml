@@ -1,14 +1,36 @@
 site_name: MAMANのITノート
-
+site_description: ITやエンジニアリングに関する私的メモ
+site_url: https://itnote.mamansoft.net
+site_author: tadashi-aikawa
+repo_name: tadashi-aikawa/it-note
+repo_url: https://github.com/tadashi-aikawa/it-note
+copyright: © 2019 tadashi-aikawa
 
 theme:
   name: 'material'
+  palette:
+    primary: 'grey'
+    accent: 'deep purple'
+  language: 'ja'
+  logo: https://avatars1.githubusercontent.com/u/9500018?s=460&v=4
+  favicon: https://avatars1.githubusercontent.com/u/9500018?s=460&v=4
+  feature:
+    tabs: true
+
 
 extra:
-  author:
-    github: tadashi-aikawa
-  social:
-    - type: github-alt
-      link: https://github.com/tadashi-aikawa
   search:
     language: 'en, ja'
+  social:
+    - type: 'github'
+      link: 'https://github.com/tadashi-aikawa'
+    - type: 'twitter'
+      link: 'https://twitter.com/Tadashi_MAMAN'
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: True
+
