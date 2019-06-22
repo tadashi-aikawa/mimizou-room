@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "85a07246baf3021ae39b9f2d5c955871806b6ea4b1a8808e13cff2daaac641c6"
+            "sha256": "e1cdbad22bfb2ca546e5b207d0b2495ad3edd2e3f2b69c8cbf7b94cc98ce8ccb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,8 +15,7 @@
             }
         ]
     },
-    "default": {},
-    "develop": {
+    "default": {
         "click": {
             "hashes": [
                 "sha256:2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13",
@@ -26,8 +25,7 @@
         },
         "htmlmin": {
             "hashes": [
-                "sha256:50c1ef4630374a5d723900096a961cff426dff46b48f34d194a81bbe14eca178",
-                "sha256:e7ad06f4be53eb2b4a05a560cec9a65f0ed2656ab8286d455aa01051cb2596fd"
+                "sha256:50c1ef4630374a5d723900096a961cff426dff46b48f34d194a81bbe14eca178"
             ],
             "version": "==0.1.12"
         },
@@ -40,8 +38,7 @@
         },
         "jsmin": {
             "hashes": [
-                "sha256:b6df99b2cd1c75d9d342e4335b535789b8da9107ec748212706ef7bbe5c2553b",
-                "sha256:e685c04de1466b41f5eef14e030c49d93fd9ed1798dd70d88c35319bbb242a22"
+                "sha256:b6df99b2cd1c75d9d342e4335b535789b8da9107ec748212706ef7bbe5c2553b"
             ],
             "version": "==2.2.2"
         },
@@ -164,5 +161,6 @@
             ],
             "version": "==6.0.2"
         }
-    }
+    },
+    "develop": {}
 }
