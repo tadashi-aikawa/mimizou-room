@@ -1,0 +1,27 @@
+h2:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, grey, white);
+}
+
+.md-typeset h2 {
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+.md-typeset h3 {
+    color: darkslategrey;
+    font-weight: bolder;
+}
+
+.md-typeset h4 {
+    color: darkslategrey;
+    font-weight: bolder;
+}
+
+.md-typeset h5 {
+    color: darkslategrey;
+    text-transform: none;
+}

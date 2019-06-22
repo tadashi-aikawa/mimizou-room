@@ -35,7 +35,8 @@ markdown_extensions:
   # warningとか
   - admonition
   # コードハイライト
-  - codehilite
+  - codehilite:
+      guess_lang: false
   # 注釈
   - footnotes
   # URLやEmailアドレスの自動リンク
@@ -49,3 +50,5 @@ markdown_extensions:
   - toc:
       permalink: True
 
+extra_css:
+    - 'css/custom.css'
