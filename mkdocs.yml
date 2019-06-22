@@ -2,8 +2,8 @@ site_name: Mimizou Room
 site_description: 思考の速度と動物を愛するITエンジニアのサイト
 site_url: https://mimizou.mamansoft.net
 site_author: tadashi-aikawa
-repo_name: tadashi-aikawa/it-note
-repo_url: https://github.com/tadashi-aikawa/it-note
+repo_name: tadashi-aikawa/mimizou-room
+repo_url: https://github.com/tadashi-aikawa/mimizou-room
 copyright: © 2019 tadashi-aikawa
 
 theme:
@@ -28,9 +28,24 @@ extra:
       link: 'https://twitter.com/Tadashi_MAMAN'
 
 markdown_extensions:
+  # ページ内リンク(もう使えない?)
+  - wikilinks
+  # スペース2つ付けなくても改行
+  - nl2br
+  # warningとか
   - admonition
+  # コードハイライト
   - codehilite
+  # 注釈
   - footnotes
+  # URLやEmailアドレスの自動リンク
+  - pymdownx.magiclink
+  # キーボードの見た目をカッコヨクする
+  - pymdownx.keys
+  # ???で折りたたみ
+  - pymdownx.details
+  # admonitionの中でもcode fence blockを使えるように
+  - pymdownx.superfences
   - toc:
       permalink: True
 
