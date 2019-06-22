@@ -36,5 +36,5 @@ Python
 1. `pylint`プラグインをインストール
 2. `Settings` > `Other SEttings` > `pylint` で設定
 
-⚠️ `Path to Pylint executable` はWindowsだとpathを指定する必要あり (`/`が解釈されない)
+!!! warning "`Path to Pylint executable` はWindowsだとpathを指定する必要あり (`/`が解釈されない)"
 
