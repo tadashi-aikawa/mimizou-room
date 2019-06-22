@@ -1,0 +1,14 @@
+site_name: MAMANのITノート
+
+
+theme:
+  name: 'material'
+
+extra:
+  author:
+    github: tadashi-aikawa
+  social:
+    - type: github-alt
+      link: https://github.com/tadashi-aikawa
+  search:
+    language: 'en, ja'

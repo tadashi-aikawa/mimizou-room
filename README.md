@@ -14,6 +14,12 @@ tadashi-aikawaのITに関するメモまとめ。
     * JavaScriptディレクトリは作らない..TypeScriptに包含する
 
 
+ドキュメンテーションビルダー
+----------------------------
+
+[mkdocs]を利用。
+
+
 構成
 ----
 
@@ -128,3 +134,6 @@ tadashi-aikawaのITに関するメモまとめ。
         * index.md
         * trouble.md
 ```
+
+
+[mkdocs]: https://www.mkdocs.org
