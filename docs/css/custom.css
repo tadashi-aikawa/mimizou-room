@@ -25,3 +25,11 @@ h2:after {
     color: darkslategrey;
     text-transform: none;
 }
+
+.md-typeset code {
+  background-color: rgb(240, 235, 233);
+  color: rgb(211, 0, 0);
+  line-height: 150%;
+  border-radius: 5px;
+  margin: 2px;
+}
