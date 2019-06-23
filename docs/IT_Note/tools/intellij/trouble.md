@@ -1,3 +1,5 @@
+# [IntelliJ] FAQ
+
 全般
 ----
 
@@ -15,21 +17,6 @@
 
 Python
 ------
-
-### yapfで保存時にフォーマットしたい
-
-`File Watchers`プラグインがインストールされているうえで
-
-1. `Settings` > `Tools` > `File Watchers`
-2. `<Custom>` で作成
-3. 以下の様にする
-    * `File type`: `Python`
-    * `Scope`: `Current File`
-    * `Program`: `$PyInterpreterDirectory$\yapf`
-    * `Arguments`: `-i $FilePath$`
-    * `Advanced Options`
-        * `Auto-save edited files to trigger the watcher` を外す
-        * `Trigger the watcher on external changes` を外す
 
 ### pylintを使いたい
 
