@@ -54,3 +54,7 @@ extra_javascript:
   - 'javascript/embedly.js'
 extra_css:
   - 'css/custom.css'
+
+google_analytics:
+  - 'UA-36444836-2'
+  - 'auto'
