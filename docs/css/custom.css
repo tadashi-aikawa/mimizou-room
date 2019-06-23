@@ -31,5 +31,9 @@ h2:after {
   color: rgb(211, 0, 0);
   line-height: 150%;
   border-radius: 5px;
-  margin: 2px;
+  margin: 5px;
+}
+
+.md-typeset .footnote-ref {
+    display: initial;
 }
