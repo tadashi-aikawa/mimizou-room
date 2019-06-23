@@ -1,7 +1,7 @@
 PHONY: serve
 
 serve:
-	pipenv run mkdocs serve
+	pipenv run mkdocs serve -a localhost:3300
 
 init:
 	pipenv install
