@@ -1,5 +1,20 @@
-Pacakge Manager
----------------
+# [Python] TOP
+
+<a href="https://www.python.org/" class="card">Python</a>
+
+
+学習
+----
+
+公式ドキュメントやソースコードを読むキッカケに..
+
+<a href="https://python.ms/" class="card">Mastering Python</a>
+
+
+フレームワーク/ライブラリの選定
+-------------------------------
+
+### Pacakge Manager
 
 |   名前   | 採用 | IDEAプラグイン | VSCode拡張 |
 | -------- | ---- | -------------- | ---------- |
@@ -10,8 +25,7 @@ Pacakge Manager
 [Poetry]: https://poetry.eustace.io/
 
 
-Test
-----
+### Test
 
 |   名前   | 採用 | IDEAプラグイン | VSCode拡張 |
 | -------- | ---- | -------------- | ---------- |
@@ -22,8 +36,7 @@ Test
 Doctestも併用する
 
 
-Linter
-------
+### Linter
 
 |   名前   | 採用 | IDEAプラグイン | VSCode拡張 |
 | -------- | ---- | -------------- | ---------- |
@@ -33,29 +46,27 @@ Linter
 [pylint]: http://pylint.pycqa.org/en/latest/
 [pylint-idea]: https://plugins.jetbrains.com/plugin/11084-pylint
 
-Formatter
----------
+### Formatter
 
-|    名前    | 採用 |            IDEAプラグイン            | VSCode拡張 |
-| ---------- | ---- | ------------------------------------ | ---------- |
-| [black]    | O    | あるが使わない<sup>[1](#note1)</sup> | 不要       |
-| [yapf]     |      | あるが使わない<sup>[2](#note2)</sup> | 不要       |
-| [autopep8] |      |                                      |            |
+|    名前    | 採用 |   IDEAプラグイン   | VSCode拡張 |
+| ---------- | ---- | ------------------ | ---------- |
+| [black]    | O    | あるが使わない[^1] | 不要       |
+| [yapf]     |      | あるが使わない[^2] | 不要       |
+| [autopep8] |      |                    |            |
 
 [black]: https://github.com/python/black
 [yapf]: https://github.com/google/yapf
 [autopep8]: https://pypi.org/project/autopep8/
 
-<small id="note1">1: File Wathersプラグインを使っているため</small>  
-<small id="note2">2: 日本語が文字化けするため</small>
+[^1]: File Wathersプラグインを使っているため
+[^2]: 日本語が文字化けするため
 
 
-CLI Framework
--------------
+### CLI
 
-|   名前   | 採用 | IDEAプラグイン | VSCode拡張 |
-| -------- | ---- | -------------- | ---------- |
-| [owlcli] | O    |                |            |
+|  名前   | 採用 | IDEAプラグイン | VSCode拡張 |
+| ------- | ---- | -------------- | ---------- |
+| [owcli] | O    |                |            |
 
 [owcli]: https://github.com/tadashi-aikawa/owcli
 
