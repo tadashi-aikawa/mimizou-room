@@ -1,63 +1,84 @@
 # [Vim] FAQ
 
 
-クリップボードをペーストするとインデントがおかしくなる
-------------------------------------------------------
+Markdown
+--------
 
-`:a!`してからペースト
+### Markdownファイルの編集が重い
 
+`plasticboy/vim-markdown`を使っている場合で`Foldexpr_markdown`が重い場合は以下の設定を追加することで無効化できます。
 
-MakefileでTABを入力できない
----------------------------
+```
+let g:vim_markdown_folding_disabled = 1
+```
 
-`set expandtab`を`.vimrc`で設定している場合なら、`set noet` で無効にできる。  
-今だけ入力したいなら`<C-v><TAB>`の方がよいかも。
-
-
-エラーメッセージが1行しか表示されない
--------------------------------------
-
-`:message`で表される
+🔗 [Realizar un <i>profile</i> en <code>vim</code> y deshabilitar <code>Foldexpr\_markdown</code>](https://osiux.gitlab.io/2018-08-15-realizar-un-profile-en-vim-y-deshabilitar-foldexpr-markdown.html)
 
 
-ファイル名を貼り付けたい
-------------------------
-
-`"%p`
-
-http://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html
+忘却系
+------
 
 
-vim-textobj-xbrackets のショートカットキーを忘れる..
-----------------------------------------------------
+### vim-textobj-xbrackets のショートカットキーを忘れる..
 
 公式を参考に頑張る。。
 
 https://github.com/anyakichi/vim-textobj-xbrackets/blob/master/plugin/textobj/xbrackets.vim
 
 
+### ファイル名を貼り付けたい
 
-検索や置換を正規表現で指定したい
---------------------------------
+`"%p`
+
+http://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html
+
+
+### 全ての設定をOFFにして起動したい
+
+```
+$ vim -u NONE -N
+```
+
+* `-u`は別の設定を読み込むオプションなので`NONE`にすると`.vimrc`を読み込まない
+* `-N`はviとの互換性..`compatible`をオフにする
+
+
+その他
+------
+
+### クリップボードをペーストするとインデントがおかしくなる
+
+`:a!`してからペースト
+
+
+### MakefileでTABを入力できない
+
+`set expandtab`を`.vimrc`で設定している場合なら、`set noet` で無効にできる。  
+今だけ入力したいなら`<C-v><TAB>`の方がよいかも。
+
+
+### エラーメッセージが1行しか表示されない
+
+`:message`で表される
+
+
+### 検索や置換を正規表現で指定したい
 
 very magicを利用します。`\v`を頭ににつけるだけ。
 
 
-コマンドの実行結果を挿入したい
-------------------------------
+### コマンドの実行結果を挿入したい
 
 * `:r!`で次の行に挿入
 * `!!`で現在行を置換
 
 
-別のファイルの内容を挿入したい
-------------------------------
+### 別のファイルの内容を挿入したい
 
 * `:r`で次の行に指定ファイルを挿入
 
 
-複数ファイルに同じ操作をしたい
-------------------------------
+### 複数ファイルに同じ操作をしたい
 
 #### 複数ファイルの一括置換
 
@@ -76,15 +97,13 @@ args *
 ```
 
 
-Vimに色が付かない
------------------
+### Vimに色が付かない
 
 `set termguicolors`を外してみる
 
 https://qiita.com/foooomio/items/9f5a1948104f8f26d38a
 
 
-VimでHomeやEndの移動が上手く出来ない
-------------------------------------
+### VimでHomeやEndの移動が上手く出来ない
 
 ???
