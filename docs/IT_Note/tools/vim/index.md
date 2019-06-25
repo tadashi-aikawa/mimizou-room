@@ -1,10 +1,13 @@
+# [Vim] Top
+
+
 リンク集
 --------
 
 ### 日本語のVim情報とりまとめ
 
-<a href="https://vim-jp.org/" class="card"></a>
+{{summary("https://vim-jp.org/")}}
 
 ### 日本語ドキュメント
 
-<a href="https://vim-jp.org/vimdoc-ja/" class="card"></a>
+{{summary("https://vim-jp.org/vimdoc-ja/")}}

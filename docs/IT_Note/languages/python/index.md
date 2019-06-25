@@ -1,6 +1,6 @@
 # [Python] TOP
 
-<a href="https://www.python.org/" class="card">Python</a>
+{{summary("https://www.python.org/")}}
 
 
 学習
@@ -8,7 +8,7 @@
 
 公式ドキュメントやソースコードを読むキッカケに..
 
-<a href="https://python.ms/" class="card">Mastering Python</a>
+{{summary("https://python.ms/")}}
 
 
 フレームワーク/ライブラリの選定
@@ -74,4 +74,8 @@ Doctestも併用する
 Gitリポジトリにあるパッケージのインストール
 -------------------------------------------
 
-📖 https://www.lifewithpython.com/2018/07/python-install-package-dev-versions.html
+```
+$ pip install git+<リポジトリ URL>
+```
+
+🔗 [Python Tips：パッケージの開発版をインストールしたい \- Life with Python](https://www.lifewithpython.com/2018/07/python-install-package-dev-versions.html) 

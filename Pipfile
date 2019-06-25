@@ -7,6 +7,7 @@ verify_ssl = true
 mkdocs = "*"
 mkdocs-material = "*"
 pygments = "*"
+mkdocs-macros-plugin = "*"
 
 [requires]
 python_version = "3.7"

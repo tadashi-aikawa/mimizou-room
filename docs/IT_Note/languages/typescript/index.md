@@ -1,7 +1,6 @@
 # [TypeScript] TOP
 
-<a href="https://www.typescriptlang.org/" class="card">TypeScript</a>
-
+{{summary("https://www.typescriptlang.org/")}}
 
 学習
 ----
@@ -10,19 +9,19 @@
 
 公式が最強。英語に抵抗なければ。
 
-<a href="https://www.typescriptlang.org/docs/home.html" class="card">TypeScript Documentation</a>
+{{summary("https://www.typescriptlang.org/docs/home.html")}}
 
 ### 仕事ですぐに使える知識を一通り知りたい
 
 未経験だけど仕事で使うことになったんじゃぁぁぁぁという人向け。
 
-<a href="https://future-architect.github.io/typescript-guide/" class="card">仕事ですぐに使えるTypeScript</a>
+{{summary("https://future-architect.github.io/typescript-guide/")}}
 
 ### 型について詳しく知りたい
 
 ES2015以降やNode.js、npmなどを知っている人向け。
 
-<a href="http://typescript.ninja/typescript-in-definitelyland/" class="card">Revised Revised 型の国のTypeScript</a>
+{{summary("http://typescript.ninja/typescript-in-definitelyland/")}}
 
 !!! warning ""
     対応TypeScriptバージョンは古いので注意 (TypeScript 2.4.2)
@@ -31,15 +30,13 @@ ES2015以降やNode.js、npmなどを知っている人向け。
 
 TypeScriptならではの型が紹介されている。
 
-<a href="https://log.pocka.io/posts/typescript-builtin-type-functions/" class="card">TypeScript特有の組み込み型関数 - log.pocka.io</a>
+{{summary("https://log.pocka.io/posts/typescript-builtin-type-functions/")}}
 
 ### 非同期処理について分かりやすく知りたい
 
 非同期でハマった人向け。PromiseとAsync/Awaitを学ぶなら分かりやすく詳しい。
 
-<a href="http://azu.github.io/promises-book/" class="card">JavaScript Promiseの本</a>
-
-
+{{summary("http://azu.github.io/promises-book/")}}
 
 
 フレームワーク/ライブラリの選定

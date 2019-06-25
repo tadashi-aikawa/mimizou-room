@@ -17,6 +17,9 @@ theme:
   feature:
     tabs: true
 
+plugins:
+  - search
+  - macros
 
 extra:
   search:

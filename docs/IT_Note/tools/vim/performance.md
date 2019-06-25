@@ -6,7 +6,7 @@
 
 以下の記事を参照。
 
-<a href="https://blog.mamansoft.net/2018/03/31/investigate-why-vim-moves-slow/" class="card">Vimの移動が遅い原因を探ってみた</a>
+{{summary("https://blog.mamansoft.net/2018/03/31/investigate-why-vim-moves-slow/")}}
 
 手順だけ抜き出すと以下。
 
