@@ -1,37 +1,8 @@
 # [Vim] FAQ
 
 
-Markdown
---------
-
-### Markdownファイルの編集が重い
-
-`plasticboy/vim-markdown`を使っている場合で`Foldexpr_markdown`が重い場合は以下の設定を追加することで無効化できます。
-
-```
-let g:vim_markdown_folding_disabled = 1
-```
-
-🔗 [Realizar un <i>profile</i> en <code>vim</code> y deshabilitar <code>Foldexpr\_markdown</code>](https://osiux.gitlab.io/2018-08-15-realizar-un-profile-en-vim-y-deshabilitar-foldexpr-markdown.html)
-
-
-忘却系
-------
-
-
-### vim-textobj-xbrackets のショートカットキーを忘れる..
-
-公式を参考に頑張る。。
-
-https://github.com/anyakichi/vim-textobj-xbrackets/blob/master/plugin/textobj/xbrackets.vim
-
-
-### ファイル名を貼り付けたい
-
-`"%p`
-
-http://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html
-
+起動
+----
 
 ### 全ての設定をOFFにして起動したい
 
@@ -39,44 +10,45 @@ http://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html
 $ vim -u NONE -N
 ```
 
+
+オペレーション
+--------------
+
+### ファイル名を貼り付けたい
+
+`"%p`
+
+http://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html
+
 * `-u`は別の設定を読み込むオプションなので`NONE`にすると`.vimrc`を読み込まない
 * `-N`はviとの互換性..`compatible`をオフにする
 
 
-その他
-------
-
 ### クリップボードをペーストするとインデントがおかしくなる
 
 `:a!`してからペースト
-
 
 ### MakefileでTABを入力できない
 
 `set expandtab`を`.vimrc`で設定している場合なら、`set noet` で無効にできる。  
 今だけ入力したいなら`<C-v><TAB>`の方がよいかも。
 
-
 ### エラーメッセージが1行しか表示されない
 
 `:message`で表される
 
-
 ### 検索や置換を正規表現で指定したい
 
 very magicを利用します。`\v`を頭ににつけるだけ。
-
 
 ### コマンドの実行結果を挿入したい
 
 * `:r!`で次の行に挿入
 * `!!`で現在行を置換
 
-
 ### 別のファイルの内容を挿入したい
 
 * `:r`で次の行に指定ファイルを挿入
-
 
 ### 複数ファイルに同じ操作をしたい
 
@@ -97,6 +69,9 @@ args *
 ```
 
 
+見た目
+------
+
 ### Vimに色が付かない
 
 `set termguicolors`を外してみる
@@ -104,6 +79,15 @@ args *
 https://qiita.com/foooomio/items/9f5a1948104f8f26d38a
 
 
-### VimでHomeやEndの移動が上手く出来ない
+Markdown
+--------
 
-???
+### Markdownファイルの編集が重い
+
+`plasticboy/vim-markdown`を使っている場合で`Foldexpr_markdown`が重い場合は以下の設定を追加することで無効化できます。
+
+```
+let g:vim_markdown_folding_disabled = 1
+```
+
+🔗 [Realizar un <i>profile</i> en <code>vim</code> y deshabilitar <code>Foldexpr\_markdown</code>](https://osiux.gitlab.io/2018-08-15-realizar-un-profile-en-vim-y-deshabilitar-foldexpr-markdown.html)
