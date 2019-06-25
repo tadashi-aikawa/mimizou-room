@@ -10,6 +10,9 @@
 $ vim -u NONE -N
 ```
 
+* `-u`は別の設定を読み込むオプションなので`NONE`にすると`.vimrc`を読み込まない
+* `-N`はviとの互換性..`compatible`をオフにする
+
 
 オペレーション
 --------------
@@ -18,11 +21,7 @@ $ vim -u NONE -N
 
 `"%p`
 
-http://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html
-
-* `-u`は別の設定を読み込むオプションなので`NONE`にすると`.vimrc`を読み込まない
-* `-N`はviとの互換性..`compatible`をオフにする
-
+🔗 [vim\-jp » Hack \#121: バッファ名をペーストする](https://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html)
 
 ### クリップボードをペーストするとインデントがおかしくなる
 
@@ -76,7 +75,7 @@ args *
 
 `set termguicolors`を外してみる
 
-https://qiita.com/foooomio/items/9f5a1948104f8f26d38a
+🔗 [Vimでtermguicolorsをオンにしたらちょっとハマった話 \- Qiita](https://qiita.com/foooomio/items/9f5a1948104f8f26d38a)
 
 
 Markdown
