@@ -79,3 +79,97 @@ $ pip install git+<リポジトリ URL>
 ```
 
 🔗 [Python Tips：パッケージの開発版をインストールしたい \- Life with Python](https://www.lifewithpython.com/2018/07/python-install-package-dev-versions.html) 
+
+
+よくやる環境構築
+----------------
+
+### 環境構築と開発ツールのインストール
+
+#### owcli使わない場合
+
+```
+$ pipenv install --python 3.7
+$ pipenv install --dev --pre black pylint
+$ pipenv shell
+```
+
+#### owcli使う場合
+
+```
+$ owcli init <app_name>
+$ pipenv install --python 3.7
+# ここまでowcliのPipfileに記載してしまってもいいかも。。
+$ pipenv install --dev --pre black pylint
+$ pipenv shell
+```
+
+### `.pylintrc`作成
+
+`owcli init` 内で生成してしまうのもアリ?
+
+```
+$ pylint --generate-rcfile > .pylintrc
+```
+
+### `pyproject.toml`作成
+
+テンプレートに含めてしまうのもアリ?
+
+```toml
+[tool.black]
+line-length = 100
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''
+```
+
+### .gitignore作成
+
+owcliに組み込んでしまった方がいいかも。。
+gitも初期化してしまった方がいいかも。。
+
+```
+$ curl "https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore" > .gitignore
+$ echo /.idea >> .gitignore
+```
+
+### .editorconfigの作成
+
+```
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.yml]
+indent_size = 2
+
+[*.yaml]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+```
