@@ -1,3 +1,6 @@
+# [Vim] キーバインド
+
+
 Ctrlに関するショートカットキー一覧
 ----------------------------------
 
@@ -31,6 +34,8 @@ Ctrlに関するショートカットキー一覧
 | :Vex     | 新しい分割ウィンドウ(横)にファイルを開く           |
 | :Vex .   | 新しい分割ウィンドウ(横)に現在のディレクトリを開く |
 | :tabnew  | 新しいタブを開く                                   |
+| :w       | 指定した範囲の内容でファイルを新しく作る           |
+| :r       | 指定したファイルの内容を貼り付ける                 |
 
 
 ### 画面スクロール系
@@ -50,3 +55,20 @@ Ctrlに関するショートカットキー一覧
 | -------- | -------------------------- |
 | Ctrl+T   | インデント(挿入モード時)   |
 | Ctrl+D   | 逆インデント(挿入モード時) |
+
+
+### オリジナル
+
+??? hint "VimがPython3に対応しており、以下の設定が`.vimrc`に書かれている場合のみ使える"
+
+    ```
+    " Markdown h1 header
+    nnoremap <silent> <space>h= v:!python3 -c 'import sys; from unicodedata import east_asian_width; w=sys.stdin.read().strip(); l=sum(map(lambda x: 2 if east_asian_width(x) in "FWA" else 1, w)); print(w+"\n"+"="*l)'<cr>
+    " Markdown h2 header
+    nnoremap <silent> <space>h- v:!python3 -c 'import sys; from unicodedata import east_asian_width; w=sys.stdin.read().strip(); l=sum(map(lambda x: 2 if east_asian_width(x) in "FWA" else 1, w)); print(w+"\n"+"-"*l)'<cr>
+    ```
+
+|  コマンド   |            説明             |
+| ----------- | --------------------------- |
+| `<Space>h=` | 見出し1のアンダーライン補完 |
+| `<Space>h-` | 見出し2のアンダーライン補完 |
