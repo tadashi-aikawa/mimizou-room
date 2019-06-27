@@ -1,9 +1,6 @@
 リレーショナルマッピングの仕方
 ------------------------------
 
-📖 https://momijiame.tumblr.com/post/27327972441/python-%E3%81%AE-or%E3%83%9E%E3%83%83%E3%83%91%E3%83%BC-sqlalchemy-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E5%9F%BA%E6%9C%AC-4
-📖 https://poyo.hatenablog.jp/entry/2017/01/08/212227#backref%E3%81%AE%E5%A0%B4%E5%90%88
-
 ### One to Many
 
 ```python
@@ -97,3 +94,6 @@ class AnotherOne(Base):
 
     one = relation('One', uselist=False, back_populates='another_one')
 ```
+
+🔗 [Python の O/Rマッパー SQLAlchemy を使ったリレーショナルマッピング基本 4\.\.\. \| CUBE SUGAR STORAGE](https://momijiame.tumblr.com/post/27327972441/python-%E3%81%AE-or%E3%83%9E%E3%83%83%E3%83%91%E3%83%BC-sqlalchemy-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E5%9F%BA%E6%9C%AC-4)
+🔗 [SQLAlchemyのリレーションにおけるメソッドやパラメータについてのメモ \- ぽよメモ](https://poyo.hatenablog.jp/entry/2017/01/08/212227#backref%E3%81%AE%E5%A0%B4%E5%90%88)
