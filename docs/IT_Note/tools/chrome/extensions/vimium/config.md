@@ -1,3 +1,6 @@
+# [Vimium] Config
+
+
 keymap設定
 ----------
 

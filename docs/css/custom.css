@@ -27,13 +27,26 @@ h2:after {
 }
 
 .md-typeset code {
-  background-color: rgb(240, 235, 233);
-  color: rgb(211, 0, 0);
-  line-height: 150%;
-  border-radius: 5px;
-  margin: 5px;
+    background-color: rgb(240, 235, 233);
+    color: rgb(211, 0, 0);
+    line-height: 150%;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .md-typeset .footnote-ref {
     display: initial;
+}
+
+.inline-image {
+    display:inline-block;
+    vertical-align: middle;
+    font-size: 80%;
+}
+
+.link {
+    display:inline-block;
+    vertical-align: middle;
+    font-size: 120%;
+    font-weight: bolder;
 }

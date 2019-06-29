@@ -16,4 +16,4 @@ split_before_logical_operator = true
 
 ### 有効オプション一覧
 
-https://github.com/google/yapf#knobs
+{{link("https://github.com/google/yapf#knobs")}}

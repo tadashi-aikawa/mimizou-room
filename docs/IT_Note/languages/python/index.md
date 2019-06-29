@@ -78,7 +78,7 @@ Gitリポジトリにあるパッケージのインストール
 $ pip install git+<リポジトリ URL>
 ```
 
-🔗 [Python Tips：パッケージの開発版をインストールしたい \- Life with Python](https://www.lifewithpython.com/2018/07/python-install-package-dev-versions.html) 
+{{refer("https://www.lifewithpython.com/2018/07/python-install-package-dev-versions.html")}}
 
 
 よくやる環境構築

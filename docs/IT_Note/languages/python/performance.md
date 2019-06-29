@@ -45,4 +45,4 @@ measure_operations()
 
 matplotlibを使うとメモリ使用量をグラフ化することができるらしい..
 
-📖 https://blog.amedama.jp/entry/2018/02/04/001950
+{{refer("https://blog.amedama.jp/entry/2018/02/04/001950")}}

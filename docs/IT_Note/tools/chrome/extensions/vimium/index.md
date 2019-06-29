@@ -1,7 +1,10 @@
+# [Vimium] Top
+
+
 インストール
 ------------
 
-https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
+{{link("https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb")}}
 
 
 ドキュメント
@@ -9,8 +12,8 @@ https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcme
 
 ### 公式Wiki
 
-* [Home · philc/vimium Wiki](https://github.com/philc/vimium/wiki)
+{{link("https://github.com/philc/vimium/wiki")}}
 
 ### 日本語
 
-* [Vimiumドキュメント翻訳 \| Vimium \- にほんご。](https://tr.you84815.space/vimium/index.html)
+{{link("https://tr.you84815.space/vimium/index.html")}}

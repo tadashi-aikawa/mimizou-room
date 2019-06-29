@@ -21,7 +21,7 @@ $ vim -u NONE -N
 
 `"%p`
 
-🔗 [vim\-jp » Hack \#121: バッファ名をペーストする](https://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html)
+{{refer("https://vim-jp.org/vim-users-jp/2010/02/01/Hack-121.html")}}
 
 ### クリップボードをペーストするとインデントがおかしくなる
 
@@ -75,7 +75,7 @@ args *
 
 `set termguicolors`を外してみる
 
-🔗 [Vimでtermguicolorsをオンにしたらちょっとハマった話 \- Qiita](https://qiita.com/foooomio/items/9f5a1948104f8f26d38a)
+{{refer("https://qiita.com/foooomio/items/9f5a1948104f8f26d38a")}}
 
 
 Markdown
@@ -89,4 +89,4 @@ Markdown
 let g:vim_markdown_folding_disabled = 1
 ```
 
-🔗 [Realizar un <i>profile</i> en <code>vim</code> y deshabilitar <code>Foldexpr\_markdown</code>](https://osiux.gitlab.io/2018-08-15-realizar-un-profile-en-vim-y-deshabilitar-foldexpr-markdown.html)
+{{refer("https://osiux.gitlab.io/2018-08-15-realizar-un-profile-en-vim-y-deshabilitar-foldexpr-markdown.html")}}

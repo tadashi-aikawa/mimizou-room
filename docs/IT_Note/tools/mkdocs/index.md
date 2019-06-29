@@ -22,4 +22,4 @@ Python製のサイトジェネレーター。
 オススメサイト
 --------------
 
-* {{refer("https://qiita.com/mebiusbox2/items/a61d42878266af969e3c")}}
+{{link("https://qiita.com/mebiusbox2/items/a61d42878266af969e3c")}}
