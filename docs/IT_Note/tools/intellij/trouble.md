@@ -24,3 +24,10 @@ Python
 2. `Settings` > `Other SEttings` > `pylint` で設定
 
 !!! warning "`Path to Pylint executable` はWindowsだとpathを指定する必要あり (`/`が解釈されない)"
+
+
+### リモートのPython環境を開発したい
+
+!!! warning "有料版のみ"
+
+{{summary("https://blog.mamansoft.net/2019/06/29/develop-python-in-virtual-machine-with-intellij-idea/")}}
