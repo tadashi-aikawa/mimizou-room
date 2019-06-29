@@ -18,3 +18,19 @@ git push origin :refs/heads/<branch_name>
 参考: https://qiita.com/koara-local/items/e36bc172a3c36eb67b4f
 
 
+`warning: LF will be replaced by CRLF in`
+-----------------------------------------
+
+gitのconfigで`core.autoCRLF`が`true`になっていないか確認する。
+
+```
+$ git config --global core.autoCRLF
+```
+
+`true`になっていたら`false`にする。
+
+```
+$ git config --global core.autoCRLF false
+```
+
+{{refer("https://normalblog.net/system/lf_replaced_crlf/")}}
