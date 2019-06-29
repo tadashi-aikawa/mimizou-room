@@ -24,4 +24,3 @@ Python
 2. `Settings` > `Other SEttings` > `pylint` で設定
 
 !!! warning "`Path to Pylint executable` はWindowsだとpathを指定する必要あり (`/`が解釈されない)"
-
