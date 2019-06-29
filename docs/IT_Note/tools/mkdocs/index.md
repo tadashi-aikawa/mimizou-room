@@ -22,4 +22,4 @@ Python製のサイトジェネレーター。
 オススメサイト
 --------------
 
-* [MkDocsによるドキュメント作成 \- Qiita](https://qiita.com/mebiusbox2/items/a61d42878266af969e3c)
+* {{refer("https://qiita.com/mebiusbox2/items/a61d42878266af969e3c")}}
