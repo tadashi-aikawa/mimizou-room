@@ -71,7 +71,7 @@ def declare_variables(variables, macro):
 
         return f"""
         <div class="refer">
-            <img src={icon_url} width=20 />
+            <img src={icon_url} class="refer-image"/>
             <a href={url}>{escape(title)}</a>
         </div>
         """.strip()
