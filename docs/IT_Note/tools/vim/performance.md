@@ -1,4 +1,4 @@
-# [Vim] パフォーマンス
+# [Vim] Performance
 
 
 プロファイリング

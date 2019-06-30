@@ -20,7 +20,7 @@ Vimを触ったことがあり簡単な操作はできるが..
 
 Vimの良さが伝わりましたら以下の書籍を是非読んでみて下さい。私の中では聖書です🙏
 
-{{summary("https://www.amazon.co.jp/dp/B00HWLJI3U/ref=cm_sw_r_tw_dp_U_x_BwdgDbYNCSR")}}
+{{link("https://www.amazon.co.jp/dp/B00HWLJI3U/ref=cm_sw_r_tw_dp_U_x_BwdgDbYNCSR")}}
 
 
 ウォーミングアップ(5分)

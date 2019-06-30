@@ -1,3 +1,6 @@
+# [Git] FAQ
+
+
 ブランチとタグが同じ名前になってしまいエラーが出る
 --------------------------------------------------
 
@@ -15,7 +18,7 @@ git push origin :refs/tags/<tag_name>
 git push origin :refs/heads/<branch_name>
 ```
 
-参考: https://qiita.com/koara-local/items/e36bc172a3c36eb67b4f
+{{refer("https://qiita.com/koara-local/items/e36bc172a3c36eb67b4f")}}
 
 
 `warning: LF will be replaced by CRLF in`

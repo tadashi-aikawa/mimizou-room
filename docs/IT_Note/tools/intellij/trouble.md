@@ -1,4 +1,4 @@
-# [IntelliJ] FAQ
+# [IntelliJ IDEA] FAQ
 
 
 全般
@@ -29,6 +29,6 @@ Python
 
 ### リモートのPython環境を開発したい
 
-!!! warning "有料版のみ"
+**有料版のみ**であれば
 
 {{link("https://blog.mamansoft.net/2019/06/29/develop-python-in-virtual-machine-with-intellij-idea/")}}

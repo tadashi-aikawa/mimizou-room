@@ -25,6 +25,11 @@ def get_meta_by_name(html: any, name: str) -> Optional[str]:
     return e.attrs.get("content") if e else None
 
 
+def get_src_by_id(html: any, id_: str) -> Optional[str]:
+    e = html.find("#" + id_, first=True)
+    return e.attrs.get("src") if e else None
+
+
 def to_base_url(url: str) -> str:
     return f"{urlsplit(url).scheme}://{urlsplit(url).netloc}"
 
@@ -91,7 +96,10 @@ def declare_variables(variables, macro):
             or get_meta_by_name(res.html, "description")
             or ""
         )
-        image_url = get_meta_by_property(res.html, "og:image")
+        image_url: Optional[str] = get_meta_by_property(
+            res.html, "og:image"
+        ) or get_src_by_id(res.html, "ebooksImgBlkFront")
+        print(f"Image URL: {image_url}")
         favicon_url = get_favicon_url(res.html, url)
         icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
         print(f"ICON: {icon_url}")
