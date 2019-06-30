@@ -6,7 +6,7 @@
 
 以下の記事を参照。
 
-{{summary("https://blog.mamansoft.net/2018/03/31/investigate-why-vim-moves-slow/")}}
+{{link("https://blog.mamansoft.net/2018/03/31/investigate-why-vim-moves-slow/")}}
 
 手順だけ抜き出すと以下。
 

@@ -6,8 +6,8 @@
 
 ### 日本語のVim情報とりまとめ
 
-{{summary("https://vim-jp.org/")}}
+{{link("https://vim-jp.org/")}}
 
 ### 日本語ドキュメント
 
-{{summary("https://vim-jp.org/vimdoc-ja/")}}
+{{link("https://vim-jp.org/vimdoc-ja/")}}

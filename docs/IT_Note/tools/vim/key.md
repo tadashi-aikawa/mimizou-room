@@ -4,7 +4,7 @@
 Ctrlに関するショートカットキー一覧
 ----------------------------------
 
-[vimのnormal modeでctrlキーを使うキーマップ一覧 \- Qiita](https://qiita.com/34ro/items/e20fa0831d78566981d3)
+{{link("https://qiita.com/34ro/items/e20fa0831d78566981d3")}}
 
 
 使う機会が多いけど忘れやすいもの

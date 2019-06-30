@@ -1,5 +1,26 @@
 # [IntelliJ] FAQ
 
+hoge
+
+<div class="link-card">
+            <div>
+                <img src="https://avatars1.githubusercontent.com/u/9500018?s=460&v=4" width=20 class="link-card-site-icon"/>
+                <span class="link-card-site-name">MAMANのITブログ</span>
+            </div>
+    <div class="link-card-body">
+        <div class="link-card-content">
+            <div>
+                <p class="link-card-title">仮想マシン内のPython開発をIDEAで</p>
+            </div>
+            <div class="link-card-description">てすとのですくりぷしょんふつうはこのあとにいろいろなせつめいがあるとおもうのでそこまでちゃんとよみましょうね</div>
+        </div>
+        <img src="https://dl.dropboxusercontent.com/s/1ly6ljj1rgna7sy/asian-1839802_1280.jpg" class="link-card-image"/>
+    </div>
+    <a href="https://blog.mamansoft.net/2019/05/18/requirements-idea-actions/"></a>
+</div>
+
+huga
+
 全般
 ----
 

@@ -19,6 +19,7 @@ Java中心だが、Ultimate版は様々な言語を使える。
 ### Must
 
 {{summary("https://blog.mamansoft.net/2019/05/18/requirements-idea-actions/")}}
+{{link("https://blog.mamansoft.net/2019/05/18/requirements-idea-actions/")}}
 
 ### Should
 

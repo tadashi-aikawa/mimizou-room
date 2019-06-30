@@ -1,6 +1,6 @@
 # [TypeScript] TOP
 
-{{summary("https://www.typescriptlang.org/")}}
+{{link("https://www.typescriptlang.org/")}}
 
 学習
 ----
@@ -9,17 +9,19 @@
 
 公式が最強。英語に抵抗なければ。
 
-{{summary("https://www.typescriptlang.org/docs/home.html")}}
+{{link("https://www.typescriptlang.org/docs/home.html")}}
 
 ### 仕事ですぐに使える知識を一通り知りたい
 
 未経験だけど仕事で使うことになったんじゃぁぁぁぁという人向け。
 
-{{summary("https://future-architect.github.io/typescript-guide/")}}
+{{link("https://future-architect.github.io/typescript-guide/")}}
 
 ### 型について詳しく知りたい
 
 ES2015以降やNode.js、npmなどを知っている人向け。
+
+{{link("http://typescript.ninja/typescript-in-definitelyland/")}}
 
 {{summary("http://typescript.ninja/typescript-in-definitelyland/")}}
 
@@ -30,13 +32,15 @@ ES2015以降やNode.js、npmなどを知っている人向け。
 
 TypeScriptならではの型が紹介されている。
 
+{{link("https://log.pocka.io/posts/typescript-builtin-type-functions/")}}
+
 {{summary("https://log.pocka.io/posts/typescript-builtin-type-functions/")}}
 
 ### 非同期処理について分かりやすく知りたい
 
 非同期でハマった人向け。PromiseとAsync/Awaitを学ぶなら分かりやすく詳しい。
 
-{{summary("http://azu.github.io/promises-book/")}}
+{{link("http://azu.github.io/promises-book/")}}
 
 
 フレームワーク/ライブラリの選定
