@@ -1,9 +1,9 @@
-## どこでも使えそうな絵文字
+# Emoji
+
+どこでも使えそうな絵文字
+------------------------
 
 * 📂
 * 📄
 
-
-## 参考
-
-https://lister.tokyo/emoji/unicode_emoji_list.php
+{{refer("https://lister.tokyo/emoji/unicode_emoji_list.php")}}

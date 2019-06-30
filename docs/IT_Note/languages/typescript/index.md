@@ -1,6 +1,11 @@
-# [TypeScript] TOP
+# [TypeScript] Top
+
+
+公式
+----
 
 {{link("https://www.typescriptlang.org/")}}
+
 
 学習
 ----
@@ -23,8 +28,6 @@ ES2015以降やNode.js、npmなどを知っている人向け。
 
 {{link("http://typescript.ninja/typescript-in-definitelyland/")}}
 
-{{summary("http://typescript.ninja/typescript-in-definitelyland/")}}
-
 !!! warning ""
     対応TypeScriptバージョンは古いので注意 (TypeScript 2.4.2)
 
@@ -33,8 +36,6 @@ ES2015以降やNode.js、npmなどを知っている人向け。
 TypeScriptならではの型が紹介されている。
 
 {{link("https://log.pocka.io/posts/typescript-builtin-type-functions/")}}
-
-{{summary("https://log.pocka.io/posts/typescript-builtin-type-functions/")}}
 
 ### 非同期処理について分かりやすく知りたい
 

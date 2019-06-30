@@ -6,7 +6,7 @@ MkDocsとは
 
 Python製のサイトジェネレーター。
 
-<a class="card" href="https://www.mkdocs.org/">MkDocs</a>
+{{link("https://www.mkdocs.org/")}}
 
 このコンテンツもmkdocsで作成している。
 

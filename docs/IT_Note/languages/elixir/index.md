@@ -1,13 +1,16 @@
+# [Elixir] Top
+
+
 インストール
 ------------
 
 インストーラーで。
 
-https://elixir-lang.org/install.html#windows
+{{link("https://elixir-lang.org/install.html#windows")}}
 
 Chocolatey使うとIDEA使えなくなる。
 
-📘https://github.com/KronicDeth/intellij-elixir/issues/1159
+{{link("https://github.com/KronicDeth/intellij-elixir/issues/1159")}}
 
 
 ### Chocolatey使う場合(非推奨)
@@ -47,7 +50,7 @@ Main.main
 実行
 ----
 
-📘https://qiita.com/tanaka0325/items/045ce9d9ee9355741c3d
+{{link("https://qiita.com/tanaka0325/items/045ce9d9ee9355741c3d")}}
 
 コンパイルしなくても実行できる。  
 その場合は拡張子を`exs`にすべきらしいがここでは気にしない。
@@ -61,7 +64,7 @@ Hello, World!
 コンパイル
 ----------
 
-📘https://qiita.com/kazuhikoyamashita/items/fee98aa446a9e71c109c
+{{link("https://qiita.com/kazuhikoyamashita/items/fee98aa446a9e71c109c")}}
 
 コンパイルと同時に実行もされる。
 

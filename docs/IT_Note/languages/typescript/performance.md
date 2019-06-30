@@ -1,4 +1,4 @@
-# [TypeScript] パフォーマンス
+# [TypeScript] Performance
 
 
 正確なパフォーマンス測定
@@ -9,7 +9,7 @@
 
 `Date.now`は1ミリ秒の精度だが、`performance.now`は0.005ミリ秒の精度と高品質.
 
-[JavaScriptで任意の処理にかかる時間を計測する](https://sbfl.net/blog/2017/12/01/javascript-measure-time/)
+{{refer("https://sbfl.net/blog/2017/12/01/javascript-measure-time/")}}
 
 
 ### nodejsの場合

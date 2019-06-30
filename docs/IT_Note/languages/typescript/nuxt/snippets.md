@@ -1,12 +1,18 @@
+# [Nuxt] Snippets
+
+
 decorator
 ---------
 
 Nuxt(Vue)で使えるデコレータの数々をご紹介。
 
-* [vue-property-decorator]: https://github.com/kaorun343/vue-property-decorator
-* [vuex-class]: https://github.com/ktsn/vuex-class
+{{link("https://github.com/kaorun343/vue-property-decorator")}}
 
-上記は[nuxt-property-decorator](https://github.com/nuxt-community/nuxt-property-decorator)でまとめて使用できます。
+{{link("https://github.com/ktsn/vuex-class")}}
+
+上記はnuxt-property-decoratorでまとめて使用できる。
+
+{{link("https://github.com/nuxt-community/nuxt-property-decorator")}}
 
 
 ### @Prop
@@ -17,9 +23,11 @@ Nuxt(Vue)で使えるデコレータの数々をご紹介。
 @Prop([String, Boolean]) readonly propC!: string | boolean
 ```
 
-⚠️プロパティに初期値を設定してはいけません。デフォルト値は`default`で設定しましょう。
+{{refer("https://github.com/kaorun343/vue-property-decorator#Prop")}}
 
-https://github.com/kaorun343/vue-property-decorator#Prop
+!!! warning "プロパティに初期値を設定してはいけない"
+
+    デフォルト値は`default`で設定しましょう。
 
 
 ### @Watch
@@ -34,7 +42,7 @@ onPersonChanged1(val: Person, oldVal: Person) { }
 * `immediate`はwatch開始時に開幕フックが呼ばれる
 * `deep`を`true`にしないとネストされたObjectの中が変更された場合に通知されない
 
-https://github.com/kaorun343/vue-property-decorator#Watch
+{{refer("https://github.com/kaorun343/vue-property-decorator#Watch")}}
 
 
 ### @Emit
@@ -48,7 +56,7 @@ yourFunctionName2() {}
 
 * 引数を指定しないと関数名をkebab-caseに変換した名称が使われる
 
-https://github.com/kaorun343/vue-property-decorator#Emit
+{{refer("https://github.com/kaorun343/vue-property-decorator#Emit")}}
 
 
 ### @Action
@@ -62,7 +70,7 @@ https://github.com/kaorun343/vue-property-decorator#Emit
 this.actionFoo({ value: true }) // -> store.dispatch('foo', { value: true })
 ```
 
-https://github.com/ktsn/vuex-class
+{{refer("https://github.com/ktsn/vuex-class")}}
 
 
 ### @Mutation
@@ -76,7 +84,7 @@ https://github.com/ktsn/vuex-class
 this.mutationFoo({ value: true }) // -> store.commit('foo', { value: true })
 ```
 
-https://github.com/ktsn/vuex-class
+{{refer("https://github.com/ktsn/vuex-class")}}
 
 
 ### @Getter
@@ -90,7 +98,7 @@ https://github.com/ktsn/vuex-class
 this.getterFoo // -> store.getters.foo
 ```
 
-https://github.com/ktsn/vuex-class
+{{refer("https://github.com/ktsn/vuex-class")}}
 
 
 ### @State
@@ -106,7 +114,7 @@ this.stateBar // -> store.state.bar
 
 State直下でない場合は引数が必要。
 
-https://github.com/ktsn/vuex-class
+{{refer("https://github.com/ktsn/vuex-class")}}
 
 
 CSS(style)の切り替え
@@ -115,4 +123,5 @@ CSS(style)の切り替え
 ### bool値の結果によってclassをつける
 
 付けるか付けないかの場合
-https://jp.vuejs.org/v2/guide/class-and-style.html
+
+{{link("https://jp.vuejs.org/v2/guide/class-and-style.html")}}

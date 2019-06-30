@@ -1,6 +1,6 @@
 # [Python] TOP
 
-{{summary("https://www.python.org/")}}
+{{link("https://www.python.org/")}}
 
 
 学習
@@ -8,7 +8,7 @@
 
 公式ドキュメントやソースコードを読むキッカケに..
 
-{{summary("https://python.ms/")}}
+{{link("https://python.ms/")}}
 
 
 フレームワーク/ライブラリの選定

@@ -4,7 +4,7 @@
 よく使う型
 ----------
 
-https://log.pocka.io/posts/typescript-builtin-type-functions/
+{{link("https://log.pocka.io/posts/typescript-builtin-type-functions/")}}
 
 ### Partial (2.1から)
 

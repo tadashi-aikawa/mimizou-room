@@ -39,10 +39,12 @@ h2:after {
 }
 
 .refer {
-    display:inline-block;
-    vertical-align: middle;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-size: 80%;
     font-weight: bolder;
+    padding-right: 40px;
 }
 
 /************************
