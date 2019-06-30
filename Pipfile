@@ -9,6 +9,7 @@ mkdocs-material = "*"
 pygments = "*"
 mkdocs-macros-plugin = "*"
 requests-html = "*"
+requests-cache = "*"
 
 [requires]
 python_version = "3.7"
