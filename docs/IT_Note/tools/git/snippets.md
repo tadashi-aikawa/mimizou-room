@@ -184,6 +184,17 @@ git commit --amend --date="Sun Feb 4 19:37:11 2017 +0900"
 git rebase HEAD~2 --committer-date-is-author-date
 ```
 
+#### リモートに間違えて追加したファイルを取り消す
+
+!!! danger "リモートを直接変更するので、他の人がコミットしていないか注意"
+
+1. `git rebase -i <hash_before_target_commit>`を実行して、やり直したいコミットの1つ前に戻る
+2. 開かれたエディタの`pick`を`edit`に書き換えて保存/終了する
+3. `git rm <file>` で消したいファイルを削除する
+4. `git commit --amend`で上書きコミット
+5. `git rebase --continue`
+6. 途中でconflictしたら解消してから`git rebase --continue`
+7. `git push -f origin master`でforceコミット
 
 
 削除
