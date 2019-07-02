@@ -14,7 +14,7 @@ $ pylint --generate-rcfile > .pylintrc
 メッセージと番号
 ----------------
 
-http://pylint-messages.wikidot.com/ で調べる。
+`pylint --list-msgs` で調べる。
 
 ###よく見るもの
 
@@ -24,6 +24,8 @@ http://pylint-messages.wikidot.com/ で調べる。
 | W0511        | fixme                  | notesで指定されたprefixのコメントが残っている |
 | W0611        | unused-import          | 使われていないimportがある                    |
 | R0903        | too-few-public-methods | 公開メソッドが少なすぎる                      |
+| C0302        | too-many-lines         | 1ファイルの行数が多すぎる                     |
+| R0201        | no-self-use            | 使われていないselfがある(特にtest)            |
 
 
 特定箇所だけ無視
