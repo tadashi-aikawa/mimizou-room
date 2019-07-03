@@ -6,9 +6,13 @@
 学習
 ----
 
-公式ドキュメントやソースコードを読むキッカケに..
+### 公式ドキュメントをピックアップして超分かりやすく
 
 {{link("https://python.ms/")}}
+
+### package管理の歴史 (～2019年)
+
+{{link("https://www.m3tech.blog/entry/python-packaging")}}
 
 
 フレームワーク/ライブラリの選定
