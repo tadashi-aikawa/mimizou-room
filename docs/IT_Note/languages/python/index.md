@@ -71,6 +71,16 @@ Doctestも併用する
 [owcli]: https://github.com/tadashi-aikawa/owcli
 
 
+### 関数型系
+
+|  名前   | 採用 | IDEAプラグイン | VSCode拡張 |                  備考                  |
+| ------- | ---- | -------------- | ---------- | -------------------------------------- |
+| [fn.py] | O    |                |            | `pip install fn` -> `from fn import _` |
+
+[fn.py]: https://github.com/kachayev/fn.py
+
+
+
 Gitリポジトリにあるパッケージのインストール
 -------------------------------------------
 
