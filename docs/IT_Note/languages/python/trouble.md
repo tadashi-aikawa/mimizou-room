@@ -1,16 +1,22 @@
 # [Python] FAQ
 
 
-URLを分解/解析/組み立てしたい
------------------------------
+標準モジュールで解決するもの
+----------------------------
+
+### 標準エラー出力を使いたい
+
+`print(..., file=sys.stderr)` と指定。
+
+
+### URLを分解/解析/組み立てしたい
 
 `urllib.parse`の関数を使う。
 
 {{link("https://docs.python.org/ja/3/library/urllib.parse.html#urllib.parse.urlsplit")}}
 
 
-HTMLに記載できない文字をエスケープしたい
-----------------------------------------
+### HTMLに記載できない文字をエスケープしたい
 
 `xml.sax.saxutils`の`escape`を使う。
 
