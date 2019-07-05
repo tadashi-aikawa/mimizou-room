@@ -56,6 +56,8 @@ class AnotherOne(Base):
 
 ### Many to Many
 
+#### クラスを作成したくない場合
+
 ```python
 cross_table = Table('many_another_many', Base.metadata,
     Column('many_id', Integer, ForeignKey('many_t.id')),
@@ -73,6 +75,29 @@ class AnotherMany(Base):
     id = Column(Integer, primary_key=True)
 
     manys = relation('Many', uselist=True, back_populates='another_manys', secondary=cross_table)
+```
+
+#### クラスを作成したい場合
+
+```python
+
+class ManyToAnotherManyEntity(BASE):
+    __tablename__ = "many_to_another_many_t"
+
+    many_id = Column(Integer, ForeignKey("many_t.id"), primary_key=True)
+    another_many_id = Column(Integer, ForeignKey("another_many_t.id"), primary_key=True)
+
+class Many(Base):
+    __tablename__ = 'many_t'
+    id = Column(Integer, primary_key=True)
+
+    another_manys = relation('AnotherMany', uselist=True, back_populates='manys', secondary=ManyToAnotherManyEntity.__tablename__)
+
+class AnotherMany(Base):
+    __tablename__ = 'another_many_t'
+    id = Column(Integer, primary_key=True)
+
+    manys = relation('Many', uselist=True, back_populates='another_manys', secondary=ManyToAnotherManyEntity.__tablename__)
 ```
 
 ### 結合条件を複数定義したいとき
