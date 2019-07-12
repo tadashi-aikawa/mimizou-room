@@ -1,6 +1,28 @@
 # [Nuxt] Snippets
 
 
+コンポーネントにイベントを作成
+------------------------------
+
+コンポーネント内部
+
+```ts
+this.$emit("on-filter-changed", arg)
+```
+
+コンポーネント呼び出し元
+
+```html
+<Component @on-filter-changed="handleChanged"/>
+```
+
+```ts
+handleChanged(arg) {
+    // ...
+}
+```
+
+
 decorator
 ---------
 
