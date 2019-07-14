@@ -1,4 +1,4 @@
-# [IntelliJ IDEA] FAQ
+# [IDEA] FAQ
 
 
 全般

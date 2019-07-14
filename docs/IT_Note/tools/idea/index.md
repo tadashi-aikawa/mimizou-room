@@ -1,4 +1,4 @@
-# [IntelliJ IDEA] Top
+# [IDEA] Top
 
 
 IntelliJ IDEAとは
