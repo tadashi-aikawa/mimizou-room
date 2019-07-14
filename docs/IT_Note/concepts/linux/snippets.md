@@ -4,6 +4,29 @@
 Linuxコマンド
 -------------
 
+### apt
+
+```bash
+# リポジトリの更新
+$ apt update
+# パッケージの更新
+$ apt upgrade
+# パッケージインストール
+$ apt install <package_or_deb>
+# パッケージ削除
+$ apt remove <package>
+# パッケージ情報表示
+$ apt show <package>
+# パッケージ検索(完全一致)
+$ apt list <package>
+# パッケージ検索(部分一致)
+$ apt search <package>
+# インストールパッケージ一覧表示
+$ dpkg -l
+# パッケージインストール先表示
+$ dpkg -L <package>
+```
+
 ### awk
 
 ```bash
