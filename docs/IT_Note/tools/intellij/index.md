@@ -33,3 +33,17 @@ Java中心だが、Ultimate版は様々な言語を使える。
 VS Codeも使っている場合はコンテキストスイッチの切り替えコストを下げるため、同じキーバインドが望ましい。
 
 {{link("https://docs.google.com/spreadsheets/d/11KZFwz_KJWeN-zRGRV74pCubN0_k3yDaDDr7tErHPrY/edit#gid=0")}}
+
+
+プラグイン
+----------
+
+言語系のプラグインは各言語ページに記載するため除く。
+
+|   プラグイン名   |                    説明                    |
+| ---------------- | ------------------------------------------ |
+| File Watchers    | ファイルが変更されたときに処理を実施できる |
+| IdeaVim          | Vim！！                                    |
+| AceJump-Lite[^1] | EmacsのAceJum/VimのEasyMotion のようなもの |
+
+[^1]: AceJumpというプラグインもあり、そちらの方が有名だがパフォーマンスに難があるため
