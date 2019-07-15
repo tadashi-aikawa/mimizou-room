@@ -173,7 +173,17 @@ $ curl -i ${URL}
 $ curl -i -D - ${URL}
 ```
 
-https://access.redhat.com/site/documentation/ja-JP/Red_Hat_Enterprise_Virtualization/3.0/html/REST_API_Guide/appe-REST_API_Guide-cURL_Integration.html
+具体的なデータ送信ケース
+
+```bash
+# x-www-form-urlencodedとしてPOST
+$ curl ${url} -X POST -d "key=value&k=v"
+# application/jsonとしてPOST
+$ curl ${url} -X POST -d '{"id": 1, "name": "Ichi"}' -H "Content-Type: application/json;charset=UTF-8"
+```
+
+{{refer("https://access.redhat.com/site/documentation/ja-JP/Red_Hat_Enterprise_Virtualization/3.0/html/REST_API_Guide/appe-REST_API_Guide-cURL_Integration.html")}}
+
 
 ### date
 
