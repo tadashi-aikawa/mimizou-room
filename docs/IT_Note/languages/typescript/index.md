@@ -20,13 +20,13 @@
 
 未経験だけど仕事で使うことになったんじゃぁぁぁぁという人向け。
 
-http://future-architect.github.io/typescript-guide/
+{{link("http://future-architect.github.io/typescript-guide/")}}
 
 ### 型について詳しく知りたい
 
 ES2015以降やNode.js、npmなどを知っている人向け。
 
-http://typescript.ninja/typescript-in-definitelyland/
+{{link("http://typescript.ninja/typescript-in-definitelyland/")}}
 
 !!! warning ""
     対応TypeScriptバージョンは古いので注意 (TypeScript 2.4.2)
@@ -41,7 +41,7 @@ TypeScriptならではの型が紹介されている。
 
 非同期でハマった人向け。PromiseとAsync/Awaitを学ぶなら分かりやすく詳しい。
 
-{{link("http://azu.github.io/promises-book/")}}
+{{link("https://azu.github.io/promises-book/")}}
 
 
 フレームワーク/ライブラリの選定
