@@ -20,7 +20,7 @@
 
 未経験だけど仕事で使うことになったんじゃぁぁぁぁという人向け。
 
-{{link("http://future-architect.github.io/typescript-guide/")}}
+{{link("https://future-architect.github.io/typescript-guide/")}}
 
 ### 型について詳しく知りたい
 
