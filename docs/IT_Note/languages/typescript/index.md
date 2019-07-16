@@ -20,13 +20,13 @@
 
 未経験だけど仕事で使うことになったんじゃぁぁぁぁという人向け。
 
-{{link("https://future-architect.github.io/typescript-guide/")}}
+http://future-architect.github.io/typescript-guide/
 
 ### 型について詳しく知りたい
 
 ES2015以降やNode.js、npmなどを知っている人向け。
 
-{{link("http://typescript.ninja/typescript-in-definitelyland/")}}
+http://typescript.ninja/typescript-in-definitelyland/
 
 !!! warning ""
     対応TypeScriptバージョンは古いので注意 (TypeScript 2.4.2)

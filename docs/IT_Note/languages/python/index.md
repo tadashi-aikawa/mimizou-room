@@ -47,7 +47,7 @@ Doctestも併用する
 | [Pylint] | O    | [pylint-idea]  |            |
 | flake8   |      |                |            |
 
-[pylint]: http://pylint.pycqa.org/en/latest/
+[pylint]: https://pylint.readthedocs.io/en/latest/
 [pylint-idea]: https://plugins.jetbrains.com/plugin/11084-pylint
 
 ### Formatter
