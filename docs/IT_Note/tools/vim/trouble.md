@@ -20,6 +20,22 @@ Vimから`:terminal`を呼び出すことで以下のメリットがある。
 * `<C-w>N`でターミナルがVimモードになる
 * `<C-w>""`でVimとターミナルのyankが共有できる
 
+### git bash vimで`HOME`と`END`が`ÏH`と`ÏF`になる
+
+以下の設定が悪い方向に競合していたので、削除したらなおった。
+
+```
+" MetaキーにAltを割り当てる
+let c = 'a'
+while c <= 'z'
+    execute "set <M-" . c . ">=\e" . c
+    execute "imap \e" . c . " <M-" . c . ">"
+    execute "set <M-S-" . c . ">=\e" . toupper(c)
+    execute "imap \e" . toupper(c) . " <M-" . c . ">"
+    let c = nr2char(1+char2nr(c))
+endw
+```
+
 
 オペレーション
 --------------
