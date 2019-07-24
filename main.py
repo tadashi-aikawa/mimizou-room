@@ -6,7 +6,7 @@ import requests_cache
 
 # Must install before importing HTMLSession
 requests_cache.install_cache(
-    cache_name="mimizou_room", backend="sqlite", expire_after=timedelta(hours=24)
+    cache_name="mimizou_room", backend="sqlite", expire_after=timedelta(weeks=1)
 )
 from requests_html import HTMLSession
 
