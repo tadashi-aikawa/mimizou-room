@@ -57,10 +57,11 @@ def declare_variables(variables, macro):
 
     @macro
     def refer(url):
-        print(f"Create refer: {url}")
-
+        print(f"[Create Refer] {url}")
         session = HTMLSession()
         res = session.get(url)
+        if not res.ok:
+            print(f"☠☠ Failure ☠☠")
 
         title = (
             get_meta_by_property(res.html, "og:title")
@@ -69,6 +70,11 @@ def declare_variables(variables, macro):
         )
         favicon_url = get_favicon_url(res.html, url)
         icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
+
+        if not title:
+            print(f"  ∟ ⚠ No Title")
+        if not favicon_url:
+            print(f"  ∟ ⚠ No favicon")
 
         return f"""
         <div class="refer">
@@ -79,10 +85,11 @@ def declare_variables(variables, macro):
 
     @macro
     def link(url):
-        print(f"Create link: {url}")
-
+        print(f"[Create Card] {url}")
         session = HTMLSession()
         res = session.get(url)
+        if not res.ok:
+            print(f"☠☠ Failure ☠☠")
 
         site_name = (
             get_meta_by_property(res.html, "og:site_name") or urlsplit(url).netloc
@@ -100,10 +107,19 @@ def declare_variables(variables, macro):
         image_url: Optional[str] = get_meta_by_property(
             res.html, "og:image"
         ) or get_src_by_id(res.html, "ebooksImgBlkFront")
-        print(f"Image URL: {image_url}")
         favicon_url = get_favicon_url(res.html, url)
         icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
-        print(f"ICON: {icon_url}")
+
+        if not site_name:
+            print(f"  ∟ ⚠ No Site Name")
+        if not title:
+            print(f"  ∟ ⚠ No Title")
+        if not description:
+            print(f"  ∟ ⚠ No description")
+        if not image_url:
+            print(f"  ∟ ⚠ No Image URL")
+        if not favicon_url:
+            print(f"  ∟ ⚠ No Favicon")
 
         return f"""
         <div class="link-card">
