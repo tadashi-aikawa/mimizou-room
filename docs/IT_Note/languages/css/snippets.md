@@ -1,6 +1,14 @@
 # [CSS] Snippets
 
 
+Grid Layout
+-----------
+
+{{link("https://qiita.com/kura07/items/486c19045aab8090d6d9")}}
+
+!!! todo "align/justify, items/content などの挙動違いはまとめたい"
+
+
 flexbox
 -------
 
@@ -66,6 +74,12 @@ flexbox
     justify-content: space-between;
 }
 ```
+
+
+親要素の中央に配置する
+----------------------
+
+親要素に `text-align: center` を追加する。
 
 
 Linkの色を変更しない
