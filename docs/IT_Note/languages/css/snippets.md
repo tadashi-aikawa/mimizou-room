@@ -76,6 +76,16 @@ flexbox
 ```
 
 
+色合い変化
+----------
+
+`filter`を使って画像や要素の色合いをさせる。
+
+{{link("http://www-creators.com/css-prop/filter")}}
+
+* 背景を暗くするなら `filter:brightness(...)`
+
+
 親要素の中央に配置する
 ----------------------
 
