@@ -22,55 +22,56 @@ slideNumber: true
 よくある構成
 ------------
 
+!!! warning "本ページの`theme.css`を使っていることが条件"
+
 ### タイトル
 
-```markdown
-# Title  
-Sub title
+```html
+# みみぞうとレイアウト  
+~ Grid Layout ~
 
 ----
 
 ### tadashi-aikawa
-2019-07-22 (Mon)
+2019-07-24 (Wed)
 
-<!-- .slide: class="title"  data-background="http://background" -->
+<!-- .slide: class="title"  data-background="https://dl.dropboxusercontent.com/s/c2qdld24ynb7boz/emiliano-vittoriosi-aTHqiz_sosU-unsplash.jpg" -->
+
 ```
 
 ### 中央に寄せて2列並べる
 
-!!! todo "後でCSSに寄せたい"
+```html
+<div class="grid-2x1">
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+</div>
+```
+
+### 中央に4分割でタイル表示
 
 ```html
-<div style="display: flex; justify-content: space-around;">
-    <div>1</div>
-    <div>2</div>
+<div class="grid-2x2" style="width: 500px; height: 500px;">
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
 </div>
 ```
 
 ### 中央に9分割でタイル表示
 
-!!! todo "後でCSSに寄せたい"
-
 ```html
-<div style="text-align: center;">
-    <div style="display: grid;
-        width: 600px;
-        align-items: center;
-        justify-items: center;
-        margin: auto;
-        grid-template-rows: 33% 33% 33%;
-        grid-template-columns: 33% 33% 33%;"
-        >
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-    </div>
+<div class="grid-3x3" style="width: 500px; height: 500px;">
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
+    <img src="https://avatars0.githubusercontent.com/u/9500018?s=400&v=4" />
 </div>
 ```
 
@@ -97,16 +98,32 @@ CSS
 
 ### white用
 
+`theme.css`
 ```css
+/* Base font options */
 .reveal {
-    font-size: 200%;
+    font-size: 250%;
 }
 
+/* Images */
 .reveal section img {
     border: none;
     box-shadow: none;
 }
 
+/* Title */
+.reveal .title {
+    font-size: 80%;
+    color: white;
+    text-shadow:  3px 3px 3px #37474F;
+}
+
+/* Title image */
+.reveal .slide-background.present {
+    filter: brightness(50%) grayscale(20%) sepia(40%) blur(5px);
+}
+
+/* Title headers */
 .reveal .title h1 {
     color: white;
     text-shadow:  3px 3px 3px #37474F;
@@ -117,11 +134,7 @@ CSS
     text-shadow:  3px 3px 3px #37474F;
 }
 
-.reveal .title {
-    color: white;
-    text-shadow:  3px 3px 3px #37474F;
-}
-
+/* Headers */
 .reveal h1 {
     color: #37474F;
     text-transform: none;
@@ -142,6 +155,7 @@ CSS
     text-transform: none;
 }
 
+/* Emphasis */
 .reveal strong {
     color: #F06292;
 }
@@ -150,6 +164,7 @@ CSS
     color: #42A5F5;
 }
 
+/* List */
 .reveal ol li {
     font-weight: bolder;
     font-size: 75%;
@@ -160,20 +175,69 @@ CSS
     font-size: 75%;
 }
 
+/* Code */
 .reveal pre {
     padding: 15px;
     background-color: #37474F;
 }
 
+/* Table */
 .reveal .small-table {
     font-size: 75%;
 }
 
+/* Refer */
 .reveal .refer {
     font-size: 12px;
 }
 
 .reveal .refer:before {
     content: "🔗";
+}
+
+/***********/
+/* Layouts */
+/***********/
+.reveal .central-2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Need to specify width & height */
+.reveal .grid-2x1 {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    grid-column-gap: 5%;
+    grid-template-columns: 40% 40%;
+}
+
+.reveal .grid-2x2 {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    grid-row-gap: 5%;
+    grid-column-gap: 5%;
+    grid-template-rows: 40% 40%;
+    grid-template-columns: 40% 40%;
+}
+
+.reveal .grid-3x3 {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    grid-row-gap: 3%;
+    grid-column-gap: 3%;
+    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
 }
 ```

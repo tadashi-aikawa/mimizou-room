@@ -9,6 +9,13 @@ Grid Layout
 !!! todo "align/justify, items/content などの挙動違いはまとめたい"
 
 
+### justify/align items/self/content の違い
+
+以下の動きを見ながら学ぶ。
+
+{{link("https://developer.mozilla.org/ja/docs/Web/CSS/align-content")}}
+
+
 flexbox
 -------
 
