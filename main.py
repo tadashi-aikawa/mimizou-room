@@ -116,10 +116,17 @@ def declare_variables(variables, macro):
             print(f"  ∟ ⚠ No Title")
         if not description:
             print(f"  ∟ ⚠ No description")
-        if not image_url:
-            print(f"  ∟ ⚠ No Image URL")
         if not favicon_url:
             print(f"  ∟ ⚠ No Favicon")
+
+        if image_url:
+            if "http://" in image_url:
+                image_url = image_url.replace("http://", "https://")
+                print(
+                    f"  ∟ ⚠ This Image URL includes http scheme.. so replace http to https.."
+                )
+        else:
+            print(f"  ∟ ⚠ No Image URL")
 
         return f"""
         <div class="link-card">
