@@ -106,3 +106,11 @@ TypeScriptならではの型が紹介されている。
 | [tsdoc] | O    |                |            |
 
 [tsdoc]: https://github.com/microsoft/tsdoc
+
+### 暗号/ハッシュ
+
+|    名前     | 採用 | IDEAプラグイン | VSCode拡張 |
+| ----------- | ---- | -------------- | ---------- |
+| [crypto-js] | O    |                |            |
+
+[crypto-js]: https://github.com/brix/crypto-js
