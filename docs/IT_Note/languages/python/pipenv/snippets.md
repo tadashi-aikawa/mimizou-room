@@ -1,13 +1,37 @@
 # [Pipenv] Snippets
 
+{{link("https://pipenv-ja.readthedocs.io/ja/translate-ja/basics.html#example-pipenv-upgrade-workflow")}}
 
-installのオプション
--------------------
 
-### Pipfile.lockやPythonバージョンを確認してインストール
+packageのインストール
+---------------------
+
+### Pipfileの内容でpackageをインストール
+
+```
+$ pipenv install
+```
+
+### Pipfileの内容でdev-packageとpackageをインストール
+
+```
+$ pipenv install --dev
+```
+
+### Pipfile.lockが古い場合はビルドを失敗させるようなインストール
+
+フラグが無いと`Pipfile.lock`を最新にする。
 
 ```
 $ pipenv install --deploy
+```
+
+### Pipfile.lockの指定通りにインストール
+
+再ロックはしない。
+
+```
+$ pipenv sync
 ```
 
 ### Pipfile.lockの内容をインストール
@@ -18,7 +42,9 @@ Pipfileの内容は無視して完全に同じバージョンをインストー�
 $ pipenv install --ignore-pipfile
 ```
 
-### Pipfile.lockはいじらない
+### Pipfile.lockを無視してインストール
+
+Pipfileだけを参考にインストールする。Pipfile.lockも更新しない。
 
 ```
 $ pipenv install --skip-lock
@@ -28,6 +54,22 @@ $ pipenv install --skip-lock
 
 ```
 $ pipenv install --pre
+```
+
+
+packageのアンインストール
+-------------------------
+
+### Pipfileは触らずに全てアンインストール
+
+```
+$ pipenv uninstall --all
+```
+
+### Pipfileも含めて全てアンインストール
+
+```
+$ pipenv uninstall --all-dev
 ```
 
 
