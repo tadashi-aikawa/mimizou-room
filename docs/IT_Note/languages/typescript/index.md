@@ -14,7 +14,7 @@
 
 公式が最強。英語に抵抗なければ。
 
-{{link("https://www.typescriptlang.org/docs/home.html")}}
+{{link("https://www.typescriptlang.org")}}
 
 ### 仕事ですぐに使える知識を一通り知りたい
 
