@@ -54,12 +54,15 @@ File Watchersの設定
 
 ### Prettier
 
-|   項目    |                     値                      |
-| --------- | ------------------------------------------- |
-| File type | Any                                         |
-| Scope     | Current File                                |
-| Program   | $ProjectFileDir$\node_modules\.bin\prettier |
-| Arguments | --write $FilePath$                          |
+`.prettierignore`を読み込む場合は`Working directory`の指定が必須です。
+
+|       項目        |                     値                      |
+| ----------------- | ------------------------------------------- |
+| File type         | Any                                         |
+| Scope             | Current File                                |
+| Program           | $ProjectFileDir$\node_modules\.bin\prettier |
+| Arguments         | --write $FilePath$                          |
+| Working directory | $ProjectFileDir$                            |
 
 ### Black
 
