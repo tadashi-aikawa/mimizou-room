@@ -55,14 +55,3 @@ yourcode # pylint: disable=wrong-import-position
 ```
 # pylint: disable=wrong-import-position
 ```
-
-
-IDEAへの設定
-------------
-
-* Scope: `Current File`
-* Program: `$PyInterpreterDirectory$\pylint.exe`
-* Arguments: `--rcfile $ContentRoot$/.pylintrc $FilePath$`
-
-`Working directory`に`$ContentRoot`を指定しないのは、ターミナルに出力される絶対パスへクリックでリンクできないから。  
-それが問題なければ`Working directory`に指定すれば良い。
