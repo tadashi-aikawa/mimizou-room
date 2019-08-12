@@ -114,3 +114,21 @@ TypeScriptならではの型が紹介されている。
 | [crypto-js] | O    |                |            |
 
 [crypto-js]: https://github.com/brix/crypto-js
+
+
+よく使うビルドオプション
+------------------------
+
+### `--incremental`
+
+静的インクリメンタルビルド。  
+少なくてもビルド速度が半分以下になるので使ったほうがいい。
+
+キャッシュに使うファイルとして、`--outDir`で指定された場所に`tsconfig.tsbuildinfo`ができる。
+
+{{refer("https://qiita.com/vvakame/items/7f4a55fe15fc9bbe1a63")}}
+
+### `--watch`
+
+動的インクリメンタルビルド。  
+スピードは最速だが、一度停止すると次はフルビルドになる。
