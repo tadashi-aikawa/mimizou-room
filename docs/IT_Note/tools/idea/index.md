@@ -47,3 +47,27 @@ VS Codeも使っている場合はコンテキストスイッチの切り替え�
 | AceJump-Lite[^1] | EmacsのAceJum/VimのEasyMotion のようなもの |
 
 [^1]: AceJumpというプラグインもあり、そちらの方が有名だがパフォーマンスに難があるため
+
+
+File Watchersの設定
+-------------------
+
+### Prettier
+
+|   項目    |                     値                      |
+| --------- | ------------------------------------------- |
+| File type | Any                                         |
+| Scope     | Current File                                |
+| Program   | $ProjectFileDir$\node_modules\.bin\prettier |
+| Arguments | --write $FilePath$                          |
+
+### Black
+
+リモートインタプリタを使う場合があるので`Program`はグローバル環境の`black`を参照するようにします。
+
+|   項目    |      値       |
+| --------- | ------------- |
+| File type | Python        |
+| Scope     | Current File  |
+| Program   | black         |
+| Arguments | -i $FilePath$ |
