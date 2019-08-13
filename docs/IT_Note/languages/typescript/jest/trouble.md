@@ -1,6 +1,34 @@
 # [Jest] FAQ
 
 
+テスト対象の中でimportしているモジュールのMockを作りたい
+--------------------------------------------------------
+
+`companyService.fetch`が`clients/api`を使っているケース。  
+`clients/api`をMock化して、副作用の無い状態で`companyService.fetch`をテストしたい。
+
+`jest.mock`でモック化すれば、それをimportしている箇所全てに影響が出る。
+
+```ts
+import * as companyService from './company';
+import * as api from '../clients/api';
+jest.mock('../clients/api');
+
+describe('companyService.fetch', () => {
+  beforeAll(() => {
+    (svn as any).list.mockReturnValue(['dummy1', 'dummy2']);
+  });
+  test('テスト', async () => {
+    const actual = await companyService.fetch();
+    expect(actual).toStrictEqual(['dummy1, dummy2']);
+  });
+});
+```
+
+モック化した`モジュール.プロパティ`に対して、`mockReturnValue(...)`で任意の値をreturnさせる。  
+`mockImplementation((arg1, arg2) => arg1 + arg2)`のようにすると任意のfunctionを定義できる。
+
+
 Decorators are not enabled エラーになる
 ---------------------------------------
 
