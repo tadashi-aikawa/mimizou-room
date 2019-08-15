@@ -7,5 +7,11 @@
 ### ディレクトリのコピー
 
 ```
-$ xcopy /is from to
+$ xcopy /is <from> <to>
+```
+
+### ディレクトリの削除
+
+```
+$ rd /s /q <dir>
 ```
