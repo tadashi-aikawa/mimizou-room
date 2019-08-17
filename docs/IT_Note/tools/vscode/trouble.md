@@ -151,3 +151,17 @@ module.exports = {
 #### 実行
 
 `webpack --watch & sam local start-api --template ../template.yaml -d 5858`
+
+
+拡張機能
+--------
+
+### REST Clientで環境変数を使いたい(秘密情報として)
+
+`{{$processEnv 環境変数名}}` でOK。
+
+`rest-client.environmentVariables`に指定した環境変数を使いたいなら
+
+```
+{{$processEnv %キー名}}
+```
