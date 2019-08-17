@@ -156,10 +156,26 @@ module.exports = {
 拡張機能
 --------
 
-### REST Clientで環境変数を使いたい(秘密情報として)
+### REST Clientで環境変数を使いたい
 
-`{{$processEnv 環境変数名}}` でOK。
+```
+{{"{{$processEnv 環境変数名}}"}}
+```
 
-`rest-client.environmentVariables`に指定した環境変数を使いたいなら`{{$processEnv %キー名}}`
+`rest-client.environmentVariables`に指定した環境変数を使いたいなら
+
+```
+{{"{{$processEnv %キー名}}"}}
+```
+
+`rest-client.environmentVariables`に指定すれば.. `{{"{{$processEnv %secretKey}}"}}` でアクセス可能に
+
+```
+  "rest-client.environmentVariables": {
+    "local": {
+      "secretKey": "PASSWORD",
+    },
+  }
+```
 
 {{refer("https://marketplace.visualstudio.com/items?itemName=humao.rest-client")}}
