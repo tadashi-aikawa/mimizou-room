@@ -160,10 +160,6 @@ module.exports = {
 
 `{{$processEnv 環境変数名}}` でOK。
 
-`rest-client.environmentVariables`に指定した環境変数を使いたいなら
-
-```
-{{$processEnv %キー名}}
-```
+`rest-client.environmentVariables`に指定した環境変数を使いたいなら`{{$processEnv %キー名}}`
 
 {{refer("https://marketplace.visualstudio.com/items?itemName=humao.rest-client")}}
