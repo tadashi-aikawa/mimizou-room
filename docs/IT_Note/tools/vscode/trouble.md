@@ -165,3 +165,5 @@ module.exports = {
 ```
 {{$processEnv %キー名}}
 ```
+
+{{refer("https://marketplace.visualstudio.com/items?itemName=humao.rest-client")}}
