@@ -1,6 +1,5 @@
 # [VS Code] FAQ
 
-
 全般
 ----
 
@@ -10,7 +9,6 @@
 
 設定だと `"workbench.editor.enablePreview": false`
 
-
 ### 特定ファイルのPrettierをオフにしたい
 
 設定に`"prettier.disableLanguages": [...]`を追加。
@@ -19,17 +17,15 @@ Markdownの場合は`"prettier.disableLanguages": ["markdown"]`。
 
 {{refer("https://qiita.com/the_red/items/e121cbb659c52a60bca6")}}
 
-
 ### batファイルをShift-JISで開きたい
 
 拡張子ごとのエンコーディング指定を設定(`settings.json`)に追加する。
 
-```
+```json
   "[bat]": {
     "files.encoding": "shiftjis"
   },
 ```
-
 
 JavaScript系
 ------------
@@ -47,7 +43,7 @@ JavaScript系
 
 構成が以下の場合。
 
-```
+```tree
 .
 ├── event.json
 ├── yourapp
@@ -66,7 +62,6 @@ JavaScript系
 │   └── webpack.config.js
 └── template.yaml
 ```
-
 
 #### `tsconfig.json`
 
@@ -152,25 +147,24 @@ module.exports = {
 
 `webpack --watch & sam local start-api --template ../template.yaml -d 5858`
 
-
 拡張機能
 --------
 
 ### REST Clientで環境変数を使いたい
 
-```
+```text
 {{"{{$processEnv 環境変数名}}"}}
 ```
 
 `rest-client.environmentVariables`に指定した環境変数を使いたいなら
 
-```
+```text
 {{"{{$processEnv %キー名}}"}}
 ```
 
 `rest-client.environmentVariables`に指定すれば.. `{{"{{$processEnv %secretKey}}"}}` でアクセス可能に
 
-```
+```json
   "rest-client.environmentVariables": {
     "local": {
       "secretKey": "PASSWORD",
