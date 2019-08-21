@@ -812,6 +812,15 @@ $ tar -xzvf ${archive} -C ${dst}
 $ tee -a ${file}
 ```
 
+### timezonectl
+
+タイムゾーンの設定
+
+```bash
+# timezoneをJSTにする
+timedatectl set-timezone Asia/Tokyo
+```
+
 ### top
 
 ```bash
