@@ -13,3 +13,9 @@ requests-cache = "*"
 
 [requires]
 python_version = "3.7"
+
+[dev-packages]
+black = "*"
+
+[pipenv]
+allow_prereleases = true

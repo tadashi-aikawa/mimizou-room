@@ -7,7 +7,7 @@ import requests_cache
 
 # Must install before importing HTMLSession
 requests_cache.install_cache(
-    cache_name="mimizou_room", backend="sqlite", expire_after=timedelta(weeks=1)
+    cache_name="mimizou_room", backend="sqlite", expire_after=timedelta(weeks=2)
 )
 from requests_html import HTMLSession
 
@@ -51,10 +51,6 @@ def get_favicon_url(html: any, url: str) -> str:
 
 
 def declare_variables(variables, macro):
-    @macro
-    def summary(url):
-        return f'<a class="card" href="{url}" data-card-description="0">{url}</a>'
-
     @macro
     def refer(url):
         print(f"[Create Refer] {url}")
