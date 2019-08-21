@@ -12,6 +12,7 @@ map S LinkHints.activateModeToOpenInNewTab
 map gs LinkHints.activateModeWithQueue
 map ys LinkHints.activateModeToCopyLinkUrl
 map q removeTab
+map <c-Q> removeTab
 
 map t Vomnibar.activateTabSelection
 map o Vomnibar.activateInNewTab
@@ -20,8 +21,6 @@ map p openCopiedUrlInNewTab
 map <a-w> moveTabToNewWindow
 map e goBack
 map <c-e> goForward
-map <a-h> previousTab
-map <a-l> nextTab
 
 map m Marks.activateCreateMode swap
 map ` Marks.activateGotoMode swap
