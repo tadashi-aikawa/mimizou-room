@@ -7,11 +7,11 @@ repo_url: https://github.com/tadashi-aikawa/mimizou-room
 copyright: © 2019 tadashi-aikawa
 
 theme:
-  name: 'material'
+  name: "material"
   palette:
-    primary: 'grey'
-    accent: 'deep purple'
-  language: 'ja'
+    primary: "grey"
+    accent: "deep purple"
+  language: "ja"
   logo: https://avatars1.githubusercontent.com/u/9500018?s=460&v=4
   favicon: https://avatars1.githubusercontent.com/u/9500018?s=460&v=4
   feature:
@@ -23,12 +23,12 @@ plugins:
 
 extra:
   search:
-    language: 'en, ja'
+    language: "en, ja"
   social:
-    - type: 'github'
-      link: 'https://github.com/tadashi-aikawa'
-    - type: 'twitter'
-      link: 'https://twitter.com/Tadashi_MAMAN'
+    - type: "github"
+      link: "https://github.com/tadashi-aikawa"
+    - type: "twitter"
+      link: "https://twitter.com/Tadashi_MAMAN"
 
 markdown_extensions:
   # ページ内リンク(もう使えない?)
@@ -53,11 +53,9 @@ markdown_extensions:
   - toc:
       permalink: True
 
-extra_javascript:
-  - 'javascript/embedly.js'
 extra_css:
-  - 'css/custom.css'
+  - "css/custom.css"
 
 google_analytics:
-  - 'UA-36444836-2'
-  - 'auto'
+  - "UA-36444836-2"
+  - "auto"
