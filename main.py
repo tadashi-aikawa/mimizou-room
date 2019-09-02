@@ -47,7 +47,7 @@ def get_favicon_url(html: any, url: str) -> str:
     base = html.find("base", first=True)
     base_url = base and base.attrs["href"]
 
-    return f"{to_base_url(url)}{base_url}{href}" if base_url else urljoin(url, href)
+    return f"{to_base_url(url)}/{href}" if base_url else urljoin(url, href)
 
 
 def declare_variables(variables, macro):
@@ -69,7 +69,9 @@ def declare_variables(variables, macro):
 
         if not title:
             print(f"  ∟ ⚠ No Title")
-        if not favicon_url:
+        if favicon_url:
+            print(f"  ∟ favicon: {favicon_url}")
+        else:
             print(f"  ∟ ⚠ No favicon")
 
         return f"""
@@ -112,10 +114,14 @@ def declare_variables(variables, macro):
             print(f"  ∟ ⚠ No Title")
         if not description:
             print(f"  ∟ ⚠ No description")
-        if not favicon_url:
-            print(f"  ∟ ⚠ No Favicon")
+        if favicon_url:
+            print(f"  ∟ favicon: {favicon_url}")
+        else:
+            print(f"  ∟ ⚠ No favicon")
 
         if image_url:
+            if "http://" not in image_url and "https://" not in image_url:
+                image_url = f"{to_base_url(url)}/{image_url}"
             if "http://" in image_url:
                 image_url = image_url.replace("http://", "https://")
                 print(
