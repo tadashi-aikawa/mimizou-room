@@ -188,11 +188,11 @@
         },
         "mkdocs-material": {
             "hashes": [
-                "sha256:451b949f6c8f0750b937f805e14c5bd40b81c5ff829072a74896efeaa6e8567f",
-                "sha256:8b5a042a0f2b54e631668e33d6a0777ff2c68331656066e26223c47159a255e1"
+                "sha256:75807513b2fa904219124f05802ef4e674a7312aa018446ed58054a48a76e66a",
+                "sha256:d3e641f634227ce113ebdde1df0a0e0b1eba1d3f1da35344d68095b4270407b2"
             ],
             "index": "pypi",
-            "version": "==4.4.0"
+            "version": "==4.4.2"
         },
         "mkdocs-minify-plugin": {
             "hashes": [
@@ -206,6 +206,13 @@
                 "sha256:a5fca7000c6588d77bc65c28f3f21bfce03b5e44daa8f9f07c17fe364990d717"
             ],
             "version": "==1.12.1"
+        },
+        "pep562": {
+            "hashes": [
+                "sha256:58cb1cc9ee63d93e62b4905a50357618d526d289919814bea1f0da8f53b79395",
+                "sha256:d2a48b178ebf5f8dd31709cc26a19808ef794561fa2fe50ea01ea2bad4d667ef"
+            ],
+            "version": "==1.0"
         },
         "pyee": {
             "hashes": [
@@ -224,10 +231,10 @@
         },
         "pymdown-extensions": {
             "hashes": [
-                "sha256:25b0a7967fa697b5035e23340a48594e3e93acb10b06d74574218ace3347d1df",
-                "sha256:6cf0cf36b5a03b291ace22dc2f320f4789ce56fbdb6635a3be5fadbf5d7694dd"
+                "sha256:24c1a0afbae101c4e2b2675ff4dd936470a90133f93398b9cbe0c855e2d2ec10",
+                "sha256:960486dea995f1759dfd517aa140b3d851cd7b44d4c48d276fd2c74fc4e1bce9"
             ],
-            "version": "==6.0"
+            "version": "==6.1"
         },
         "pyppeteer": {
             "hashes": [
@@ -317,10 +324,10 @@
         },
         "tqdm": {
             "hashes": [
-                "sha256:438d6a735167099d75e5fd9a55175c6727c4dbba345ae406b2886c2728fe3e80",
-                "sha256:ebc205051d79b49989140f5f6c73ec23fce5f590cbc4d9cd6e4c47f168fa0f10"
+                "sha256:1be3e4e3198f2d0e47b928e9d9a8ec1b63525db29095cec1467f4c5a4ea8ebf9",
+                "sha256:7e39a30e3d34a7a6539378e39d7490326253b7ee354878a92255656dc4284457"
             ],
-            "version": "==4.34.0"
+            "version": "==4.35.0"
         },
         "urllib3": {
             "hashes": [
