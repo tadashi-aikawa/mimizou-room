@@ -22,6 +22,27 @@ pipeline {
 {{refer("https://jenkins.io/doc/book/pipeline/syntax/#triggers")}}
 
 
+### パラメータ
+
+```groovy
+pipeline {
+    agent any
+    parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo "${params.Greeting} World!"
+            }
+```
+
+!!! warning
+    shの内部で呼び出す時は `${params.Greeting}` ではなく `${Greeting}` なので注意
+
+{{refer("https://jenkins.io/doc/book/pipeline/jenkinsfile/#handling-parameters")}}
+
+
 独自関数
 --------
 
