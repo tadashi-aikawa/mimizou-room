@@ -58,6 +58,24 @@ docker run -t <container_name>
 docker run -i <container_name>
 ```
 
+### 環境変数を指定する
+
+```bash
+docker run --env VARNAME=<value>
+```
+
+### 環境変数をファイルで指定する
+
+```bash
+docker run --env-file <file_name>
+```
+
+指定ファイルの中身は以下の様な感じ。
+
+```ini
+VARNAME=<value>
+```
+
 ### コマンドを指定する
 
 ```bash
