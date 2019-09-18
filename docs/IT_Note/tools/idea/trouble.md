@@ -41,6 +41,6 @@ pytestの`--doctest-modules`を指定すればOK。
 1. `Run/Debug Configurations`
 2. `Python tests > pytest` を作成
 3. `Target:` を `Custom` にする
-4. `Additional Arguments` に `--doctest-modules` を指定 (ついでに`-vv`とかも好みで)
+4. `Additional Arguments` に `--doctest-modules` を指定 (ついでに`--doctest-continue-on-failure` `-vv`とかも好みで)
 
 `Working directory`に注意。配下をテストしにいくので

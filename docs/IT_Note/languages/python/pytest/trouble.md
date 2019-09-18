@@ -14,3 +14,5 @@ doctestも一緒に実行したい
 ```bash
 pytest --doctest-modules --doctest-continue-on-failure
 ```
+
+{{refer("http://doc.pytest.org/en/latest/doctest.html")}}
