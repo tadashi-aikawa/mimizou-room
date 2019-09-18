@@ -60,7 +60,7 @@ File Watchersの設定
 | ----------------- | ------------------------------------------- |
 | File type         | Any                                         |
 | Scope             | Current File                                |
-| Program           | $ProjectFileDir$\node_modules\.bin\prettier |
+| Program           | $ProjectFileDir$\node_modules\\.bin\prettier |
 | Arguments         | --write $FilePath$                          |
 | Working directory | $ProjectFileDir$                            |
 
