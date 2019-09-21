@@ -15,6 +15,12 @@
 * `Insert pair quote`
 * `Insert closing tag on tag completion`
 
+### 未保存のファイルが分かりにくい
+
+`Editor` > `General` > `Editor Tabs` の `Mark modified` にチェックをつける。
+
+{{refer("http://xblood.hatenablog.com/entry/2017/06/06/230000")}}
+
 
 Python
 ------
