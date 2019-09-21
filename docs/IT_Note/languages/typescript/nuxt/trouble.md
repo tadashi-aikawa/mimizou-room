@@ -51,3 +51,33 @@ name: str | null = null
 
 `nuxt.config.ts`の`plugins`に追加されていることを確認する。
 
+
+コンポーネントにHTMLやコンポーネントをネストさせたい
+----------------------------------------------------
+
+`slot`を使う。
+
+{{link("https://jp.vuejs.org/v2/guide/components-slots.html")}}
+
+以下のような`InnerComponent`を差し込みたい場合...
+
+```html
+<YourComponent key=value>
+    <InnerComponent />
+</YourComponent>
+```
+
+以下のように書くと...
+
+```vue
+<template>
+    <div>
+        <p>コンポーネントの中身</p>
+        <slot></slot>
+    </div>
+</template>
+```
+
+`<slot></slot>`の部分に`<InnerComponent />`が差し込まれる。
+
+名前付きもできる。
