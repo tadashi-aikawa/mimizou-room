@@ -1,6 +1,30 @@
 # [Nuxt] Snippets
 
 
+Vue component template
+----------------------
+
+```ts
+<template></template>
+<script lang="ts">
+    import * as _ from 'lodash';
+    import {Dictionary} from 'lodash';
+    import {Component, State, Getter, Mutation, Prop, Vue, Action} from '~/node_modules/nuxt-property-decorator';
+
+    @Component({})
+    export default class extends Vue {
+        @State st: any;
+        @State(s => s.hoge.huga) huga: any;
+        @Action onAction;
+        @Prop() prop: any;
+        @Mutation setHogehoge: (x: any) => any;
+        @Getter getHogeHoge: (x: any) => any;
+    }
+</script>
+<style scoped></style>
+```
+
+
 コンポーネントにイベントを作成
 ------------------------------
 
