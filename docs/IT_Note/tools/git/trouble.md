@@ -62,3 +62,33 @@ autocrlf設定によって変わってしまう改行コードを抑制したい
 
 
 {{refer("https://qiita.com/nacam403/items/23511637335fc221bba2")}}
+
+
+競合を解消したい
+----------------
+
+### 1. 内容を1つにマージする
+
+好きなエディタでファイルをマージする。
+
+一方で完全に上書きしたい場合は以下のコマンドを使える。競合が激しいときはこっちの方がいいかも。
+
+```bash
+# 現在のブランチを優先
+git checkout --ours <files...>
+# マージするブランチを優先
+git checkout --theirs <files...>
+```
+
+### 2. 変更点をコミット
+
+`add`を忘れやすいので注意。
+
+```bash
+git add <files...>
+git commit
+```
+
+メッセージは自動で生成してくれる。
+
+{{refer("https://qiita.com/wataling/items/f7d82b84d5f5f248bc53")}}
