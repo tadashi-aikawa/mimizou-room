@@ -10,7 +10,7 @@
 
 手順だけ抜き出すと以下。
 
-```
+```vim
 "ログ出力先とプロファイリング対象を決める
 :profile start profile.log
 :profile func *

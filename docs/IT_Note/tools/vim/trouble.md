@@ -6,8 +6,8 @@
 
 ### 全ての設定をOFFにして起動したい
 
-```
-$ vim -u NONE -N
+```bash
+vim -u NONE -N
 ```
 
 * `-u`は別の設定を読み込むオプションなので`NONE`にすると`.vimrc`を読み込まない
@@ -24,7 +24,7 @@ Vimから`:terminal`を呼び出すことで以下のメリットがある。
 
 以下の設定が悪い方向に競合していたので、削除したらなおった。
 
-```
+```vim
 " MetaキーにAltを割り当てる
 let c = 'a'
 while c <= 'z'
@@ -78,14 +78,14 @@ very magicを利用します。`\v`を頭ににつけるだけ。
 
 確認不要の場合は`c`を外す
 
-```
+```vim
 :args *
 :argdo %s/before/after/gc | update
 ```
 
 #### 複数ファイルの一括操作
 
-```
+```vim
 args *
 :argdo exec "norm iTANAHASHI" | update
 ```
@@ -112,7 +112,7 @@ Markdown
 
 `plasticboy/vim-markdown`を使っている場合で`Foldexpr_markdown`が重い場合は以下の設定を追加することで無効化できます。
 
-```
+```vim
 let g:vim_markdown_folding_disabled = 1
 ```
 
