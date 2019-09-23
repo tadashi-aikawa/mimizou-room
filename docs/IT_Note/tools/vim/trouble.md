@@ -117,3 +117,12 @@ let g:vim_markdown_folding_disabled = 1
 ```
 
 {{refer("https://osiux.gitlab.io/2018-08-15-realizar-un-profile-en-vim-y-deshabilitar-foldexpr-markdown.html")}}
+
+
+Exコマンド
+----------
+
+### ExコマンドをNORMALモードで編集したい
+
+Exコマンドラインで`<C-f>`を押すとコマンド履歴画面で編集できます。
+
