@@ -34,3 +34,11 @@ xcopy /is <from> <to>
 ```bat
 rd /s /q <dir>
 ```
+
+### カレントディレクトリの特定階層の文字列取得
+
+6番目だったら..
+
+```bat
+for /f "usebackq tokens=6 delims==\" %%a in (`echo %CD%`) do set xrf_name=%%a
+```
