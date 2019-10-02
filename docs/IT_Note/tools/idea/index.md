@@ -68,9 +68,9 @@ File Watchersの設定
 
 リモートインタプリタを使う場合があるので`Program`はグローバル環境の`black`を参照するようにします。
 
-|   項目    |      値       |
-| --------- | ------------- |
-| File type | Python        |
-| Scope     | Current File  |
-| Program   | black         |
-| Arguments | -i $FilePath$ |
+|   項目    |      値      |
+| --------- | ------------ |
+| File type | Python       |
+| Scope     | Current File |
+| Program   | black        |
+| Arguments | $FilePath$   |
