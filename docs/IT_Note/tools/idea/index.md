@@ -52,6 +52,8 @@ VS Codeも使っている場合はコンテキストスイッチの切り替え�
 File Watchersの設定
 -------------------
 
+開いているファイルだけフォーマットしたいので、`Advanced options`のチェックは全て外す。
+
 ### Prettier
 
 `.prettierignore`を読み込む場合は`Working directory`の指定が必須です。
