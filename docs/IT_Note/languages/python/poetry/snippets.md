@@ -10,6 +10,8 @@
 poetry new <project_name>
 ```
 
+`pyproject.toml`を作成するだけなら`poetry init`.
+
 
 packageのインストール/アンインストール
 --------------------------------------
@@ -29,8 +31,20 @@ poetry remove <package_name>
 ### 依存関係を全てインストール(devも含む)
 
 ```bash
-poetry install
+poetry install [<packages>...]
 ```
+
+* `poetry.lock`がある場合は記載されたバージョンをインストール
+* `poetry.lock`がない場合は`pyproject.toml`から依存性グラフを作成した結果のバージョンをインストール + `poetry.lock`の作成
+
+### 依存関係のアップデート
+
+```bash
+poetry update [<packages>...]
+```
+
+`pyproject.toml`の条件を満たすバージョン最新が、`poetry.lock`に記録されていなければファイルをアップデート + インストール
+
 
 環境
 ----
@@ -82,6 +96,12 @@ packageのビルド
 
 ```bash
 poetry build
+```
+
+### wheelだけ作成
+
+```bash
+poetry build -f wheel
 ```
 
 
