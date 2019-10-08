@@ -55,6 +55,24 @@ poetry update [<packages>...]
 poetry debug:info
 ```
 
+### 仮想環境をプロジェクト配下に作成するようにする
+
+```bash
+poetry config settings.virtualenvs.in-project true
+```
+
+`%APPDATA%\pypoetry\config.toml`に登録される
+
+```toml
+[settings.virtualenvs]
+in-project = true
+```
+
+既に `%APPDATA%\pypoetry\Cache\virtualenvs` 配下に環境がある場合、そちらが優先して使われるので一度消すこと。
+
+{{refer("https://poetry.eustace.io/docs/configuration/#settingsvirtualenvsin-project-boolean")}}
+
+
 packageの依存関係
 -----------------
 
@@ -113,3 +131,23 @@ poetry build -f wheel
 ```bash
 poetry run <commands>...
 ```
+
+
+packageリリース
+---------------
+
+### パブリッシュ
+
+```bash
+poetry publish
+```
+
+### ID/PASSWORDを聞かれなくする
+
+```bash
+poetry config http-basic.pypi <username> <password>
+```
+
+`%APPDATA%\pypoetry\auth.toml`に登録される。
+
+{{refer("https://github.com/sdispater/poetry/issues/111")}}
