@@ -581,6 +581,7 @@ zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
 
 * `λ`に似た`\`を頭につけて表現
 * 普通は全体をカッコで括る
+* 複数引数は `(\x y -> x + y)`
 
 3の倍数
 
@@ -641,6 +642,24 @@ accumuratorは畳み込みによる途中結果
 
 * `5 - (4 - (3 - (2 - 1)))` と等価
 * 初期値は右端の`5`ではなく、左端の`1`
+
+### 正格な畳み込み
+
+畳み込みは遅延評価であるがゆえに完了するまで途中経過をメモリに展開する。  
+そのため、対象のリストが巨大だとStack Overflowになる。
+
+```haskell
+foldl (+) 0 (replicate 100000000 1)
+```
+
+`foldl`の代わりに`Data.List`モジュールの`foldl'`を使うと正格で即時評価できる。
+
+```haskell
+import Data.List (foldl')
+foldl' (+) 0 (replicate 100000000 1)
+```
+
+なお`foldr'`は存在しない。
 
 ### scan
 
@@ -711,3 +730,122 @@ summ = foldl1 (+)
 ```
 
 このような省略スタイルをポイントフリースタイルという。
+
+
+モジュール
+----------
+
+関数、型、型クラスなどが定義されたファイルのこと。
+
+Preludeはデフォルトでインポートされている。
+
+### インポート
+
+ファイルの先頭に書かなければいけない。
+
+`import モジュール名`でインポートする。
+
+```haskell
+*Main Lib> import Data.List
+*Main Lib Data.List> :t nub
+nub :: Eq a => [a] -> [a]
+```
+
+一部のみインポートする場合は指定する。
+
+```haskell
+> import Data.List (nub, sort)
+```
+
+別名インポート
+
+```haskell
+> import qualified Data.Map as M
+```
+
+⚠️ `Data.Map`が読み込めない..
+
+
+### Data.List
+
+|    関数    |             意味             |               記載例                |           結果            |
+| ---------- | ---------------------------- | ----------------------------------- | ------------------------- |
+| nub        | 重複する値をユニークにする   | nub [1,2,3,2,1,3]                   | [1,2,3]                   |
+| words      | 文字に分割する               | words "It is a member"              | ["It","is","a","member"]  |
+| group      | 隣接要素をグループ化する     | group [2,3,2,2,4,3]                 | [[2],[3],[2,2],[4],[3]]   |
+| sort       | ソートする                   | sort [2,3,2,2,4,3]                  | [2,2,2,3,3,4]             |
+| tails      | 全てのtailパターンを取得する | tails [1,2,3]                       | [[1,2,3], [2,3], [3], []] |
+| isPrefixOf | prefixで始まるか判定する     | isPrefixOf "Mr" "Mr. Tom"           | True                      |
+| find       | 初めて条件を満たす要素を返す | find (>3) [2,1,4,2,5]               | Just 4                    |
+| findIndex  | 初めて条件を満たす位置を返す | findIndex (>3) [2,1,4,2,5]          | Just 2                    |
+| isInfixOf  | 包含されているかを判定する   | isInfixOf [2,3] [1..5]              | True                      |
+| lookup     | keyからvalueを検索する       | lookup 2 [(1, "taro"), (2, "jiro")] | Just "jiro"               |
+
+### Data.Char
+
+|    関数    |           意味           |     記載例     | 結果 |
+| ---------- | ------------------------ | -------------- | ---- |
+| ord        | 文字を対応数値に変換する | ord 'a'        | 97   |
+| chr        | 数値を対応文字に変換する | chr 97         | 'a'  |
+| digitToInt | 文字を数字に変換する     | digitToInt '6' | 6    |
+| isDigit | 数値かどうかを判定する | isDigit '6' | True |
+
+### Data.Map
+
+名前競合するため`import qualified Data.Map as Map`で名前付けるのがよい。  
+`:set -package containers`が必要だった。これは❓
+
+
+`fromList`で連想リストから変換。
+
+```haskell
+members :: Map.Map Int String
+members = Map.fromList [(1, "tadashi"), (2, "tagayasu"), (3, "seigo")]
+```
+
+keyが重複する場合は`fromListWith`を使う。値をどう合体させるかは指定が必要。
+
+```haskell
+members :: Map.Map Int String
+members = Map.fromListWith (++) $ map (\(k, v) -> (k, [v])) [(1, "tadashi"), (2, "tagayasu"), (1, "seigo")]
+```
+
+
+|  関数  |          意味          |                     記載例                     |                        結果                        |
+| ------ | ---------------------- | ---------------------------------------------- | -------------------------------------------------- |
+| lookup | keyからvalueを検索する | lookup 2 $ fromList [(1, "taro"), (2, "jiro")] | Just "jiro"                                        |
+| insert | 要素を挿入する         | insert 3 "saburo"                              | fromList [(1, "taro"), (2, "jiro"), (3, "saburo")] |
+| size   | サイズの取得           | size $ fromList [(1, "taro"), (2, "jiro")]     | 2                                                  |
+
+`insert`などで元の値は変わらないので注意。新しい変数で束縛が必要。
+
+
+### モジュールの作成
+
+こんな感じで階層化することができる。
+
+```
+.
+∟src
+  ∟Geometry
+    ∟Cube.hs
+    ∟Cuboid.hs
+    ∟Sphere.hs
+```
+
+`Cube.hs`はこんな感じ。
+
+```haskell
+module Geometry.Cube
+  ( volume
+  , area
+  ) where
+
+import qualified Geometry.Cuboid as Cuboid
+
+volume :: Float -> Float
+volume side = Cuboid.volume side side side
+
+area :: Float -> Float
+area side = Cuboid.area side side side
+```

@@ -1,5 +1,10 @@
 # [Haskell] Top
 
+API
+---
+
+{{link("https://hoogle.haskell.org/")}}
+
 
 ghci
 ----
