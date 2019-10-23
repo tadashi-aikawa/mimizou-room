@@ -4,18 +4,7 @@
 よく使う設定
 ------------
 
-`.prettierrc.yaml`
-```yaml
-printWidth: 120
-tabWidth: 2
-useTabs: false
-semi: true
-singleQuote: true
-quoteProps: as-needed
-trailingComma: all
-bracketSpacing: true
-arrowParens: avoid
-```
+<script src="https://gist.github.com/tadashi-aikawa/697f228f7b0c1d333e15d887deff8a96.js"></script>
 
 設定はTypeScript Deep Diveに準拠している。
 
