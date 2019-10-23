@@ -130,30 +130,7 @@ $ pylint --generate-rcfile > .pylintrc
 
 テンプレートに含めてしまうのもアリ?
 
-```toml
-[tool.black]
-line-length = 100
-target-version = ['py36', 'py37', 'py38']
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-  # The following are specific to Black, you probably don't want those.
-  | blib2to3
-  | tests/data
-  | profiling
-)/
-'''
-```
+<script src="https://gist.github.com/tadashi-aikawa/697f228f7b0c1d333e15d887deff8a96.js?file=pyproject.toml"></script>
 
 ### .gitignore作成
 
@@ -167,23 +144,4 @@ $ echo /.idea >> .gitignore
 
 ### .editorconfigの作成
 
-```
-root = true
-
-[*]
-charset = utf-8
-end_of_line = lf
-indent_style = space
-indent_size = 4
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.yml]
-indent_size = 2
-
-[*.yaml]
-indent_size = 2
-
-[*.md]
-trim_trailing_whitespace = false
-```
+<script src="https://gist.github.com/tadashi-aikawa/697f228f7b0c1d333e15d887deff8a96.js?file=.editorconfig"></script>
