@@ -29,3 +29,13 @@
 ```
 
 {{refer("https://github.com/ElemeFE/element/issues/13453")}}
+
+
+アイコンによって幅が変わるのを統一したい
+----------------------------------------
+
+Classに`fa-fw`を指定すればOK.
+
+```html
+<font-awesome-icon class="fa-fw" />
+```
