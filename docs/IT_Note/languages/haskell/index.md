@@ -1,5 +1,24 @@
 # [Haskell] Top
 
+オススメ文献
+------------
+
+### 入門書
+
+{{link("https://www.amazon.co.jp/dp/B009RO80XY/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1")}}
+
+### Haskellでモナド周りを体系的に学ぶ
+
+以下シリーズ全て
+
+{{link("https://qiita.com/7shi/items/145f1234f8ec2af923ef")}}
+
+### Haskellで実際にモノを作る
+
+{{link("https://employment.en-japan.com/engineerhub/entry/2017/09/11/110000")}}
+{{link("https://employment.en-japan.com/engineerhub/entry/2017/10/03/110000")}}
+
+
 API
 ---
 
