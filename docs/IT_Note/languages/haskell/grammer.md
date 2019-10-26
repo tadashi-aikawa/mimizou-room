@@ -849,3 +849,65 @@ volume side = Cuboid.volume side side side
 area :: Float -> Float
 area side = Cuboid.area side side side
 ```
+
+
+オリジナルの型/型クラス
+-----------------------
+
+### 型定義
+
+`data`キーワードを使う。
+
+```haskell
+data Human = Man Int String Int | Woman Int String
+```
+
+* プロンプトに値を表示させるには`deriving (Show)`が必要
+
+### 値コンストラクタ
+
+上記の`Man`と`Woman`は値コンストラクタ。  
+型コンストラクタは型引数を受け取る。
+
+パターンマッチもできる。
+
+```haskell
+getAge :: Human -> Int
+getAge (Man _ _ age) = age
+getAge (Woman _ _) = -1
+```
+
+値コンストラクタはマッチに必ず必要なので、忘れてタプル(`(x y)`)にしないこと。
+
+### レコード構文
+
+辞書っぽい感じ。
+
+```haskell
+data Human
+  = Man { id   :: Int
+        , name :: String
+        , age  :: Int }
+  | Woman { id   :: Int
+          , name :: String }
+```
+
+インスタンスの作り方は2通り
+
+```haskell
+Man {id=1, age=32, name="tagayasu"}
+Man 1 "tagayasu" 32
+```
+
+フィールド名に一致した関数がgetterとして自動生成される
+
+```haskell
+> name $ Woman 1 "hanako"
+"hanako"
+```
+
+### 型コンストラクタ
+
+型引数をとって新しい型を作る。
+
+※ 型引数は`data Maybe a = Nothing | Just a`の`a`
