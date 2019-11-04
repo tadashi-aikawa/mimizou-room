@@ -1,14 +1,4 @@
-# [Slack] Top
-
-
-Message Format
---------------
-
-### URLリンク埋め込み
-
-```text
-<https://example.com|Overlook Hotel>
-```
+# [Slack] Snippets
 
 
 お気軽Webhook通知
