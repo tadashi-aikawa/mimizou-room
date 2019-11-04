@@ -1,5 +1,18 @@
 # [Haskell] Top
 
+
+API
+---
+
+{{link("https://hoogle.haskell.org/")}}
+
+
+オンラインIDE
+-------------
+
+{{link("https://repl.it/languages/haskell")}}
+
+
 オススメ文献
 ------------
 
@@ -17,12 +30,6 @@
 
 {{link("https://employment.en-japan.com/engineerhub/entry/2017/09/11/110000")}}
 {{link("https://employment.en-japan.com/engineerhub/entry/2017/10/03/110000")}}
-
-
-API
----
-
-{{link("https://hoogle.haskell.org/")}}
 
 
 ghci
