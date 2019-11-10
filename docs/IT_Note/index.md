@@ -29,6 +29,7 @@ title: はじめに
 
 ディレクトリ構成はREQUIREDだが、配下のファイルは全てOPTIONAL。
 
+※ 古いファイルの`faq.md`は`trouble.md`となっている
 
 ### 最上位階層
 
@@ -59,7 +60,7 @@ title: はじめに
 | config.md   | よく使う設定                                         |
 | keys.md     | よく使うショートカットキー                           |
 | snippets.md | よく使う表現や設定                                   |
-| trouble.md  | トラブルシューティング                               |
+| faq.md      | トラブルシューティング                               |
 
 ### services配下の構成
 
@@ -68,7 +69,7 @@ title: はじめに
 | index.md   | 利用開始方法や動作、オススメリンクなどの基本情報 |
 | config.md  | よく使う設定                                     |
 | keys.md    | よく使うショートカットキー                       |
-| trouble.md | トラブルシューティング                           |
+| faq.md     | トラブルシューティング                           |
 
 ### concepts配下の構成
 
@@ -77,7 +78,7 @@ title: はじめに
 | ファイル名 |       記載する内容       |
 | ---------- | ------------------------ |
 | index.md   | 基本的な情報はここに集約 |
-| trouble.md | トラブルシューティング   |
+| faq.md     | トラブルシューティング   |
 
 
 ### 構成イメージ
@@ -89,32 +90,32 @@ title: はじめに
             * index.md
             * grammer.md
             * snippets.md
-            * trouble.md
+            * faq.md
         * python
             * index.md
             * grammer.md
             * snippets.md
-            * trouble.md
+            * faq.md
             * requests
                 * index.md
                 * snippets.md
-                * trouble.md
+                * faq.md
         * typescript
             * index.md
             * grammer.md
             * snippets.md
-            * trouble.md
+            * faq.md
             * angular
                 * index.md
                 * grammer.md
                 * snippets.md
-                * trouble.md
+                * faq.md
     * tools
         * idea
             * index.md
             * config.md
             * key.md
-            * trouble.md
+            * faq.md
         * vscode
             * index.md
             * config.md
