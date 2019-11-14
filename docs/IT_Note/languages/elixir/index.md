@@ -1,5 +1,10 @@
 # [Elixir] Top
 
+学習
+----
+
+{{link("https://elixirschool.com/ja/")}}
+
 
 インストール
 ------------
