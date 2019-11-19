@@ -106,11 +106,22 @@ Enum
   * 遅延処理の場合はStreamモジュールを使う
 
 
-|   関数名    |            説明            |                例                |       結果        |
-| ----------- | -------------------------- | -------------------------------- | ----------------- |
-| all?        | 全てがtrueならtrue         | Enum.all?([0, true, :true])      | true              |
-| any?        | 1つでもtrueならtrue        | Enum.any?([0, true, :false])     | true              |
-| chunk_every | 特定サイズの配列に分割する | Enum.chunk_every([1,2,3,4,5], 2) | [[1,2],[3,4],[5]] |
+|   関数名    |                説明                |                           例                           |        結果         |
+| ----------- | ---------------------------------- | ------------------------------------------------------ | ------------------- |
+| all?        | 全てがtrueならtrue                 | Enum.all? [0, true, :true]                             | true                |
+| any?        | 1つでもtrueならtrue                | Enum.any? [0, true, :false]                            | true                |
+| chunk_every | 特定サイズの配列に分割する         | Enum.chunk_every 1..5, 2                               | [[1,2],[3,4],[5]]   |
+| chunk_by    | 関数の結果が同じもの同士で分割する |                                                        |                     |
+| map_every   | 一定間隔ごとに変換する             | Enum.map_every 1..5, 3, &(&1*100)                      | [100, 2, 3, 400, 5] |
+| each        | 反復して処理を実行する             | Enum.each 1..5, &(IO.puts &1)                          | :ok                 |
+| map         | 変換する                           | Enum.map 1..5, &(&1*2)                                 | [2, 4, 6, 8, 10]    |
+| min         | 最小値を取得する                   | Enum.min 1..5                                          | 1                   |
+| max         | 最大値を取得する                   | Enum.max 1..5                                          | 5                   |
+| filter      | 条件に一致する要素だけ取得する     | Enum.filter 1..5, &(&1 < 3)                            | [1, 2]              |
+| reduce      | 畳み込む                           | Enum.reduce 1..5, fn(x, acc) -> x + acc end            | 15                  |
+| sort        | ソートする                         | Enum.shuffle(5..1) &#124;> Enum.sort`                  | [1, 2, 3, 4, 5]     |
+| uniq        | ユニークにする                     | 1..10 &#124;> Enum.map(&(rem &1, 3)) &#124;> Enum.uniq | [1, 2, 0]           |
+| uniq_by     | 関数の結果でユニークにする         | 1..10 &#124;> Enum.uniq_by(&(rem &1, 3))               | [1, 2, 3]           |
 
 
 ラムダ式
