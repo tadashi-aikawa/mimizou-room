@@ -23,7 +23,7 @@ Chocolatey使うとIDEA使えなくなる。
 Windowsの場合
 
 ```
-$ cinst elixir
+cinst elixir
 ```
 
 インストール場所
