@@ -31,15 +31,3 @@
 
 </details>
 ```
-
-↓ こうなる
-
-<details>
-    <summary><b>(ﾟ∀ﾟ) v5.0 have breaking changes</b></summary>
-    <div>
-
-* `TIterator#group_by`
-  * Return `TDict[TList[T]]` instead of `TDict[TIterator[T]]`
-    </div>
-
-</details>
