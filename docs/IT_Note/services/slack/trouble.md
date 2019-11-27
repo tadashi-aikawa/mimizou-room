@@ -36,4 +36,4 @@ Message Formatについて
 
 MEGAMOJIを使うと色々な絵文字を簡単に作成できる。
 
-{{link("https://slack-redir.net/link?url=https%3A%2F%2Fzk-phi.github.io%2FMEGAMOJI%2F")}}
+{{link("https://zk-phi.github.io/MEGAMOJI/")}}
