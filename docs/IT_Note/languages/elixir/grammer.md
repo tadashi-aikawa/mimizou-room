@@ -174,3 +174,64 @@ key = :hello
 
 * `%{key: value}`
 * `%{^key: value}`
+
+
+制御構文
+--------
+
+### ifとunless
+
+* `if ... do ... end`
+* ifの逆が `unless ... do ... end`
+* `do`と`end`の間にelseが入ることがある
+
+### case
+
+パターンマッチ
+
+```elixir
+case ... do
+  ... -> ...
+  ... -> ...
+  _ -> ...
+end
+```
+
+定義済み変数にマッチさせる場合、`->`の左辺はピン演算子にする。
+
+### when
+
+パターンマッチ中のガード節として使う。
+
+```elixir
+case {1, 2, 3} do
+  {1, x, 3} when x > 0 -> "match"
+  _ -> "not match"
+end
+```
+
+### cond
+
+条件をマッチできる。`else if`のようなもの。
+
+```elixir
+cond do
+  x + y == 5 -> "five"
+  x * 2 == 7 -> "seven"
+  true -> "other"
+end
+```
+
+`default`的なものは`true`で拾う。
+
+### with
+
+`case/2`がネストするケースをflatに表現するのに便利
+
+```elixir
+with {:ok, id} <- Map.fetch(user, :id),
+     {:ok, name} <- Map.fetch(user, :name),
+     do: "[#{id}] #{name}"
+```
+
+`else`節で`:error`をキャッチできる
