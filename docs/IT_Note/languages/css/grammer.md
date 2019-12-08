@@ -1,6 +1,40 @@
 # [CSS] Grammer
 
 
+基本
+----
+
+{{link("https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/CSS_basics")}}
+
+![](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
+
+* セレクタ (selector)
+* 宣言 (declaration)
+* プロパティ (property)
+* プロパティ値 (property value)
+
+セミコロン区切り
+
+
+ボックス
+--------
+
+{{link(https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/CSS_basics#Boxes_boxes_its_all_about_boxes)}}
+
+![](https://mdn.mozillademos.org/files/9443/box-model.png)
+
+### パディング構文
+
+| 属性値の数 |         意味          |            覚え方            |
+| ---------- | --------------------- | ---------------------------- |
+| 1          | `padding 上下左右`    |                              |
+| 2          | `padding 上下 左右`   | 上下左右                     |
+| 3          | `padding 上 左右 下`  | ゲームコントローラを上から.. |
+| 4          | `padding 上 右 下 左` | 時計の針が回る方向           |
+
+{{refer("https://developer.mozilla.org/ja/docs/Web/CSS/padding#Syntax")}}
+
+
 セレクタ
 --------
 
