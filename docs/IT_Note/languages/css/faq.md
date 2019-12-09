@@ -41,3 +41,25 @@ a:visited {
 `object-fit: contain`を使う。
 
 {{refer("https://on-ze.com/archives/2296")}}
+
+
+iframeのコンテンツを拡大/縮小したい
+-----------------------------------
+
+transformを使う。
+
+```css
+.inline-page {
+  height: 600px;
+  width: 1920px;
+  transform: scale(0.55);
+  transform-origin: 0 0;
+  overflow: scroll;
+}
+```
+
+```html
+<iframe src="..." class="inline-page">
+```
+
+{{refer("https://blog.asial.co.jp/1314")}}
