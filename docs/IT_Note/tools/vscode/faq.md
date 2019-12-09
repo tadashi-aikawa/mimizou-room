@@ -147,8 +147,15 @@ module.exports = {
 
 `webpack --watch & sam local start-api --template ../template.yaml -d 5858`
 
+
 拡張機能
 --------
+
+### 自動更新をOFFにしたい
+
+```
+"extensions.autoUpdate": false
+```
 
 ### REST Clientで環境変数を使いたい
 
