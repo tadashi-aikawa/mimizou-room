@@ -235,3 +235,57 @@ with {:ok, id} <- Map.fetch(user, :id),
 ```
 
 `else`節で`:error`をキャッチできる
+
+
+関数
+----
+
+### 匿名関数
+
+#### 定義
+
+```
+func = fn (x, y) -> x + y end
+```
+
+省略記法を使うと
+
+```
+func = &(&1 + &2)
+```
+
+#### 呼び出し
+
+```elixir
+func.(2, 4)
+```
+
+❓ `func 2, 4`ではダメ..
+
+
+### 名前付き関数
+
+モジュールの中に`def ... do ... end`で定義する。
+
+```elixir
+defmodule Module do
+  def func() do
+    ...
+  end
+end
+```
+
+1行でもOK。
+
+```elixir
+defmodule Module do
+  def func(), do: "Hello"
+end
+```
+
+`,`と`:`がポイント
+
+#### 命名とアリティ
+
+名前が同じでもアリティが異なれば、異なる関数 (オーバーロードとは違う).
+
