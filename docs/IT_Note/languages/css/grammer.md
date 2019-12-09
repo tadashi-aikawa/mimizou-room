@@ -19,7 +19,7 @@
 ボックス
 --------
 
-{{link(https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/CSS_basics#Boxes_boxes_its_all_about_boxes)}}
+{{link("https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/CSS_basics#Boxes_boxes_its_all_about_boxes")}}
 
 ![](https://mdn.mozillademos.org/files/9443/box-model.png)
 
