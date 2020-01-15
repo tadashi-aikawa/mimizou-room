@@ -153,3 +153,20 @@ h2:after {
   color: grey;
   font-size: 80%;
 }
+
+.emphasis {
+  font-size: 150%;
+  color: orangered;
+}
+
+.label {
+  color: whitesmoke;
+  font-size: 50%;
+  font-weight: bolder;
+  padding: 1px 3px 1px;
+  background-color: grey;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-radius: 5px;
+}

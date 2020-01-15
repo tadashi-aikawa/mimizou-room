@@ -52,6 +52,10 @@ def get_favicon_url(html: any, url: str) -> str:
 
 def declare_variables(variables, macro):
     @macro
+    def minver(version):
+        return f'<span class="label">{version} ↑</span>'
+
+    @macro
     def refer(url):
         print(f"[Create Refer] {url}")
         session = HTMLSession()
