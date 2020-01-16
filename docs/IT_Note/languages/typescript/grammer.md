@@ -16,7 +16,7 @@ TypeScript2.0から公式リリースノートで紹介されている内容を�
 
 `null`と`undefined`をそれぞれ型として認識できる
 
-#### [--strictNullChecks](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#--strictnullchecks) {{minver(2.0)}}
+### [--strictNullChecks](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#--strictnullchecks) {{minver(2.0)}}
 
 `--strictNullChecks` でstrict null checking modeが有効になる
 
@@ -27,13 +27,30 @@ TypeScript2.0から公式リリースノートで紹介されている内容を�
 | `T`と`T | undefined` | 別の型とみなす               | ほぼ同一の型とみなす          |
 | `T`と`T | null`      | 別の型とみなす               | ほぼ同一の型とみなす          |
 
-#### [Assigned-before-use checking](taypescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#--strictnullchecks) {{minver(2.0)}}
+### [Assigned-before-use checking](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#assigned-before-use-checking) {{minver(2.0)}}
 
 strict null checking modeが有効のとき、変数の使用前に代入されていることをチェックする。
 
 * `undefined`の場合は代入不要 (未代入が`undefined`相当)
 * `null`の場合は代入が必要 (nullはObject)
 
+### [Optional parameters and properties](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#optional-parameters-and-properties) {{minver(2.0)}}
+
+`value?: T`と表現されたvalueは、型`T | undefined`となる.
+
+### [Non-null and non-undefined type guards](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-and-non-undefined-type-guards) {{minver(2.0)}}
+
+ifや三項演算子などの条件式でnull/undefinedの可能性がなくなったとき  
+型`T | null`や型`T | undefined`は型`T`となる. 逆も同じ.
+
+```ts
+let stringOrNull = string | null
+if (stringOrNull != null) {
+  // この中ではstringOrNullはstring型
+} else {
+  // この中ではstringOrNullはnull
+}
+```
 
 
 よく使う型
