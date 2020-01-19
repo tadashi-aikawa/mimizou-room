@@ -52,6 +52,24 @@ if (stringOrNull != null) {
 }
 ```
 
+### [Dotted names in type guards](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#dotted-names-in-type-guards) {{minver(2.0)}}
+
+Type guardがドット表記名をサポートした.  
+`arg`や`param`だけでなく、`arg.x`や`param.y`、`arg.x.y`などでもガードが可能.
+
+strict null checking modeではなくてもType guardは作用する.
+
+### [Expression operators](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#expression-operators) {{minver(2.0)}}
+
+オペランド(演算値)の型が`null`や`undefined`を含むとしても、結果はそれらを含まない。
+ただし、`&&`や`||`は例外.
+
+| 左オペランド型 | オペレータ | 右オペランド型 | 結果の型   |
+|----------------|------------|----------------|------------|
+| `T | null`     | `+`        | `T | null`     | `T`        |
+| `T | null`     | `&&`       | `U`            | `U | null` |
+| `T | null`     | `||`       | `U`            | `T | U`    |
+
 
 よく使う型
 ----------
