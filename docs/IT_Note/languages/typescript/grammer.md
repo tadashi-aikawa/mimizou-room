@@ -83,7 +83,9 @@ strict null checking modeの有無によって、`null`や`undefined`を代入�
 
 ### [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator) {{minver(2.0)}}
 
-`!`をつけると`null`や`undefined`の可能性がある変数から、`null`や`undefined`の可能性を排除できる.  
+`!`をつけると`null`や`undefined`の可能性がある変数から、`null`や`undefined`の可能性を排除できる.
+たとえば`x: number | null`に対しては、`x!.`
+
 Type guardsを使って型チェッカーが判断できるならその方がいい.
 
 
