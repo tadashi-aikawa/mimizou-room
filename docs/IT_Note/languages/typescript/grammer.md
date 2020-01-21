@@ -70,6 +70,22 @@ strict null checking modeではなくてもType guardは作用する.
 | `T | null`     | `&&`       | `U`            | `U | null` |
 | `T | null`     | `||`       | `U`            | `T | U`    |
 
+### [Type widening](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#type-widening) {{minver(2.0)}}
+
+strict null checking modeの有無によって、`null`や`undefined`を代入した変数の型が変わる.
+
+`let x = null`のとき
+
+| strict null checking mode | xの型  |
+|---------------------------|--------|
+| 有効                      | `null` |
+| 無効                      | `any`  |
+
+### [Non-null assertion operator](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator) {{minver(2.0)}}
+
+`!`をつけると`null`や`undefined`の可能性がある変数から、`null`や`undefined`の可能性を排除できる.  
+Type guardsを使って型チェッカーが判断できるならその方がいい.
+
 
 よく使う型
 ----------
