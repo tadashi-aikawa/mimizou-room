@@ -88,6 +88,37 @@ strict null checking modeの有無によって、`null`や`undefined`を代入�
 
 Type guardsを使って型チェッカーが判断できるならその方がいい.
 
+### [Control flow based type analysis](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#control-flow-based-type-analysis) {{minver(2.0)}}
+
+文(`return`や`break`など)、式により型が限定される場合は絞り込む.
+
+### [Tagged union types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#non-null-assertion-operator) {{minver(2.0)}}
+
+Discriminated union typesとも言う.
+
+Union型で指定されたそれぞれのinterfaceやclassに固定の文字列リテラル(判別特性)を持たせる.  
+if文やswitch文を使い判別特性の値で条件分岐したあと、Union型の候補は絞られる.
+
+以下はShapeというUnion型と`kind`という判別特性を使った例.
+
+```ts
+interface Square {
+  kind: "square";
+  size: number;
+}
+
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+
+type Shape = Square | Circle
+```
+
+Shapeのオブジェクト`sh`に対して`if(sh.kind === "square") {...}`が真の場合、`...`の処理内で`sh`は`Square`型として扱われる.
+
+※ 2.0だと判別特性(discriminant properties)はstringリテラルしか使えない
+
 
 よく使う型
 ----------
