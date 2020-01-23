@@ -119,6 +119,22 @@ Shapeのオブジェクト`sh`に対して`if(sh.kind === "square") {...}`が真
 
 ※ 2.0だと判別特性(discriminant properties)はstringリテラルしか使えない
 
+### [The never type](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#the-never-type) {{minver(2.0)}}
+
+発生しない値の型 `never`型 (primitive)
+
+* `never`型の変数は、すべての型に割り当てることができる (すべてsubtype)
+* `never`型でない変数は、`never`型に割り当てることができない
+
+出現するケース
+
+* 関数の最後に到達しない関数 (必ずthrowするなど)
+
+関数が`never`以外を返す可能性があるとき、戻り値の型に`never`は出現しない.  
+なぜなら、すべての型のsubtypeであるから.
+
+
+
 
 よく使う型
 ----------
