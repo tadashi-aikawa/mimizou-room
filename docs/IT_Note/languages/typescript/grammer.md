@@ -133,6 +133,25 @@ Shapeのオブジェクト`sh`に対して`if(sh.kind === "square") {...}`が真
 関数が`never`以外を返す可能性があるとき、戻り値の型に`never`は出現しない.  
 なぜなら、すべての型のsubtypeであるから.
 
+### [Read-only properties and index signatures](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#read-only-properties-and-index-signatures) {{minver(2.0)}}
+
+`readonly`を付けると、プロパティやインデックスを読み取り専用にできる.  
+すると代入ができなくなる(コンストラクタは例外).
+
+*readonlyのプロパティが持つプロパティは自動でreadonlyにならないので注意*
+
+```ts
+class Human {
+  constructor(public readonly readArg: number, public name: string, public readonly favorite?: Human){}
+}
+
+const tatsuwo = new Human(100, "tatsuwo", new Human(330, "mimizou"))
+
+tatsuwo.readArg = 5   // Error
+tatsuwo.name = "hoge" // OK
+tatsuwo.favorite = new Human(333, "mitsuwo") // Error
+tatsuwo.favorite.name = "MITSUWO" // OK
+```
 
 
 
