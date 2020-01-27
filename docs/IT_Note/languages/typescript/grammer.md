@@ -153,6 +153,37 @@ tatsuwo.favorite = new Human(333, "mitsuwo") // Error
 tatsuwo.favorite.name = "MITSUWO" // OK
 ```
 
+### [Specifying the type of this for functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#specifying-the-type-of-this-for-functions) {{minver(2.0)}}
+
+関数内で使うthisの型を指定できる. (Classの場合だけ?)
+
+普通に書くとcはany型になる. (TODO: this型になったので後のバージョンで変わった?)
+
+```ts
+class Caluculator {
+  add(x: number, y: number): number {
+    const c = this; // c: any
+    return x + y;
+  }
+}
+
+const calc = new Caluculator();
+console.log(calc.add(1, 2));
+```
+
+Pythonのselfみたいに第1引数にthisを指定すると、thisの型を強制できる.
+
+```ts
+class Caluculator {
+  add(this: Caluculator, x: number, y: number): number {
+    const c = this; // c: Caluculator
+    return x + y;
+  }
+}
+
+const calc = new Caluculator();
+console.log(calc.add(1, 2));      // 第1引数のthisはスルーされる
+```
 
 
 よく使う型
