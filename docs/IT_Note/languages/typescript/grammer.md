@@ -157,7 +157,12 @@ tatsuwo.favorite.name = "MITSUWO" // OK
 
 関数内で使うthisの型を指定できる. (Classの場合だけ?)
 
-普通に書くとcはany型になる. (TODO: this型になったので後のバージョンで変わった?)
+普通に書くとcはany型になる. 
+
+??? question "this型になった?"
+
+    cがany型ではなくthis型と判断された..後のリリースで仕様が変わった?
+
 
 ```ts
 class Caluculator {
@@ -184,6 +189,56 @@ class Caluculator {
 const calc = new Caluculator();
 console.log(calc.add(1, 2));      // 第1引数のthisはスルーされる
 ```
+
+### [this parameters in callbacks](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#this-parameters-in-callbacks) {{minver(2.0)}}
+
+コールバック関数の第1引数に`this: void`を指定することで、`this`の禁止を強要できる.  
+※ コールバックの`this`はバグの温床だからね！
+
+`onclick: (e: Event) => ...`ではなく`onclick: (this: void, e: Event) => ...`にすると..
+
+```ts
+interface UIElement {
+  addClickListener(onclick: (this: void, e: Event) => void): void;
+}
+```
+
+どのような形で`this`を使おうとしても、type checkの時点でエラーになる.
+
+```ts
+class Handler {
+  info: string;
+
+  // `this: Handler` としたとき
+  onClickBad(this: Handler, e: Event) {
+    this.info = e.message;
+  }
+}
+// Error: `onClickBad(this: Handler, e: Event)` に `(this: void, e: Event) => void` は代入できない
+({} as UIElement).addClickListener((new Handler()).onClickBad);
+```
+
+```ts
+class Handler {
+  info: string;
+
+  // `this: void` としたとき
+  onClickBad(this: void, e: Event) {
+    // Error: infoはvoid型に存在しない！
+    this.info = e.message;
+  }
+}
+({} as UIElement).addClickListener((new Handler()).onClickBad);
+```
+
+### [--noImplicitThis](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#--noimplicitthis) {{minver(2.0)}}
+
+`--noImplicitThis`を有効にすると、`this`の方が明示されていない場合エラーになる.
+
+??? question "this型になった?"
+
+    エラーにならず`this`型と判断された.. 後のリリースで`this`型に対応したから?)
+
 
 
 よく使う型
