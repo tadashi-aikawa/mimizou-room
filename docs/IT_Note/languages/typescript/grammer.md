@@ -239,6 +239,22 @@ class Handler {
 
     エラーにならず`this`型と判断された.. 後のリリースで`this`型に対応したから?)
 
+### [Base URL](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#base-url) {{minver(2.0)}}
+
+`compilerOptions.baseUrl`にパスを指定すると、相対名のないimportは`tsconfig.json`を基点とした指定値からの相対パスとなる.  
+`tsconfig.json`の場所を`~/typescript-sample`としたとき、`"baseUrl": "./foo/bar"`なら以下は同じ.
+
+* `import "foo/bar"`
+* `import "~/typescript-sample/foo/bar"`
+
+AMD moduleをロードする場合に使う.
+
+### [Path mapping](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#path-mapping) {{minver(2.0)}}
+
+特定のmoduleだけ`baseUrl`配下の特定ファイルを読み込みたい場合、`paths`にkey-value形式で指定できる.
+
+`import "moduleName"`のような簡潔表記が可能になる.
+
 
 
 よく使う型
