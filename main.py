@@ -61,7 +61,7 @@ def declare_variables(variables, macro):
         session = HTMLSession()
         res = session.get(url)
         if not res.ok:
-            print(f"☠☠ Failure ☠☠")
+            print(f">>>>> Failure: {url}")
 
         title = (
             get_meta_by_property(res.html, "og:title")
@@ -91,7 +91,7 @@ def declare_variables(variables, macro):
         session = HTMLSession()
         res = session.get(url)
         if not res.ok:
-            print(f"☠☠ Failure ☠☠")
+            print(f">>>>> Failure: {url}")
 
         site_name = (
             get_meta_by_property(res.html, "og:site_name") or urlsplit(url).netloc
