@@ -96,53 +96,53 @@ def declare_variables(variables, macro):
         session = HTMLSession()
         try:
             res = session.get(url)
+            if not res.ok:
+                print(f">>>>> Failure: {url}")
+                return
+
+            site_name = (
+                get_meta_by_property(res.html, "og:site_name") or urlsplit(url).netloc
+            )
+            title = (
+                get_meta_by_property(res.html, "og:title")
+                or res.html.find("title")[0].text
+                or url
+            )
+            description = (
+                get_meta_by_property(res.html, "og:description")
+                or get_meta_by_name(res.html, "description")
+                or ""
+            )
+            image_url: Optional[str] = get_meta_by_property(
+                res.html, "og:image"
+            ) or get_src_by_id(res.html, "ebooksImgBlkFront")
+            favicon_url = get_favicon_url(res.html, url)
+            icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
+
+            if not site_name:
+                print(f"  ∟ ⚠ No Site Name")
+            if not title:
+                print(f"  ∟ ⚠ No Title")
+            if not description:
+                print(f"  ∟ ⚠ No description")
+            if favicon_url:
+                print(f"  ∟ favicon: {favicon_url}")
+            else:
+                print(f"  ∟ ⚠ No favicon")
+
+            if image_url:
+                if "http://" not in image_url and "https://" not in image_url:
+                    image_url = f"{to_base_url(url)}/{image_url}"
+                if "http://" in image_url:
+                    image_url = image_url.replace("http://", "https://")
+                    print(
+                        f"  ∟ ⚠ This Image URL includes http scheme.. so replace http to https.."
+                    )
+            else:
+                print(f"  ∟ ⚠ No Image URL")
+
         except:
-            print(f">>>>> Error: {url}")
-            return
-        if not res.ok:
-            print(f">>>>> Failure: {url}")
-            return
-
-        site_name = (
-            get_meta_by_property(res.html, "og:site_name") or urlsplit(url).netloc
-        )
-        title = (
-            get_meta_by_property(res.html, "og:title")
-            or res.html.find("title")[0].text
-            or url
-        )
-        description = (
-            get_meta_by_property(res.html, "og:description")
-            or get_meta_by_name(res.html, "description")
-            or ""
-        )
-        image_url: Optional[str] = get_meta_by_property(
-            res.html, "og:image"
-        ) or get_src_by_id(res.html, "ebooksImgBlkFront")
-        favicon_url = get_favicon_url(res.html, url)
-        icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
-
-        if not site_name:
-            print(f"  ∟ ⚠ No Site Name")
-        if not title:
-            print(f"  ∟ ⚠ No Title")
-        if not description:
-            print(f"  ∟ ⚠ No description")
-        if favicon_url:
-            print(f"  ∟ favicon: {favicon_url}")
-        else:
-            print(f"  ∟ ⚠ No favicon")
-
-        if image_url:
-            if "http://" not in image_url and "https://" not in image_url:
-                image_url = f"{to_base_url(url)}/{image_url}"
-            if "http://" in image_url:
-                image_url = image_url.replace("http://", "https://")
-                print(
-                    f"  ∟ ⚠ This Image URL includes http scheme.. so replace http to https.."
-                )
-        else:
-            print(f"  ∟ ⚠ No Image URL")
+            raise Error(f">>>>> Error: {url}")
 
         return f"""
         <div class="link-card">
