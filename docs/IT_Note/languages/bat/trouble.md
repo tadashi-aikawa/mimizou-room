@@ -9,7 +9,7 @@ for文やif文の中で変数が期待通りにならない
 * `setlocal enabledelayedexpansion` の文がある
 * forやifの中で`!ARG!`のような変数指定をしている (`%ARG%`ではなく)
 
-{{refer("https://wa3.i-3-i.info/word12518.html")}}
+参考: https://wa3.i-3-i.info/word12518.html
 
 
 glob表記を含めた可変長引数の処理をしたい

@@ -26,7 +26,7 @@
 
 ES2015以降やNode.js、npmなどを知っている人向け。
 
-{{link("http://typescript.ninja/typescript-in-definitelyland/")}}
+http://typescript.ninja/typescript-in-definitelyland/
 
 !!! warning ""
     対応TypeScriptバージョンは古いので注意 (TypeScript 2.4.2)
