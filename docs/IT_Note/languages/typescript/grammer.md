@@ -255,6 +255,47 @@ AMD moduleをロードする場合に使う.
 
 `import "moduleName"`のような簡潔表記が可能になる.
 
+### [Virtual Directories with rootDirs](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#virtual-directories-with-rootdirs) {{minver(2.0)}}
+
+複数のディレクトリがあたかも同じディレクトリであるかのように見せてimportができる.
+
+ファイル構成
+
+```
+* src
+  * one
+    * one1.ts
+  * other
+    * other1.ts
+```
+
+`tsconfig.json`の設定に`rootDirs`を入れる.
+
+```
+    "rootDirs": [
+      "src/one",
+      "src/other"
+    ]
+```
+
+すると、`one1.ts`と`other1.ts`はお互いがカレントディレクトリにいるものとしてimportできる.
+
+`one1.ts`
+
+```ts
+import { add } from './other1';  // src/one と src/other は同ディレクトリと判断されるためOK
+export function add3(a: number, b: number, c: number): number {
+  return add(add(a, b), c);
+}
+```
+
+`other1.ts`
+
+```ts
+export function add(a: number, b: number): number {
+  return a + b;
+}
+```
 
 
 よく使う型
