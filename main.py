@@ -59,9 +59,14 @@ def declare_variables(variables, macro):
     def refer(url):
         print(f"[Create Refer] {url}")
         session = HTMLSession()
-        res = session.get(url)
+        try:
+            res = session.get(url)
+        except:
+            print(f">>>>> Error: {url}")
+            return
         if not res.ok:
             print(f">>>>> Failure: {url}")
+            return
 
         title = (
             get_meta_by_property(res.html, "og:title")
@@ -89,9 +94,14 @@ def declare_variables(variables, macro):
     def link(url):
         print(f"[Create Card] {url}")
         session = HTMLSession()
-        res = session.get(url)
+        try:
+            res = session.get(url)
+        except:
+            print(f">>>>> Error: {url}")
+            return
         if not res.ok:
             print(f">>>>> Failure: {url}")
+            return
 
         site_name = (
             get_meta_by_property(res.html, "og:site_name") or urlsplit(url).netloc
