@@ -142,7 +142,7 @@ def declare_variables(variables, macro):
                 print(f"  ∟ ⚠ No Image URL")
 
         except:
-            raise Error(f">>>>> Error: {url}")
+            raise Exception(f">>>>> Error: {url}")
 
         return f"""
         <div class="link-card">
