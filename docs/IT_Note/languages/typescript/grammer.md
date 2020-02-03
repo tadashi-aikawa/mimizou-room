@@ -297,6 +297,11 @@ export function add(a: number, b: number): number {
 }
 ```
 
+### [Tracing module resolution](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#tracing-module-resolution) {{minver(2.0)}}
+
+`--traceResolution`オプションを付けると、コンパイラがモジュールの依存関係をどう解決したか表示できる.
+
+
 
 よく使う型
 ----------
