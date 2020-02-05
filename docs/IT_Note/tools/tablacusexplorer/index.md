@@ -56,7 +56,7 @@
 
 X-Finderアドオンをインストール済みなら以下の環境変数が使える。
 
-{{link("https://www.eonet.ne.jp/~gakana/xf.html#env")}}
+https://www.eonet.ne.jp/~gakana/xf.html#env
 
 X-Finderだけで使える環境変数や各項目の意味は以下のサイトが詳しい。
 
