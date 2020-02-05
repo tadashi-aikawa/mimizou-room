@@ -315,7 +315,7 @@ export function add(a: number, b: number): number {
 
 以下のような`index.d.ts`のような型定義ファイルを作成すると、any型としてmoduleをインポートできる.
 
-```
+```ts
 declare module "your-import-module"
 ```
 
