@@ -255,6 +255,16 @@ AMD moduleをロードする場合に使う.
 
 `import "moduleName"`のような簡潔表記が可能になる.
 
+Nuxt.jsの`tsconfig.json`では以下のようにRoot直下のパスをどこからでも`~/...`や`@/...`で指定可能になっている.
+
+```
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+```
+
 ### [Virtual Directories with rootDirs](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#virtual-directories-with-rootdirs) {{minver(2.0)}}
 
 複数のディレクトリがあたかも同じディレクトリであるかのように見せてimportができる.
@@ -301,6 +311,15 @@ export function add(a: number, b: number): number {
 
 `--traceResolution`オプションを付けると、コンパイラがモジュールの依存関係をどう解決したか表示できる.
 
+### [Shorthand ambient module declarations](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#shorthand-ambient-module-declarations) {{minver(2.0)}}
+
+以下のような`index.d.ts`のような型定義ファイルを作成すると、any型としてmoduleをインポートできる.
+
+```
+declare module "your-import-module"
+```
+
+型定義ファイルはないが、とりあえず動かしたいときに有効.
 
 
 よく使う型
