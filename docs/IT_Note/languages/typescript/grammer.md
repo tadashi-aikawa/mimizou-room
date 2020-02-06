@@ -321,6 +321,14 @@ declare module "your-import-module"
 
 型定義ファイルはないが、とりあえず動かしたいときに有効.
 
+### [Wildcard character in module names](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#wildcard-character-in-module-names) {{minver(2.0)}}
+
+型定義のmodule宣言対象にワイルドカードを指定できる.  
+たとえば`declare module '*.json'`のようにすると、全てのjsonファイルがインポート対象になる.
+
+`*!text`や`json!*`でprefix/suffix指定表現にも対応できる.  
+ただ実行時までの間にパスを解決する必要があるためWebpackなどのツールチェーンが必要なはず.
+
 
 よく使う型
 ----------
