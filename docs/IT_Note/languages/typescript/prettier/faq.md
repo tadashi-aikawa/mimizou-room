@@ -1,4 +1,4 @@
-# [Prettier] FAW
+# [Prettier] FAQ
 
 
 IDEAで動かない
