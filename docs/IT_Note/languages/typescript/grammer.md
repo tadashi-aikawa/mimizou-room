@@ -329,6 +329,20 @@ declare module "your-import-module"
 `*!text`や`json!*`でprefix/suffix指定表現にも対応できる.  
 ただ実行時までの間にパスを解決する必要があるためWebpackなどのツールチェーンが必要なはず.
 
+### [Optional class properties](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#optional-class-properties) {{minver(2.0)}}
+
+strict null checking modeが有効のとき、クラスプロパティに`?`をつけると` | undefined`になる.
+
+```ts
+class Hoge {
+  a?: number
+  b?(): string
+}
+```
+
+* `a`は`number | undefined`になる
+* `b`は`(() => string) | undefined`になる
+
 
 よく使う型
 ----------
