@@ -343,6 +343,16 @@ class Hoge {
 * `a`は`number | undefined`になる
 * `b`は`(() => string) | undefined`になる
 
+### [Private and Protected Constructors](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#private-and-protected-constructors) {{minver(2.0)}}
+
+privateやprotectedのコンストラクタを作ることができる.
+
+| 可視性    | 外部からの呼び出し(new) | 継承 |
+|-----------|-------------------------|------|
+| private   | O                       | X    |
+| protected | O                       | O    |
+| public    | O                       | O    |
+
 
 よく使う型
 ----------
