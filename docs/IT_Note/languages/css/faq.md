@@ -26,11 +26,12 @@
 Linkの色を変更せずにaタグを使いたい(リンクしたい)
 -------------------------------------------------
 
-visitedの色を指定する。
+`inherit`で親のスタイルを引き継げばOK.
 
-```
-a:visited {
-    color: #00F;
+```css
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 ```
 
