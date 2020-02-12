@@ -353,6 +353,14 @@ privateやprotectedのコンストラクタを作ることができる.
 | protected | O                       | O    |
 | public    | O                       | O    |
 
+### [Abstract properties and accessors](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#abstract-properties-and-accessors) {{minver(2.0)}}
+
+abstractクラスには以下を定義できる.
+
+* abstract プロパティ
+* abstract getter
+* abstract setter
+
 
 よく使う型
 ----------
