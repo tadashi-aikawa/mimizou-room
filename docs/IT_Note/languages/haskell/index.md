@@ -28,8 +28,8 @@ API
 
 ### Haskellで実際にモノを作る
 
-{{link("https://employment.en-japan.com/engineerhub/entry/2017/09/11/110000")}}
-{{link("https://employment.en-japan.com/engineerhub/entry/2017/10/03/110000")}}
+* https://employment.en-japan.com/engineerhub/entry/2017/09/11/110000
+* https://employment.en-japan.com/engineerhub/entry/2017/10/03/110000
 
 
 ghci
