@@ -361,6 +361,28 @@ abstractクラスには以下を定義できる.
 * abstract getter
 * abstract setter
 
+### [Implicit index signatures](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#implicit-index-signatures) {{minver(2.0)}}
+
+index signature (`{[key: string]: number}`など) にObject literalを割り当てることができる.  
+ただし、値の型が等しい場合のみ.  
+※ 今回のケースでは`number`
+
+```ts
+function func(arg: { [key: string]: number }) {
+  console.log(arg);
+}
+
+const obj = {
+  key1: 1,
+  key2: 1,
+  3: 1,
+};
+
+func(obj);
+```
+
+keyは型が一致していなくても動作する.
+
 
 よく使う型
 ----------
