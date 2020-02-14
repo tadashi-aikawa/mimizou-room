@@ -383,6 +383,22 @@ func(obj);
 
 keyは型が一致していなくても動作する.
 
+### [Including built-in type declarations with --lib](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#including-built-in-type-declarations-with---lib) {{minver(2.0)}}
+
+`--lib`や`compilerOptions.lib`でランタイムに含まれるAPIを指定できる.  
+たとえば、`dom`を追加すると`document`などの型が認識される.
+
+`tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": ["es2018", "dom"]
+  }
+}
+```
+
 
 よく使う型
 ----------
