@@ -399,6 +399,17 @@ keyは型が一致していなくても動作する.
 }
 ```
 
+### [Flag unused declarations with --noUnusedParameters and --noUnusedLocals](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#flag-unused-declarations-with---nounusedparameters-and---nounusedlocals) {{minver(2.0)}}
+
+使われていないパラメータやローカル変数があるとエラーになる.
+
+| パラメータ             | 検査の対象                                                   |
+|------------------------|--------------------------------------------------------------|
+| `--noUnusedParameters` | 関数やメソッドの引数                                         |
+| `--noUnusedLocals`     | 使われていない/exportされていない宣言(変数/関数/クラス..etc) |
+
+パラメータ/変数の名前を`_`から始めると検査対象から除外される.
+
 
 よく使う型
 ----------
