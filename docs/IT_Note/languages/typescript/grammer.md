@@ -416,9 +416,9 @@ keyは型が一致していなくても動作する.
 `import d from "./moduleA.js"`のように`.js`拡張子を付けてインポートできるようになった.
 
 * 2.0以前
-  * `moduleA.js.ts` or `moduleA.js.d.ts` を探しにいく
+    * `moduleA.js.ts` or `moduleA.js.d.ts` を探しにいく
 * 2.0以降
-  * `moduleA.ts` or `moduleA.d.ts` を探しにいく
+    * `moduleA.ts` or `moduleA.d.ts` を探しにいく
 
 
 よく使う型
