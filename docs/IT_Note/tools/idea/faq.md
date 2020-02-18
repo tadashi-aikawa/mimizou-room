@@ -26,6 +26,10 @@
 `Code Style`から変更する。
 linterなどと設定がすれ違うと面倒..  
 
+### クリックフィックスなしで自動インポートしたい
+
+`Editor` > `General` > `Auto Import` の `Unambiguous imports on the fly` にチェックをつける。
+
 #### クォーテーション
 
 ![](images/2020-01-01-13-21-06.png)
