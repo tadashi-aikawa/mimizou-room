@@ -411,6 +411,16 @@ keyは型が一致していなくても動作する.
 パラメータ/変数の名前を`_`から始めると検査対象から除外される.
 
 
+### [Module identifiers allow for .js extension](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#module-identifiers-allow-for-js-extension) {{minver(2.0)}}
+
+`import d from "./moduleA.js"`のように`.js`拡張子を付けてインポートできるようになった.
+
+* 2.0以前
+  * `moduleA.js.ts` or `moduleA.js.d.ts` を探しにいく
+* 2.0以降
+  * `moduleA.ts` or `moduleA.d.ts` を探しにいく
+
+
 よく使う型
 ----------
 
