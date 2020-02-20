@@ -420,6 +420,32 @@ keyは型が一致していなくても動作する.
 * 2.0以降
     * `moduleA.ts` or `moduleA.d.ts` を探しにいく
 
+### [Support ‘target : es5’ with ‘module: es6’](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#support-target--es5-with-module-es6) {{minver(2.0)}}
+
+`target: es5`と`module: es6`の組み合わせが不正ではなくなった.
+
+!!! question "メリットは分からず..."
+
+### [Trailing commas in function parameter and argument lists](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#trailing-commas-in-function-parameter-and-argument-lists) {{minver(2.0)}}
+
+関数定義の引数リストや、関数の引数リストに末尾カンマが許容されるようになった.
+
+```ts
+function hoge(
+  a: int,
+  b: int,
+) {
+  return a + b
+}
+
+hoge(
+  1,
+  2,
+)
+```
+
+改行で区切って無くてもOK. ただ末尾カンマをつけたいのは通常改行時 (diffを見やすくするため)
+
 
 よく使う型
 ----------
