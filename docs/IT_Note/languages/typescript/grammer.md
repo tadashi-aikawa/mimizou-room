@@ -446,6 +446,12 @@ hoge(
 
 改行で区切って無くてもOK. ただ末尾カンマをつけたいのは通常改行時 (diffを見やすくするため)
 
+### [New --skipLibCheck](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#new---skiplibcheck) {{minver(2.0)}}
+
+`--skiplibcheck`をコンパイル時にオプションとして付けると、`d.ts`ファイルの型検査をスキップする.
+
+!!! "question" "...↑と書いてあるのだけどスキップしてくれない。。なぜ。。。"
+
 
 よく使う型
 ----------
