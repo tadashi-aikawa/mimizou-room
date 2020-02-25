@@ -452,6 +452,38 @@ hoge(
 
 !!! question "...↑と書いてあるのだけどスキップしてくれない。。なぜ。。。"
 
+### [Allow duplicate identifiers across declarations](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#allow-duplicate-identifiers-across-declarations) {{minver(2.0)}}
+
+複数の同一名称型において、重複する識別子を許容する.
+
+以下は問題なしとなる。
+
+```ts
+interface Hoge {
+  hoge1: string;
+}
+
+interface Hoge {
+  hoge1: string;
+  hoge2: string;
+}
+
+const hoge = {
+  hoge1: '11',
+  hoge2: '22',
+}
+```
+
+一方、同一ブロック内の重複はNG.
+
+```ts
+interface Hoge {
+  hoge1: string;
+  hoge2: string;
+  hoge1: string;  // これはエラー
+}
+```
+
 
 よく使う型
 ----------
