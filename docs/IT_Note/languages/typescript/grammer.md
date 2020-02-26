@@ -484,6 +484,17 @@ interface Hoge {
 }
 ```
 
+### [New --declarationDir](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html#new---declarationdir) {{minver(2.0)}}
+
+`.d.ts`ファイルの出力ディレクトリを指定できる.
+
+```console
+tsc --declaration --declarationDir ${dirname}
+```
+
+もちろん`tsconfig.json`の`declaration`と`declarationDir`を指定してもOK.
+
+
 
 よく使う型
 ----------
