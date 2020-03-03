@@ -64,3 +64,25 @@ transformを使う。
 ```
 
 {{refer("https://blog.asial.co.jp/1314")}}
+
+
+HTMLの記載順とDOMの配置順を変えたい
+----------------------------------
+
+`display: flex;`と`order`を使う。
+
+```html
+<div style="display: flex;">
+  <div style="order: 2;">2つ目</div>
+  <div style="order: 3;">3つ目</div>
+  <div style="order: 1;">1つ目</div>
+</div>
+```
+
+↓ 結果
+
+<div style="display: flex;">
+  <div style="order: 2;">2つ目</div>
+  <div style="order: 3;">3つ目</div>
+  <div style="order: 1;">1つ目</div>
+</div>
