@@ -180,3 +180,14 @@ module.exports = {
 ```
 
 {{refer("https://marketplace.visualstudio.com/items?itemName=humao.rest-client")}}
+
+### Prettierが効かない
+
+`settings.json`で`prettier.disableLanguages`に指定されていないか確認.
+
+```json
+  "prettier.disableLanguages": [
+    "markdown",
+    "yaml"
+  ],
+```
