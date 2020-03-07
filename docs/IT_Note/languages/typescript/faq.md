@@ -37,3 +37,18 @@ tsconfig.jsonが読み込まれない
 ```
 $ npm i -D @types/lodash
 ```
+
+jsonファイルをインポートしたい
+------------------------------
+
+`tsconfig.json`の`compilerOptions`に以下を記載する。
+
+```json
+  "resolveJsonModule": true,`
+```
+
+こんな感じ。
+
+```ts
+import * as pkg from '~/package.json';
+```
