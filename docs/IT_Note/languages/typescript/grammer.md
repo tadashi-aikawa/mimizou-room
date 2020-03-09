@@ -495,6 +495,35 @@ tsc --declaration --declarationDir ${dirname}
 もちろん`tsconfig.json`の`declaration`と`declarationDir`を指定してもOK.
 
 
+### [keyof and Lookup Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#keyof-and-lookup-types) {{minver(2.1)}}
+
+* `keyof T`で`TのプロパティからなるUnion Type`を表現できる
+* `T[K]`はlookup typesと呼ばれ、`T`のプロパティ`K`と同様の型と判断される.
+
+`<T, K extends keyof T>`のような構文は頻出する.  
+
+stringのUnion typeはstringのsubtypeである.  
+同じく、UnionType`T1`が別のUnionType`T2`を完全に包含する場合、`T1`は`T2`のsubtypeであり`T1 extends T2`である.
+
+`T`を以下のように定義したとき
+
+```ts
+class T {
+  p1: string
+  p2: number
+}
+```
+
+* `keyof T`は`"p1" | "p2"`である
+* 型`"p1"`は`"p1" | "p2"`のsubtypeである
+* 型`"p2"`は`"p1" | "p2"`のsubtypeである
+
+それゆえ
+
+`<T, "p1">` または `<T, "p2">` => `<T, K extends "p1" | "p2">` => `<T, K extends keyof T>`
+
+といえる.
+
 
 よく使う型
 ----------
