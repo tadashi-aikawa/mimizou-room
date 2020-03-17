@@ -525,6 +525,51 @@ class T {
 といえる.
 
 
+### [Mapped Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#mapped-types) {{minver(2.1)}}
+
+`[P in keyof T`と書くと、ある型のプロパティを利用して型を定義できる.
+
+たとえば、ある型`T`に対して、すべてのプロパティをOptionalにする型を以下のように作成できる.
+
+```ts
+type Partial<T> = {
+  [P in keyof T]?: T[P]
+}
+```
+
+
+Tが`interface Human { id: number, name: string }`のとき、Pythonのような疑似表記を交えて書くと..
+
+↓ `keyof T`は`T`のUnion Typeなので
+
+```ts
+type Partial<Human> = {
+  for P in ['id', 'name']:
+    P?: Human[P]
+}
+```
+
+↓ for文を回すと..
+
+```ts
+type Partial<Human> = {
+  id?: Human['id']
+  name?: Human['name']
+}
+```
+
+↓ Lookup Typesより..
+
+```ts
+type Partial<Human> = {
+  id?: number
+  name?: string
+}
+```
+
+となる.
+
+
 よく使う型
 ----------
 
