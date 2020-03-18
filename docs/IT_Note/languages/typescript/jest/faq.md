@@ -1,8 +1,18 @@
 # [Jest] FAQ
 
 
-テスト対象の中でimportしているモジュールのMockを作りたい
---------------------------------------------------------
+テストの実行方式について
+-----------------------
+
+### 1テストSuiteずつ直列に実行したい
+
+`--runInBand`オプションをつける
+
+
+テストの書き方について
+----------------------
+
+### テスト対象の中でimportしているモジュールのMockを作りたい
 
 `companyService.fetch`が`clients/api`を使っているケース。  
 `clients/api`をMock化して、副作用の無い状態で`companyService.fetch`をテストしたい。
@@ -27,6 +37,12 @@ describe('companyService.fetch', () => {
 
 モック化した`モジュール.プロパティ`に対して、`mockReturnValue(...)`で任意の値をreturnさせる。  
 `mockImplementation((arg1, arg2) => arg1 + arg2)`のようにすると任意のfunctionを定義できる。
+
+### 一定時間内で何度か確認してOKかを判定したい
+
+`wait-for-except`を使う.
+
+{{link("https://github.com/TheBrainFamily/wait-for-expect#readme")}}
 
 
 Decorators are not enabled エラーになる
