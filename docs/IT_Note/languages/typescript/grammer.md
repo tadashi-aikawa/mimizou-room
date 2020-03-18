@@ -593,24 +593,24 @@ interface Human {
 それぞれ以下のようになる。
 
 ```ts
-interface Partial<Human> {
+type Partial<Human> = {
   id?: number;
   name?: string;
   age?: number;
 }
 
-interface Readonly<Human> {
+type Readonly<Human> = {
   readonly id: number;
   readonly name: string;
   readonly age?: number;
 }
 
-interface Pick<Human, "id" | "name"> {
+type Pick<Human, "id" | "name"> = {
   id: number;
   name: string;
 }
 
-interface Record<keyof Human, number> {
+type Record<keyof Human, number> = {
   id: number;
   name: number;
   age?: number;
