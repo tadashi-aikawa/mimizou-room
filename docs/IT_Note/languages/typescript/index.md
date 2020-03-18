@@ -115,6 +115,16 @@ TypeScriptならではの型が紹介されている。
 
 [crypto-js]: https://github.com/brix/crypto-js
 
+### クリップボード
+
+|          名前          | 採用 |                      備考                      |
+| ---------------------- | ---- | ---------------------------------------------- |
+| [gforceg/ts-clipboard] | O    | TypeScriptならコレ                             |
+| [clipboard-polyfill]   | O    | JavaScriptでタブや改行も上手くコピーしてくれる |
+
+[gforceg/ts-clipboard]: https://github.com/gforceg/ts-clipboard
+[clipboard-polyfill]: https://github.com/lgarron/clipboard-polyfill
+
 
 よく使うビルドオプション
 ------------------------
