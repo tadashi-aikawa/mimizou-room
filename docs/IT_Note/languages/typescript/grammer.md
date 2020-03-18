@@ -503,7 +503,7 @@ tsc --declaration --declarationDir ${dirname}
 `<T, K extends keyof T>`のような構文は頻出する.  
 
 stringのUnion typeはstringのsubtypeである.  
-同じく、UnionType`T1`が別のUnionType`T2`を完全に包含する場合、`T1`は`T2`のsubtypeであり`T1 extends T2`である.
+同じく、UnionType`T1`が別のUnionType`T2`に完全に包含される場合、`T1`は`T2`のsubtypeであり`T1 extends T2`である.
 
 `T`を以下のように定義したとき
 
@@ -568,6 +568,100 @@ type Partial<Human> = {
 ```
 
 となる.
+
+
+
+### [Partial, Readonly, Record, and Pick](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick) {{minver(2.1)}}
+
+|               型               |                     意味                     |
+| ------------------------------ | -------------------------------------------- |
+| Partial<T>                     | TのプロパティがすべてOptionalになった型      |
+| Readonly<T>                    | Tのプロパティがすべて読みこみ専用になった型  |
+| Pick<T, K extends keyof T>     | TのプロパティからKのプロパティのみを残す     |
+| Record<K extends keyof any, T> | Kのプロパティ名を持ち、その型全てがTとなる型 |
+
+#### Humanを使った例
+
+```ts
+interface Human {
+  id: number;
+  name: string;
+  age?: number;
+}
+```
+
+それぞれ以下のようになる。
+
+```ts
+interface Partial<Human> {
+  id?: number;
+  name?: string;
+  age?: number;
+}
+
+interface Readonly<Human> {
+  readonly id: number;
+  readonly name: string;
+  readonly age?: number;
+}
+
+interface Pick<Human, "id" | "name"> {
+  id: number;
+  name: string;
+}
+
+interface Record<keyof Human, number> {
+  id: number;
+  name: number;
+  age?: number;
+}
+```
+
+#### Pickの補足
+
+`Pick<T, K>`型を返す`pick(...)`について、Tが`Human`のときを考える。
+
+```ts
+function pick<T, K extends keyof T>(obj: T, ...keys: K[]): Pick<T, K>;
+```
+
+↓ T = Humanより
+
+```ts
+function pick<Human, K extends "id" | "name" | "age">(obj: Human, ...keys: K[]): Pick<Human, K>
+```
+
+`K extends "id" | "name" | "age"`は以下のいずれか。
+
+* `"id"`
+* `"name"`
+* `"age"`
+* `"id" | "name"`
+* `"id" | "age"`
+* `"name" | "age"`
+* `"id" | "name" | "age"`
+
+ここで、`K = "id" | "name"`のケースを考えると..
+
+↓
+
+```ts
+function pick<Human, "id" | "name">(obj: Human, ...keys: ("id" | "name")[]): Pick<Human, "id" | "name">
+```
+
+↓ Rest Parameterを展開すると...
+
+```ts
+function pick<Human, "id" | "name">(obj: Human, id: "id", name: "name")[]): Pick<Human, "id" | "name">
+```
+
+よって以下は成立する。
+
+```ts
+pick({id: 1, name: 'ichiro', age: 11}, "id", "name")
+// -> {id: 1, name: 'ichiro'}
+```
+
 
 
 よく使う型
