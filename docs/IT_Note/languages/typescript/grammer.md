@@ -527,7 +527,7 @@ class T {
 
 ### [Mapped Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#mapped-types) {{minver(2.1)}}
 
-`[P in keyof T`と書くと、ある型のプロパティを利用して型を定義できる.
+`[P in keyof T]`と書くと、ある型のプロパティを利用して型を定義できる.
 
 たとえば、ある型`T`に対して、すべてのプロパティをOptionalにする型を以下のように作成できる.
 
