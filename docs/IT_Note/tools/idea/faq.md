@@ -67,3 +67,22 @@ pytestの`--doctest-modules`を指定すればOK。
 4. `Additional Arguments` に `--doctest-modules` を指定 (ついでに`--doctest-continue-on-failure` `-vv`とかも好みで)
 
 `Working directory`に注意。配下をテストしにいくので
+
+
+CLIコマンド
+----------
+
+### ターミナルから指定ディレクトリ/ファイルをIDEAで開きたい
+
+`idea`コマンドを使えばできる.  
+ファイルは単体で開き、ディレクトリはプロジェクトで開く.
+
+以下のようなbin配下をPATHに追加しておけばどこからでも呼び出せる.
+
+```
+C:\Program Files (x86)\JetBrains\IntelliJ IDEA 2019.2\bin
+```
+
+!!! hint "自分の環境ではJDKなどの問題もあり、`idea64.exe`を使っている"
+
+{{refer("https://pleiades.io/help/idea/opening-files-from-command-line.html")}}
