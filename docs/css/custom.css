@@ -26,14 +26,6 @@ h2:after {
   text-transform: none;
 }
 
-.md-typeset code {
-  background-color: rgb(240, 235, 233);
-  color: rgb(211, 0, 0);
-  line-height: 150%;
-  border-radius: 5px;
-  margin: 5px;
-}
-
 .md-typeset .footnote-ref {
   display: initial;
 }
