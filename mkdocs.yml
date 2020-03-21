@@ -12,22 +12,24 @@ theme:
     primary: "grey"
     accent: "deep purple"
   language: "ja"
-  logo: https://avatars1.githubusercontent.com/u/9500018?s=460&v=4
-  favicon: https://avatars1.githubusercontent.com/u/9500018?s=460&v=4
-  feature:
-    tabs: true
+  features:
+    - tabs
+  custom_dir: theme/
+  logo: assets/images/mimizou.png
+  favicon: assets/images/mimizou.png
 
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - ja
   - macros
 
 extra:
-  search:
-    language: "en, ja"
   social:
-    - type: "github"
+    - icon: fontawesome/brands/github-alt
       link: "https://github.com/tadashi-aikawa"
-    - type: "twitter"
+    - icon: fontawesome/brands/twitter
       link: "https://twitter.com/Tadashi_MAMAN"
 
 markdown_extensions:
@@ -52,6 +54,11 @@ markdown_extensions:
   - pymdownx.superfences
   - toc:
       permalink: True
+  # ===でタブ
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 
 extra_css:
   - "css/custom.css"

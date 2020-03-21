@@ -5,7 +5,7 @@ verify_ssl = true
 
 [packages]
 mkdocs = "*"
-mkdocs-material = "*"
+mkdocs-material = ">=5.0.0rc3"
 pygments = "*"
 mkdocs-macros-plugin = "*"
 requests-html = "*"
