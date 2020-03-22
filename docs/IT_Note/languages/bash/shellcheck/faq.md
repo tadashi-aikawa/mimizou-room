@@ -5,7 +5,7 @@
 以下のように`disable`アノテーションを指定する。
 
 ```bash
-# shellcheck disable=SC1091↲
+# shellcheck disable=SC1091
 ```
 
 disableするコードが分からない場合は公式にチェッカーにスクリプトを貼り付ける。  
