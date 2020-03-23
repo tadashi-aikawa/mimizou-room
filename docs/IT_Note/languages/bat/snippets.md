@@ -25,20 +25,38 @@ shellファイルの第一引数にbatファイルの位置を受け取れば、
 
 ### ディレクトリのコピー
 
-```bat
+```batch
 xcopy /is <from> <to>
 ```
 
 ### ディレクトリの削除
 
-```bat
+```batch
 rd /s /q <dir>
+```
+
+### 一定時間後にコマンド実行
+
+```batch
+timeout /T ${コマンド}
+```
+
+### 別プロセスで実行
+
+```batch
+start ${コマンド}
+```
+
+### ブラウザでURLを開く
+
+```batch
+start ${URL}
 ```
 
 ### カレントディレクトリの特定階層の文字列取得
 
 6番目だったら..
 
-```bat
+```batch
 for /f "usebackq tokens=6 delims==\" %%a in (`echo %CD%`) do set xrf_name=%%a
 ```
