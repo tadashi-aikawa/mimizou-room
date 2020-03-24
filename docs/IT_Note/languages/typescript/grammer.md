@@ -662,6 +662,55 @@ pick({id: 1, name: 'ichiro', age: 11}, "id", "name")
 // -> {id: 1, name: 'ichiro'}
 ```
 
+### [Object Spread and Rest](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#object-spread-and-rest)
+
+`...`をオブジェクトの前に付けると展開される。  
+`...{x: 1, y: 2}`は`x: 1, y: 2`のイメージ。
+
+#### Shallow copyとして使う
+
+```typescript
+const obj = { id: 1, name: "Ichiro" };
+const copied = { ...obj };
+
+console.log(obj);
+// -> { id: 1, name: 'Ichiro' }
+console.log(copied);
+// -> { id: 1, name: 'Ichiro' }
+console.log(obj === copied);
+// -> false
+```
+
+#### Objectのマージに使う
+
+あるものは上書き、無いものは追加される。
+
+```typescript
+const ichiro = { id: 1, name: "Ichiro" };
+const nanashi = { id: 2, favorite: "Japan" };
+
+console.log({ ...ichiro, ...nanashi });
+// -> { id: 2, name: 'Ichiro', favorite: 'Japan' }
+console.log({ ...nanashi, ...ichiro });
+// -> { id: 1, favorite: 'Japan', name: 'Ichiro' }
+```
+
+#### Restとして使う
+
+restは`{id: number, favorite: string}`型と判断される。
+
+```typescript
+function main() {
+  const ichiro = { id: 1, name: "Ichiro", favorite: "Japan" };
+  const { name, ...rest } = ichiro;
+  console.log(name);
+  // -> Ichiro
+  console.log(rest);
+  // -> { id: 1, favorite: 'Japan' }
+}
+
+main();
+```
 
 
 よく使う型
@@ -687,5 +736,6 @@ pick({id: 1, name: 'ichiro', age: 11}, "id", "name")
 
 `type Pick<T, K extends keyof T>`と表現する。  
 具体例は`Pick<Human, 'id' | 'name'>`のような感じ。
+
 
 
