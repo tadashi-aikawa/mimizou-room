@@ -21,3 +21,13 @@ guard-%:
 release: guard-version
 	@echo Start $@
 ```
+
+
+ブラウザでURLを開く
+----------------------
+
+`Windowsの場合`
+
+```
+"C:\Program Files\Git\bin\bash" -c 'start ${URL}'
+```
