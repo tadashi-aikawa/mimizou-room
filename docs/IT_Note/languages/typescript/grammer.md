@@ -495,7 +495,9 @@ tsc --declaration --declarationDir ${dirname}
 もちろん`tsconfig.json`の`declaration`と`declarationDir`を指定してもOK.
 
 
-### [keyof and Lookup Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#keyof-and-lookup-types) {{minver(2.1)}}
+### [keyof and Lookup Types] {{minver(2.1)}}
+
+[keyof and Lookup Types]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#keyof-and-lookup-types
 
 * `keyof T`で`TのプロパティからなるUnion Type`を表現できる
 * `T[K]`はlookup typesと呼ばれ、`T`のプロパティ`K`と同様の型と判断される.
@@ -525,7 +527,9 @@ class T {
 といえる.
 
 
-### [Mapped Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#mapped-types) {{minver(2.1)}}
+### [Mapped Types] {{minver(2.1)}}
+
+[Mapped Types]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#mapped-types
 
 `[P in keyof T]`と書くと、ある型のプロパティを利用して型を定義できる.
 
@@ -571,7 +575,9 @@ type Partial<Human> = {
 
 
 
-### [Partial, Readonly, Record, and Pick](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick) {{minver(2.1)}}
+### [Partial, Readonly, Record, and Pick] {{minver(2.1)}}
+
+[Partial, Readonly, Record, and Pick]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#partial-readonly-record-and-pick
 
 |               型               |                     意味                     |
 | ------------------------------ | -------------------------------------------- |
@@ -662,7 +668,9 @@ pick({id: 1, name: 'ichiro', age: 11}, "id", "name")
 // -> {id: 1, name: 'ichiro'}
 ```
 
-### [Object Spread and Rest](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#object-spread-and-rest)
+### [Object Spread and Rest] {{minver(2.1)}}
+
+[Object Spread and Rest]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#object-spread-and-rest
 
 `...`をオブジェクトの前に付けると展開される。  
 `...{x: 1, y: 2}`は`x: 1, y: 2`のイメージ。
