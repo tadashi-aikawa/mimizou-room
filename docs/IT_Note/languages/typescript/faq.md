@@ -25,19 +25,6 @@ tsconfig.jsonが読み込まれない
 !!! TODO "どうしても指定したい場合の方法は分からず.."
 
 
-`TS2307: Cannot find module 'lodash'.`
---------------------------------------
-
-### グローバルの古いtscを使っているケース
-
-間違ってグローバルの古いtscを使っている場合はプロジェクトのtscを使うこと。(npm or npx)
-
-### 定義ファイルを読み込んでいないケース
-
-```
-$ npm i -D @types/lodash
-```
-
 jsonファイルをインポートしたい
 ------------------------------
 
@@ -51,4 +38,39 @@ jsonファイルをインポートしたい
 
 ```ts
 import * as pkg from '~/package.json';
+```
+
+
+エラー系
+--------
+
+### `TS2307: Cannot find module 'lodash'.`
+
+#### グローバルの古いtscを使っているケース
+
+間違ってグローバルの古いtscを使っている場合はプロジェクトのtscを使うこと。(npm or npx)
+
+#### 定義ファイルを読み込んでいないケース
+
+```
+$ npm i -D @types/lodash
+```
+
+### `lib.dom.d.ts(19627, 15): 'name' was also declared here.`
+
+`lib.dom.d.ts`で宣言された`name`が再宣言されている。  
+`main.ts`などのTopレベルでグローバルに定義すると発生する。
+
+```typescript
+const name = "hoge"
+```
+
+main関数などでスコープを分けてやるとよい。
+
+```typescript
+function main() {
+    const name = "hoge"
+}
+
+main()
 ```
