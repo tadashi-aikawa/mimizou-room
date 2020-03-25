@@ -721,6 +721,15 @@ main();
 ```
 
 
+### [Downlevel Async Functions] {{minver(2.1)}}
+
+[Downlevel Async Functions]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#downlevel-async-functions
+
+TargetがES3/ES5でもasync functionが使えるようになった。
+
+!!! warning "Promiseは必要です"
+
+
 よく使う型
 ----------
 
