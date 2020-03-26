@@ -720,7 +720,6 @@ function main() {
 main();
 ```
 
-
 ### [Downlevel Async Functions] {{minver(2.1)}}
 
 [Downlevel Async Functions]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#downlevel-async-functions
@@ -728,6 +727,65 @@ main();
 TargetがES3/ES5でもasync functionが使えるようになった。
 
 !!! warning "Promiseは必要です"
+
+### [Support for external helpers library (tslib)] {{minver(2.1)}}
+
+[Support for external helpers library (tslib)]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#support-for-external-helpers-library-tslib
+
+`--importHelpers`オプションを付けると、`__extends`や`__assign`、`__awaiter`などのヘルプ関数を`tslib`から読み込まれるようになる。  
+以下のようなメリットがある。
+
+* ファイルサイズが削減する
+  * 全てのjavascriptファイルに上記関数の実装が埋め込まれなくなるため
+* 上記ファイルサイズ削減のために独自Helperライブラリ管理をしていた場合、解放される
+
+たとえば、以下の`sub.ts`と`main.ts`があったとき。
+
+`sub.ts`
+
+```typescript
+export const o = { a: 1, name: "o" };
+export const copy = { ...o };
+```
+
+`main.ts`
+
+```typescript
+import * as sub from "./sub";
+
+export const o = { a: 1, name: "o" };
+export const copy = { ...o };
+```
+
+`--importHelpers`の有無によって、ビルドされた結果のjsファイルは以下のように変わる。
+
+=== "--importHelpersなし"
+    ```typescript
+    "use strict";
+    var __assign = (this && this.__assign) || function () {
+        __assign = Object.assign || function(t) {
+            for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i];
+                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                    t[p] = s[p];
+            }
+            return t;
+        };
+        return __assign.apply(this, arguments);
+    };
+    Object.defineProperty(exports, "__esModule", { value: true });
+    exports.o = { a: 1, name: "o" };
+    exports.copy = __assign({}, exports.o);
+    ```
+
+=== "--importHelpersあり"
+    ```typescript
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var tslib_1 = require("tslib");
+    exports.o = { a: 1, name: "o" };
+    exports.copy = tslib_1.__assign({}, exports.o);
+    ```
 
 
 よく使う型
