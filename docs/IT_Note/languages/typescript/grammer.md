@@ -787,6 +787,32 @@ export const copy = { ...o };
     exports.copy = tslib_1.__assign({}, exports.o);
     ```
 
+### [Untyped imports] {{minver(2.1)}}
+
+[Untyped imports]: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-1.html#untyped-imports
+
+`--noImplicitAny`オプションが無効な場合に限り、型定義の無いJavaScriptモジュールがimportできるようになった。  
+たとえば以下のようなコードが動く。
+
+=== "main.ts"
+    ```typescript
+    import { sum } from "./sub";
+
+    console.log(sum(100, 1));
+    ```
+
+=== "sub.js"
+    ```javascript
+    function sum(a, b) {
+        return a + b
+    }
+    module.exports = { sum }
+    ```
+
+!!! failure "implicitly has an 'any' type エラーになる場合"
+    `strict: true`の場合、`--noImplicitAny`はデフォルトで有効(`true`)になります。  
+    その場合、明示的に`--noImplicitAny`を無効にしてください。
+
 
 よく使う型
 ----------
