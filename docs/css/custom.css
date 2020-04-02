@@ -151,6 +151,10 @@ h2:after {
   color: orangered;
 }
 
+/************************/
+/* Label
+/************************/
+
 .label {
   color: whitesmoke;
   font-size: 50%;
@@ -161,4 +165,34 @@ h2:after {
   border-color: grey;
   border-width: 1px;
   border-radius: 5px;
+}
+
+.label-should {
+  background-color: orangered;
+  border-color: orangered;
+}
+
+.label-had-better {
+  background-color: olivedrab;
+  border-color: olivedrab;
+}
+
+.label-not-necessary {
+  background-color: grey;
+  border-color: grey;
+}
+
+.label-hard {
+  background-color: orangered;
+  border-color: orangered
+}
+
+.label-normal {
+  background-color: olivedrab;
+  border-color: olivedrab;
+}
+
+.label-easy {
+  background-color: grey;
+  border-color: grey;
 }

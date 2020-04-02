@@ -56,6 +56,10 @@ def declare_variables(variables, macro):
         return f'<span class="label">{version} ↑</span>'
 
     @macro
+    def label(value: str):
+        return f'<span class="label label-{value.replace("_", "-")}">{value.upper().replace("_", " ")}</span>'
+
+    @macro
     def refer(url):
         print(f"[Create Refer] {url}")
         session = HTMLSession()
