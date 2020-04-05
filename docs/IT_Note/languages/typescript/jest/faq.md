@@ -45,10 +45,12 @@ describe('companyService.fetch', () => {
 {{link("https://github.com/TheBrainFamily/wait-for-expect#readme")}}
 
 
-Decorators are not enabled エラーになる
----------------------------------------
+エラーについて
+-----------
 
-### エラーケース1
+### Decorators are not enabled エラーになる
+
+#### エラーケース1
 
 以下の場合
 
@@ -76,7 +78,7 @@ If you are using ["@babel/plugin-proposal-decorators", { "legacy": true }], make
 
 もちろん該当pluginのインストールは必要。
 
-### エラーケース2
+#### エラーケース2
 
 以下の場合
 
@@ -104,8 +106,7 @@ TypeScriptのnamespaceにデフォルトで対応していないから。
 もちろん該当pluginのインストールは必要。
 
 
-electronからimportできずエラーになる
-------------------------------------
+### electronからimportできずエラーになる
 
 Jestはmainを通してelectronを起動していないので当然失敗する。  
 処理がテストに関係なければ、Mockを作って凌ぐ。
@@ -131,3 +132,8 @@ export const remote = {
 ```
 
 {{refer("https://stackoverflow.com/questions/46898185/electron-jest-ipcrenderer-is-undefined-in-unit-tests")}}
+
+### 間違ってなさそうなのにTypeScriptのテストコードがエラーになる
+
+テストコード以外のフローで、テストコード対象のtsファイルに対するjsファイルが作成されていないかを確認する。  
+jsファイルが存在するとそちらが優先して使用されてしまう恐れがあるため。
