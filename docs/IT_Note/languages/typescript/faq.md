@@ -40,6 +40,22 @@ jsonファイルをインポートしたい
 import * as pkg from '~/package.json';
 ```
 
+tscのエントリポイントを指定したい
+------------------------------------
+
+`tsconfig.json`のfilesかincludeを指定する。  
+glob表現が不要ならfilesで十分。
+
+```json
+{
+    "files": [ "src/index.ts" ]
+}
+```
+
+!!! question "CLIで指定しない理由"
+    CLIで指定すると`tsconfig.json`が無視されるため。
+
+{{refer("http://js.studio-kingdom.com/typescript/project_configuration/tsconfig_json")}}
 
 エラー系
 --------
