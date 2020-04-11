@@ -38,6 +38,11 @@ linterなどと設定がすれ違うと面倒..
 
 `Editor` > `General` > `Auto Import` の `Unambiguous imports on the fly` にチェックをつける。
 
+### ファイルの最終行以降もスクロールしたい
+
+1. 設定の `Editor` > `General`
+2. `Virtual Space`セクション の `Show virtual space at the bottom of the file` にチェックをつける。
+
 
 Python
 ------
