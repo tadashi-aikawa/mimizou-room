@@ -44,15 +44,13 @@ VS Codeも使っている場合はコンテキストスイッチの切り替え�
 | ---------------------------- | -------------------------------------------- |
 | [File Watchers]              | ファイルが変更されたときに処理を実施できる   |
 | [IdeaVim]                    | Vim！！                                      |
-| [AceJump-Lite][^1]           | EmacsのAceJum/VimのEasyMotion のようなもの   |
+| [IdeaVim-EasyMotion]         | vim-easy-motionの再現                        |
 | [Paste Images into Markdown] | Markdownファイルにクリップボードの画像を挿入 |
 
 [File Watchers]: https://plugins.jetbrains.com/plugin/7177-file-watchers
 [IdeaVim]: https://plugins.jetbrains.com/plugin/164-ideavim
-[AceJump-Lite]: https://plugins.jetbrains.com/plugin/9803-acejump-lite
+[IdeaVim-EasyMotion]: https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion
 [Paste Images into Markdown]: https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown
-
-[^1]: AceJumpというプラグインもあり、そちらの方が有名だがパフォーマンスに難があるため
 
 
 File Watchersの設定
