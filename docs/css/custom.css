@@ -173,11 +173,16 @@ h2:after {
 }
 
 .label-had-better {
+  background-color: darkgoldenrod;
+  border-color: darkgoldenrod;
+}
+
+.label-not-necessary {
   background-color: olivedrab;
   border-color: olivedrab;
 }
 
-.label-not-necessary {
+.label-unknown {
   background-color: grey;
   border-color: grey;
 }
@@ -188,11 +193,17 @@ h2:after {
 }
 
 .label-normal {
+  background-color: darkgoldenrod;
+  border-color: darkgoldenrod;
+}
+
+.label-easy {
   background-color: olivedrab;
   border-color: olivedrab;
 }
 
-.label-easy {
+.label-can-not-understand {
   background-color: grey;
   border-color: grey;
 }
+
