@@ -23,64 +23,55 @@ flexbox
 
 {{link("https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet")}}
 
-### 横並び
+サンドボックス
 
-```
-|■■■        |
-```
+{{link("http://www.cssdesk.com/mTw7Q")}}
 
-```css
-.container {
-    display: flex;
-}
-```
+### 用語
 
-### 水平中央揃え
+本記事では領域をエリア、領域に配置する要素をアイテムと呼びます。
 
-```
-|    ■■■    |
-```
+### アイテムを並べる方向
 
-```css
-.container {
-    display: flex;
-    justify-content: center;
-}
-```
+`flex-direction`を指定します。
+
+| アイテムを並べる方向 | `flex-direction` | イメージ |
+| -------------------- | ---------------- | -------- |
+| 横                   | row (デフォルト) |  ■■■        |
+| 縦                   | column           |  ■<br/>■<br/>■        |
+
+### アイテムの並べ方を指定する
+
+アイテムを並べるには`justify-content`を指定します。
+
+| アイテムの並び方 | justify-content   | イメージ(flex-direction: rowの場合) |
+| ---------------- | ----------------- | ----------------------------------- |
+| 中央寄せ         | center            | `___■■■___`                      |
+| 終点に寄せ       | flex-end          | `______■■■`                      |
+| 等間隔(両端密着) | space-between     | `■___■___■`                      |
+| 等間隔(両端空き) | space-around      | `_■__■__■_`                      |
+| 等間隔(両端空き) | space-evenly      | `__■__■__■__`                    |
 
 !!! question "中央寄せにならないときは..."
 
     containerのwidthを確認する。
     `width: 100%;`などを必要に応じて追加。
 
+!!! warning "`space-evenly`について"
 
-### 水平右揃え
+    IEは未対応なので要注意。
+    
+    {{refer("https://developer.mozilla.org/ja/docs/Web/CSS/justify-content")}}
 
-```
-|        ■■■|
-```
+### エリアの揃え方を指定する
 
-```css
-.container {
-    display: flex;
-    justify-content: flex-end;
-}
-```
+エリアの揃え方は`align-items`を指定します。  
+アイテムの並べる方向とは必ず別になります。
 
-### 両脇とその間に等間隔
-
-```
-|■    ■    ■|
-```
-
-2つの要素を左と右に寄せたいとき便利。
-
-```css
-.container {
-    display: flex;
-    justify-content: space-between;
-}
-```
+| アイテムの並び方 | align-items       | イメージ(flex-direction: rowの場合)            |
+| ---------------- | ----------------- | ---------------------------------------------- |
+| 中央揃え         | center            | `_________`<br/>`■■■______`<br/>`_________` |
+| 終点揃え         | flex-end          | `_________`<br/>`_________`<br/>`■■■______` |
 
 
 Elegant scrollbar
