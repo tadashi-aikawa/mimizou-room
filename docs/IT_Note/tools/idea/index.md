@@ -46,11 +46,13 @@ VS Codeも使っている場合はコンテキストスイッチの切り替え�
 | [IdeaVim]                    | Vim！！                                      |
 | [IdeaVim-EasyMotion]         | vim-easy-motionの再現                        |
 | [Paste Images into Markdown] | Markdownファイルにクリップボードの画像を挿入 |
+| [String Manipulation]        | 文字列を色々操作できる                       |
 
 [File Watchers]: https://plugins.jetbrains.com/plugin/7177-file-watchers
 [IdeaVim]: https://plugins.jetbrains.com/plugin/164-ideavim
 [IdeaVim-EasyMotion]: https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion
 [Paste Images into Markdown]: https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown
+[String Manipulation]: https://plugins.jetbrains.com/plugin/2162-string-manipulation
 
 
 File Watchersの設定
