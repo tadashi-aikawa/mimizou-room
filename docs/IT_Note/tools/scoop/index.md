@@ -1,10 +1,13 @@
-# [Scoop] Top
+---
+description: WindowsのためのPackage Manager
+---
 
+# Scoop
 
 Scoopとは
 ---------
 
-Windowsのためのpackage manager。
+{{ page.meta.description }}
 
 {{link("https://scoop.sh/")}}
 
