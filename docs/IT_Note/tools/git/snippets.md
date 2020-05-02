@@ -25,6 +25,8 @@ git diff
 ### インデックス登録済みとコミット済みの差分
 
 ```bash
+git diff --staged
+# --stagedは--cachedのsynonym
 git diff --cached
 ```
 
@@ -91,6 +93,12 @@ git show <hash>:<file>
 git show-branch --sha1-name branch master
 ```
 
+### ワーキングツリーをあるコミット時点の状態にする
+
+```
+git restore -s <hash> <file>
+```
+
 
 変更
 ----
@@ -119,10 +127,6 @@ git checkout -b <branch_name> refs/tags/<tag_name>
 git fetch -p
 ```
 
-### remote
-
-リモートURLの変更をするコマンド
-
 ### タグをつける
 
 ```
@@ -148,12 +152,18 @@ git push
 ### ローカルの変更を戻す (addしていない場合)
 
 ```bash
-git checkout .
+git restore <file>
+# v2.23以前
+git checkout <file>
 ```
 
 ### addしたファイルを取り消す
 
 ```bash
+git restore -S <file>
+# long
+git restore --staged <file>
+# v2.23以前
 git reset HEAD <file>
 ```
 
