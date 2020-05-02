@@ -103,15 +103,33 @@ git restore -s <hash> <file>
 変更
 ----
 
+### ブランチ作成
+
+```
+git switch -c <new_branch_name>
+# v2.23以前
+git checkout -b <new_branch_name>
+```
+
+### ブランチ変更
+
+```
+git switch <branch_name>
+# v2.23以前
+git checkout <new_branch_name>
+```
+
 ### ブランチ名変更
 
 ```bash
 git branch -m <branch_name> <new_branch_name>
 ```
 
-### ブランチをローカルにチェックアウト (ブランチはorigin弁当!)
+### リモートブランチを追跡する形でローカルに作成 (ブランチはorigin弁当!)
 
 ```bash
+git switch -c <branch_name> <origin_branch_name>
+# v2.23以前
 git checkout -b <branch_name> <origin_branch_name>
 ```
 
