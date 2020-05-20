@@ -49,10 +49,16 @@ poetry update [<packages>...]
 環境
 ----
 
-### 各種バージョンや仮想環境
+### 仮想環境の構築
 
 ```bash
-poetry debug:info
+poetry env use <python_path>
+```
+
+### 仮想環境の確認
+
+```bash
+poetry env info
 ```
 
 ### 仮想環境をプロジェクト配下に作成するようにする
