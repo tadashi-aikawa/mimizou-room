@@ -1,4 +1,10 @@
+---
+description: Intellij IDEAの設定やプラグインなどを紹介
+---
+
 # [IDEA] Top
+
+{{ page.meta.description }}
 
 
 IntelliJ IDEAとは
