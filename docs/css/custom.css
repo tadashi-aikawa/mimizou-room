@@ -126,7 +126,7 @@ h2:after {
   .link-card-image {
     display: inline-block;
     vertical-align: middle;
-    height: 100px;
+    height: 100px !important;
     object-fit: contain;
   }
 }
