@@ -42,35 +42,39 @@ VS Codeも使っている場合はコンテキストスイッチの切り替え�
 
 | プラグイン名                 | 説明                                         |
 | ---------------------------- | -------------------------------------------- |
+| [Python]                     | Pythonのサポート                             |
+| [Rust]                       | Rustのサポート                               |
+| [PowerShell]                 | PowerShellのサポート                         |
+| [Batch Scripts Support]      | Batchのサポート                              |
+| [BashSupport]                | Bashのサポート                               |
+| [Vue.js]                     | Vueのサポート                                |
 | [File Watchers]              | ファイルが変更されたときに処理を実施できる   |
 | [IdeaVim]                    | Vim！！                                      |
 | [IdeaVim-EasyMotion]         | vim-easy-motionの再現                        |
 | [Paste Images into Markdown] | Markdownファイルにクリップボードの画像を挿入 |
 | [String Manipulation]        | 文字列を色々操作できる                       |
+| [Prettier]                   | prettierと連携 (保存時自動実行など)          |
+| [Markowl]                    | Markdownの便利ツール                         |
 
 [File Watchers]: https://plugins.jetbrains.com/plugin/7177-file-watchers
 [IdeaVim]: https://plugins.jetbrains.com/plugin/164-ideavim
 [IdeaVim-EasyMotion]: https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion
 [Paste Images into Markdown]: https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown
 [String Manipulation]: https://plugins.jetbrains.com/plugin/2162-string-manipulation
+[Prettier]: https://plugins.jetbrains.com/plugin/10456-prettier
+[Python]: https://plugins.jetbrains.com/plugin/631-python
+[Vue.js]: https://plugins.jetbrains.com/plugin/9442-vue-js
+[Batch Scripts Support]: https://plugins.jetbrains.com/plugin/265-batch-scripts-support
+[BashSupport]: https://plugins.jetbrains.com/plugin/4230-bashsupport
+[Markowl]: https://plugins.jetbrains.com/plugin/14116-markowl
+[Rust]: https://plugins.jetbrains.com/plugin/8182-rust
+[PowerShell]: https://plugins.jetbrains.com/plugin/10249-powershell
 
 
 File Watchersの設定
 -------------------
 
 開いているファイルだけフォーマットしたいので、`Advanced options`のチェックは全て外す。
-
-### Prettier
-
-`.prettierignore`を読み込む場合は`Working directory`の指定が必須です。
-
-|       項目        |                     値                      |
-| ----------------- | ------------------------------------------- |
-| File type         | Any                                         |
-| Scope             | Current File                                |
-| Program           | $ProjectFileDir$\node_modules\\.bin\prettier |
-| Arguments         | --write $FilePath$                          |
-| Working directory | $ProjectFileDir$                            |
 
 ### Black
 
