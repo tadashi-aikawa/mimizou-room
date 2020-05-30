@@ -8,7 +8,7 @@
 
 設定にて
 
-1. `Editor` > `General` > `Smart Kes` を開く
+1. `Editor` > `General` > `Smart Keys` を開く
 2. 以下のチェックを外す
 
 * `Insert paired brackets`
