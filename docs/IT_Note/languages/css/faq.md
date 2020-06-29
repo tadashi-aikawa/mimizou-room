@@ -93,3 +93,13 @@ HTMLの記載順とDOMの配置順を変えたい
   <div style="order: 1;">1つ目</div>
 </div>
 
+
+透過率をゆっくり変更したい
+--------------------------
+
+`transition`を指定すると、styleが適応されたときに指定秒数で変更される。
+
+```
+opacity: <opacity>,
+transition: 'opacity 1.0s',
+```
