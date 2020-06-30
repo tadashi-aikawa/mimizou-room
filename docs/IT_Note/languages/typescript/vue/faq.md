@@ -33,3 +33,21 @@
 
 {{refer("https://jp.vuejs.org/v2/api/#data")}}
 
+
+変更があってもcomputed propertyが再計算されない
+-----------------------------------------------
+
+computedの式で参照しているプロパティが初期化されているかを確認する。  
+`undefined`の代入もNG。
+
+`NGの例`
+```
+const hoge: string | null;
+const hoge: string | undefined = undefined;
+```
+
+`OKの例`
+```
+const hoge: string | null = "";
+const hoge: string | null = null;
+```
