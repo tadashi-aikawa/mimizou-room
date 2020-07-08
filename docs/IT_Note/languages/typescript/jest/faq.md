@@ -1,12 +1,23 @@
 # [Jest] FAQ
 
 
-テストの実行方式について
------------------------
+テストの実行について
+--------------------
 
 ### 1テストSuiteずつ直列に実行したい
 
 `--runInBand`オプションをつける
+
+### テストの実行が遅い
+
+`--maxWorkers=1`オプションをつける。  
+デフォルトは3であるため、特にTypeScriptなどtranspileが必要な場合は遅くなることが多い。
+
+{{refer("https://github.com/kulshekhar/ts-jest/issues/259")}}
+
+{{refer("https://github.com/kulshekhar/ts-jest/issues/259#issuecomment-504088010")}}
+
+{{refer("https://github.com/facebook/jest/issues/8202")}}
 
 
 テストの書き方について
