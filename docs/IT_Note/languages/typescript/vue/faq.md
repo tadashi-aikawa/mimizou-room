@@ -51,3 +51,49 @@ const hoge: string | undefined = undefined;
 const hoge: string | null = "";
 const hoge: string | null = null;
 ```
+
+
+パーツがクリックされたら表示されるダイアログコンポーネントを作りたい
+--------------------------------------------------------------------
+
+最小構成で以下のような感じ。  
+`<slot></slot>`の部分にトリガーとなるパーツを外側から指定する。
+
+```vue
+<template>
+  <div>
+    <v-dialog v-model="state.visible">
+      <template v-slot:activator="{ on, attrs }">
+        <div v-bind="attrs" v-on="on">
+          <slot></slot>
+        </div>
+      </template>
+      <div>なかみ</div>
+    </v-dialog>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, reactive } from "@vue/composition-api";
+
+export default defineComponent({
+  setup(props) {
+    const state = reactive({
+      visible: false,
+    });
+
+    return {
+      state,
+    };
+  },
+});
+</script>
+```
+
+呼び出し側。
+
+```vue
+<your-dialog>
+    <button>トリガーとなるパーツ</button>
+<your-dialog>
+```
