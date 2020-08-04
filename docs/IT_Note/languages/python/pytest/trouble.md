@@ -16,3 +16,14 @@ pytest --doctest-modules --doctest-continue-on-failure
 ```
 
 {{refer("http://doc.pytest.org/en/latest/doctest.html")}}
+
+
+複数のディレクトリを無視したい
+------------------------------
+
+`omit`をカンマ区切りで複数指定する。
+
+```
+[run]
+omit = tests/*,buspar/tmp.py
+```
