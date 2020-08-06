@@ -15,7 +15,7 @@ Rustをインストールして、cargoを使ったpackage管理にチャレン�
 
 ### Rustのインストール
 
-そのため、Rustのバージョンや関連ツールを管理するCLIツール`rustup`を使う。
+Rustのバージョンや関連ツールを管理するCLIツール`rustup`を使う。
 
 `rustup`はScoopでインストールする。
 
