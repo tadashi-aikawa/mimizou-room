@@ -1,28 +1,10 @@
 # [Git] FAQ
 
 
-ブランチとタグが同じ名前になってしまいエラーが出る
---------------------------------------------------
+改行コードに関するもの
+----------------------
 
-```
-src refspec <tag_name> matches more than one.
-```
-
-```
-タグを消したい場合
-git push origin :refs/tags/<tag_name>
-```
-
-```
-ブランチを消したい場合
-git push origin :refs/heads/<branch_name>
-```
-
-{{refer("https://qiita.com/koara-local/items/e36bc172a3c36eb67b4f")}}
-
-
-`warning: LF will be replaced by CRLF in`
------------------------------------------
+### `warning: LF will be replaced by CRLF in`
 
 gitのconfigで`core.autoCRLF`が`true`になっていないか確認する。
 
@@ -39,8 +21,7 @@ $ git config --global core.autoCRLF false
 {{refer("https://normalblog.net/system/lf_replaced_crlf/")}}
 
 
-改行コードを強制したい
-----------------------
+### 改行コードを強制したい
 
 autocrlf設定によって変わってしまう改行コードを抑制したい場合。
 
@@ -60,8 +41,39 @@ autocrlf設定によって変わってしまう改行コードを抑制したい
 * `text eol=..`で改行コードを指定すると、必ずその改行コードに変換する
 * `-text`で`text`属性を外すと改行変換しない
 
-
 {{refer("https://qiita.com/nacam403/items/23511637335fc221bba2")}}
+
+### git diffの行末に『^M』が表示される
+
+`color.ui = auto`のときにCR改行が含まれると表示されてしまう。  
+`core.whitespace = cr-at-eol`を設定すると表示されなくなる。
+
+```
+git config --global core.whitespace cr-at-eol
+```
+
+{{refer("https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%81%AE%E8%A8%AD%E5%AE%9A#_code_core_whitespace_code")}}
+{{refer("https://happyquality.com/2011/09/22/1327.htm")}}
+
+
+ブランチとタグが同じ名前になってしまいエラーが出る
+--------------------------------------------------
+
+```
+src refspec <tag_name> matches more than one.
+```
+
+```
+タグを消したい場合
+git push origin :refs/tags/<tag_name>
+```
+
+```
+ブランチを消したい場合
+git push origin :refs/heads/<branch_name>
+```
+
+{{refer("https://qiita.com/koara-local/items/e36bc172a3c36eb67b4f")}}
 
 
 競合を解消したい
