@@ -52,6 +52,17 @@ const hoge: string | null = "";
 const hoge: string | null = null;
 ```
 
+v-modelを指定するコンポーネントを作りたい
+-----------------------------------------
+
+以下を参照。Vue3になったら変わる。
+
+{{link("https://jp.vuejs.org/v2/guide/components.html#%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%A7-v-model-%E3%82%92%E4%BD%BF%E3%81%86")}}
+
+* プロパティに`value`を指定
+* 値に変更があったら`input`イベントをemitして`value`を送出する
+
+
 watchしたプロパティに変更があっても処理が実行されない
 -----------------------------------------------------
 
