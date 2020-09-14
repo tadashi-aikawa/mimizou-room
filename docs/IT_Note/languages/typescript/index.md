@@ -14,7 +14,26 @@
 
 公式が最強。英語に抵抗なければ。
 
-{{link("https://www.typescriptlang.org")}}
+{{link("https://www.typescriptlang.org/docs")}}
+
+JavaScriptの経験があるなら`The TypeScript Handbook`を抑えておけばOK。  
+ただし分量は多い。
+
+{{link("https://www.typescriptlang.org/docs/handbook/intro.html")}}
+
+最新情報や歴史的経緯を学ぶならリリースノート。
+
+{{link("https://www.typescriptlang.org/docs/handbook/release-notes/overview.html")}}
+
+本サイトでもリリースノートを自分なりにまとめたページを公開している。
+
+{{link("https://mimizou.mamansoft.net/it_note/languages/typescript/releases/")}}
+
+### 要点を抑えて基礎を効率的に学びたい
+
+冒頭にあるよう`本読者がTypeScriptをすぐに実用できるよう、最短ルートに読者を導く一冊`。
+
+{{link("https://book.yyts.org/")}}
 
 ### 仕事ですぐに使える知識を一通り知りたい
 
@@ -42,6 +61,12 @@ TypeScriptならではの型が紹介されている。
 非同期でハマった人向け。PromiseとAsync/Awaitを学ぶなら分かりやすく詳しい。
 
 {{link("https://azu.github.io/promises-book/")}}
+
+### JavaScriptをしっかり学習したい
+
+JavaScriptだけでなくプログラミングそのものについても学べる良書。
+
+{{link("https://jsprimer.net/")}}
 
 
 フレームワーク/ライブラリの選定
