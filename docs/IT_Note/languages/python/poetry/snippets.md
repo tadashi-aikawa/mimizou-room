@@ -64,19 +64,16 @@ poetry env info
 ### 仮想環境をプロジェクト配下に作成するようにする
 
 ```bash
-poetry config settings.virtualenvs.in-project true
+poetry config virtualenvs.in-project "true"
 ```
 
-`%APPDATA%\pypoetry\config.toml`に登録される
+{{refer("https://stackoverflow.com/questions/62029371/python-poetry-error-setting-settings-virtualenvs-in-project-does-not-exist")}}
 
-```toml
-[settings.virtualenvs]
-in-project = true
-```
-
-既に `%APPDATA%\pypoetry\Cache\virtualenvs` 配下に環境がある場合、そちらが優先して使われるので一度消すこと。
-
-{{refer("https://poetry.eustace.io/docs/configuration/#settingsvirtualenvsin-project-boolean")}}
+!!! warning "Version 1.0より前の場合"
+    Version1.0より前はコマンドが違うので注意。
+    ```
+    poetry config settings.virtualenvs.in-project true
+    ```
 
 
 packageの依存関係
