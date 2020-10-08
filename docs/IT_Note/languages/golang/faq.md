@@ -81,6 +81,25 @@ hash := hex.EncodeToString(h.Sum(nil))
 // a5185e2f49245929acd85cfb310b395035e9ce0eedda8609a714de9896cc0b47
 ```
 
+### ソースコードファイルのパスを取得したい
+
+```go
+_, path, _, _ := runtime.Caller(0)
+```
+
+### 実行ファイルのパスを取得したい
+
+```go
+path, _ := os.Executable()
+```
+
+### カレントディレクトリ(作業ディレクトリ)のパスを取得したい
+
+```go
+path, _ := os.Getwd()
+```
+
+
 トラブル
 --------
 
