@@ -22,6 +22,14 @@ go test ./...
 実装でやりたいこと
 ------------------
 
+### 正規表現にマッチするか確認したい
+
+`regexp.MatchString`を使う。
+
+```go
+matched, _ := regexp.MatchString(pattern, value)
+```
+
 ### JSON文字列とstructを相互変換したい
 
 `json.Marshal`と`json.Unmarshall`を使う。
