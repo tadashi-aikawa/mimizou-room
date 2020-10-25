@@ -139,6 +139,12 @@ poetry run <commands>...
 packageリリース
 ---------------
 
+### requirements.txtを作成する
+
+```bash
+poetry export -f requirements.txt -o requirements.txt
+```
+
 ### パブリッシュ
 
 ```bash
@@ -147,10 +153,32 @@ poetry publish
 
 ### ID/PASSWORDを聞かれなくする
 
+2通りの方法がある。
+
+{{refer("https://python-poetry.org/docs/repositories/#configuring-credentials")}}
+
+#### configに設定する
+
 ```bash
+# api tokenを設定 (推奨)
+poetry config pypi-token.pypi <api-token>
+
+# username/passwordを設定 (非推奨)
 poetry config http-basic.pypi <username> <password>
 ```
 
-`%APPDATA%\pypoetry\auth.toml`に登録される。
+設定は以下に作成される。
 
-{{refer("https://github.com/sdispater/poetry/issues/111")}}
+* Windows: `%APPDATA%\pypoetry\auth.toml`
+* Linux: `~/.config/pypoetry/auth.toml`
+
+#### 環境変数を使う
+
+CIではコチラがオススメかも。
+
+```bash
+export POETRY_PYPI_TOKEN_PYPI=my-token
+export POETRY_HTTP_BASIC_PYPI_USERNAME=username
+export POETRY_HTTP_BASIC_PYPI_PASSWORD=password
+```
+
