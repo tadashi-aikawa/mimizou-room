@@ -4,7 +4,7 @@ site_url: https://mimizou.mamansoft.net
 site_author: tadashi-aikawa
 repo_name: tadashi-aikawa/mimizou-room
 repo_url: https://github.com/tadashi-aikawa/mimizou-room
-copyright: © 2019 tadashi-aikawa
+copyright: © 2020 tadashi-aikawa
 
 theme:
   name: "material"
@@ -22,7 +22,6 @@ plugins:
   - search:
       lang:
         - en
-        - ja
   - macros
 
 extra:
