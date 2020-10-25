@@ -5,3 +5,7 @@ serve:
 
 build:
 	poetry run mkdocs build
+
+create-requirements:
+	poetry export -f requirements.txt -o requirements.txt
+
