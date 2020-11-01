@@ -8,7 +8,7 @@ description: Pytestのfixtureについて
 
 以下の記事を参考にしている。
 
-{{<summary "https://qiita.com/_akiyama_/items/9ead227227d669b0564e#%E3%83%86%E3%82%B9%E3%83%88%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%85%A8%E4%BD%93%E3%81%AB%E3%83%95%E3%82%A3%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3%E3%82%92%E8%87%AA%E5%8B%95%E6%91%98%E8%A6%81%E3%81%99%E3%82%8B">}}
+{{link("https://qiita.com/_akiyama_/items/9ead227227d669b0564e#%E3%83%86%E3%82%B9%E3%83%88%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%85%A8%E4%BD%93%E3%81%AB%E3%83%95%E3%82%A3%E3%82%AF%E3%82%B9%E3%83%81%E3%83%A3%E3%82%92%E8%87%AA%E5%8B%95%E6%91%98%E8%A6%81%E3%81%99%E3%82%8B")}}
 
 
 fixtureのサンプル
