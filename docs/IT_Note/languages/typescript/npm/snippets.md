@@ -1,6 +1,6 @@
 # [npm] Snippets
 
-{{link("https://docs.npmjs.com/cli-documentation/cli")}}
+{{link("https://docs.npmjs.com/cli/v6/commands")}}
 
 
 npm runのコマンド一覧表示
