@@ -1,4 +1,10 @@
+---
+description: Vimの機能や操作感を提供するChrome拡張
+---
+
 # [Vimium] Top
+
+{{ page.meta.description }}
 
 
 インストール
