@@ -63,19 +63,18 @@ def declare_variables(variables, macro):
 
     @macro
     def refer(url):
-        print(f"[Create Refer] {url}")
         if url in cache["refer"]:
-            print("Hit cache.")
+            print(f"🔵 [refer] {url}")
             return cache["refer"][url]
 
         session = HTMLSession()
         try:
             res = session.get(url)
         except:
-            print(f">>>>> Error: {url}")
+            print(f"🔴 [refer] {url}")
             return
         if not res.ok:
-            print(f">>>>> Failure: {url}")
+            print(f"🔴 [refer] {url}")
             return
 
         title = (
@@ -86,12 +85,16 @@ def declare_variables(variables, macro):
         favicon_url = get_favicon_url(res.html, url)
         icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
 
-        if not title:
-            print(f"  ∟ ⚠ No Title")
-        if favicon_url:
-            print(f"  ∟ favicon: {favicon_url}")
+        print(f"🟢 [refer] {url}")
+        if title:
+            print(f"    🟢 Find Title: {title}")
         else:
-            print(f"  ∟ ⚠ No favicon")
+            print(f"    🟡 No Title")
+
+        if favicon_url:
+            print(f"    🟢 Find favion: {favicon_url}")
+        else:
+            print(f"    🟡 No favicon")
 
         result = f"""
         <div class="refer">
@@ -106,16 +109,15 @@ def declare_variables(variables, macro):
 
     @macro
     def link(url):
-        print(f"[Create Card] {url}")
         if url in cache["link"]:
-            print("Hit cache.")
+            print(f"🔵 [link] {url}")
             return cache["link"][url]
 
         session = HTMLSession()
         try:
             res = session.get(url)
             if not res.ok:
-                print(f">>>>> Failure: {url}")
+                print(f"🔴 [link] {url}")
                 return
 
             site_name = (
@@ -137,29 +139,41 @@ def declare_variables(variables, macro):
             favicon_url = get_favicon_url(res.html, url)
             icon_url = favicon_url if session.get(favicon_url).ok else NO_FAVICON_IMG
 
-            if not site_name:
-                print(f"  ∟ ⚠ No Site Name")
-            if not title:
-                print(f"  ∟ ⚠ No Title")
-            if not description:
-                print(f"  ∟ ⚠ No description")
-            if favicon_url:
-                print(f"  ∟ favicon: {favicon_url}")
+            print(f"🟢 [link] {url}")
+            if site_name:
+                print(f"    🟢 Find Site Name: {site_name}")
             else:
-                print(f"  ∟ ⚠ No favicon")
+                print(f"    🟡 No Site Name")
+
+            if title:
+                print(f"    🟢 Find Title: {title}")
+            else:
+                print(f"    🟡 No Title")
+
+            if description:
+                print(f"    🟢 Find Description")
+            else:
+                print(f"    🟡 No Description")
+
+            if favicon_url:
+                print(f"    🟢 Find favion: {favicon_url}")
+            else:
+                print(f"    🟡 No favicon")
 
             if image_url:
+                print(f"    🟢 Find Image URL: {image_url}")
                 if "http://" not in image_url and "https://" not in image_url:
                     image_url = f"{to_base_url(url)}/{image_url}"
                 if "http://" in image_url:
                     image_url = image_url.replace("http://", "https://")
                     print(
-                        f"  ∟ ⚠ This Image URL includes http scheme.. so replace http to https.."
+                        f"    🟡 This Image URL includes http scheme.. so replace http to https.."
                     )
             else:
-                print(f"  ∟ ⚠ No Image URL")
+                print(f"    🟡 No Image URL")
 
         except:
+            print(f"🔴 Raise Exeception")
             raise Exception(f">>>>> Error: {url}")
 
         result = f"""
