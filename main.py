@@ -1,19 +1,21 @@
-from datetime import timedelta
-from urllib.parse import urljoin, urlsplit
+import json
+import os
 from typing import Optional
-
-import requests_cache
-
-
-# Must install before importing HTMLSession
-requests_cache.install_cache(
-    cache_name="mimizou_room", backend="sqlite", expire_after=timedelta(weeks=4)
-)
-from requests_html import HTMLSession
-
+from urllib.parse import urljoin, urlsplit
 from xml.sax.saxutils import escape
 
+from requests_html import HTMLSession
+
 NO_FAVICON_IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NTRGMzZFNTNBOTQxMUUzOUU0OUExMEE2NkE3QUNDMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0NTRGMzZFNjNBOTQxMUUzOUU0OUExMEE2NkE3QUNDMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ1NEYzNkUzM0E5NDExRTM5RTQ5QTEwQTY2QTdBQ0MzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ1NEYzNkU0M0E5NDExRTM5RTQ5QTEwQTY2QTdBQ0MzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+pF18XQAAAUtJREFUeNqkkz1LA0EQhjdDQG0CaqOkFiEWNhG10cIrbSzTpAp4lY1cZeEPOOwDHljebxAiYilaiSDYapR0YiUW4jvwngzjLRYOPOzt3Hzszs40gpM8z9exDEAC2lSPwQgUWZZdW/uGcWxhGYIeVRPwAL7AJpihvgQpAr3/BKDzBeiCO3AAgysTXLPvmMS3utcgQsWQzs9g2zlrkhV30y59gvDO1bFP4fzmjNfAQvgtPfUVFqySlxrDG3Af6mXQZLVttoJH38JyDk7AfCRAIuapVPpwXOX3E5/vCCxGArTFKabBJYLsY/0AS6iJFnEKbIBHH0GYxcosK6z1mFMFgnyygfrOdizssJgkbu9PMJKqaBE5w3XsK3Xc/0J4tDISQNt31+wPzXepvk1uUi0YOyzUDJgW8hjsmVZO/xqmSnRoXsFydJj+M87fAgwAhBVmF6w0nW0AAAAASUVORK5CYII="
+
+# cache
+cache = {
+    "refer": {},
+    "link": {},
+}
+if os.path.exists("cache.json"):
+    with open("cache.json", "r", encoding="utf-8") as f:
+        cache = json.load(f)
 
 
 def get_meta_by_property(html: any, property: str) -> Optional[str]:
@@ -62,6 +64,10 @@ def declare_variables(variables, macro):
     @macro
     def refer(url):
         print(f"[Create Refer] {url}")
+        if url in cache["refer"]:
+            print("Hit cache.")
+            return cache["refer"][url]
+
         session = HTMLSession()
         try:
             res = session.get(url)
@@ -87,16 +93,24 @@ def declare_variables(variables, macro):
         else:
             print(f"  ∟ ⚠ No favicon")
 
-        return f"""
+        result = f"""
         <div class="refer">
             <img src={icon_url} class="refer-image"/>
             <a href={url}>{escape(title)}</a>
         </div>
         """.strip()
+        cache["refer"][url] = result
+        with open("cache.json", "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+        return result
 
     @macro
     def link(url):
         print(f"[Create Card] {url}")
+        if url in cache["link"]:
+            print("Hit cache.")
+            return cache["link"][url]
+
         session = HTMLSession()
         try:
             res = session.get(url)
@@ -148,7 +162,7 @@ def declare_variables(variables, macro):
         except:
             raise Exception(f">>>>> Error: {url}")
 
-        return f"""
+        result = f"""
         <div class="link-card">
             <div>
                 <img src={icon_url} width=20 class="link-card-site-icon"/>
@@ -166,3 +180,7 @@ def declare_variables(variables, macro):
             <a href={url}></a>
         </div>
         """.strip()
+        cache["link"][url] = result
+        with open("cache.json", "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+        return result
