@@ -40,7 +40,7 @@ def to_base_url(url: str) -> str:
 def get_favicon_url(html: any, url: str) -> str:
     icon_urls = html.find("link[rel='icon']") or html.find("link[rel='shortcut icon']")
     if not icon_urls:
-        return f"{to_base_url(url)}/favicon.ico"
+        return urljoin(to_base_url(url), "favicon.ico")
 
     href = icon_urls[0].attrs["href"]
     if "http" in href:
@@ -49,7 +49,7 @@ def get_favicon_url(html: any, url: str) -> str:
     base = html.find("base", first=True)
     base_url = base and base.attrs["href"]
 
-    return f"{to_base_url(url)}/{href}" if base_url else urljoin(url, href)
+    return urljoin(to_base_url(url), href) if base_url else urljoin(url, href)
 
 
 def declare_variables(variables, macro):
@@ -98,8 +98,8 @@ def declare_variables(variables, macro):
 
         result = f"""
         <div class="refer">
-            <img src={icon_url} class="refer-image"/>
-            <a href={url}>{escape(title)}</a>
+            <img src="{icon_url}" class="refer-image"/>
+            <a href="{url}">{escape(title)}</a>
         </div>
         """.strip()
         cache["refer"][url] = result
@@ -163,7 +163,7 @@ def declare_variables(variables, macro):
             if image_url:
                 print(f"    🟢 Find Image URL: {image_url}")
                 if "http://" not in image_url and "https://" not in image_url:
-                    image_url = f"{to_base_url(url)}/{image_url}"
+                    image_url = urljoin(to_base_url(url), image_url)
                 if "http://" in image_url:
                     image_url = image_url.replace("http://", "https://")
                     print(
@@ -176,10 +176,12 @@ def declare_variables(variables, macro):
             print(f"🔴 Raise Exeception")
             raise Exception(f">>>>> Error: {url}")
 
+        print("result")
+        print(icon_url)
         result = f"""
         <div class="link-card">
             <div>
-                <img src={icon_url} width=20 class="link-card-site-icon"/>
+                <img src="{icon_url}" width=20 class="link-card-site-icon"/>
                 <span class="link-card-site-name">{site_name}</span>
             </div>
             <div class="link-card-body">
@@ -189,9 +191,9 @@ def declare_variables(variables, macro):
                     </div>
                     <div class="link-card-description">{escape(description)}</div>
                 </div>
-                {f'<img src={image_url} class="link-card-image"/>' if image_url else ""}
+                {f'<img src="{image_url}" class="link-card-image"/>' if image_url else ""}
             </div>
-            <a href={url}></a>
+            <a href="{url}"></a>
         </div>
         """.strip()
         cache["link"][url] = result
