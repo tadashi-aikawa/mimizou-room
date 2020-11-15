@@ -1,4 +1,11 @@
+---
+description: VimのFAQ
+---
+
 # [Vim] FAQ
+
+{{ page.meta.description }}
+
 
 
 全体
@@ -34,6 +41,14 @@ while c <= 'z'
     execute "imap \e" . toupper(c) . " <M-" . c . ">"
     let c = nr2char(1+char2nr(c))
 endw
+```
+
+### Vimの起動が遅い理由を調べたい
+
+以下のコマンドを実行してプロファイリングする。
+
+```
+vim --startuptime <結果ファイル>
 ```
 
 
