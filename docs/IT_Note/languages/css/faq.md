@@ -25,7 +25,7 @@
 </div>
 ```
 
-<iframe width="100%" height="180" src="//jsfiddle.net/tk6s4ce9/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="180" src="//jsfiddle.net/tk6s4ce9/embedded/result,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 
 表現
@@ -102,7 +102,7 @@ transition: 'opacity 1.0s',
 }
 ```
 
-<iframe width="100%" height="300" src="//jsfiddle.net/n8Lxkvt6/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe width="100%" height="280" src="//jsfiddle.net/n8Lxkvt6/embedded/result,css,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 
 構造
