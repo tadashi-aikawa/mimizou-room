@@ -25,13 +25,7 @@
 </div>
 ```
 
-↓ 結果
-
-<div style="display: flex;">
-  <div style="order: 2;">2つ目</div>
-  <div style="order: 3;">3つ目</div>
-  <div style="order: 1;">1つ目</div>
-</div>
+<iframe width="100%" height="180" src="//jsfiddle.net/tk6s4ce9/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 
 表現
@@ -94,6 +88,22 @@ transformを使う。
 opacity: <opacity>,
 transition: 'opacity 1.0s',
 ```
+
+### ホバーされたら背景をグレーにしたい
+
+`backdrop-filter`を使ってTransitionする。
+
+{{refer("https://developer.mozilla.org/ja/docs/Web/CSS/backdrop-filter")}}
+
+```css
+:hover {
+    transition: backdrop-filter 0.5s;
+    backdrop-filter: brightness(75%);
+}
+```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/n8Lxkvt6/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 
 構造
 ----
