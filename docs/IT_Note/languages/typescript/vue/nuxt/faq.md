@@ -1,4 +1,10 @@
+---
+description: NuxtのFAQ
+---
+
 # [Nuxt] FAQ
+
+{{ page.meta.description }}
 
 
 Actionが上手く動かない

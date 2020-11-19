@@ -1,4 +1,11 @@
+---
+description: VueのFAQ
+---
+
 # [Vue] FAQ
+
+{{ page.meta.description }}
+
 
 
 `scoped`スタイルの子コンポーネントを指定したい

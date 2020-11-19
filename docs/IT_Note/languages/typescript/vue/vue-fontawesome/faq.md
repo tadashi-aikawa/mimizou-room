@@ -1,4 +1,11 @@
+---
+description: vue-fontawesomeのFAQ
+---
+
 # [vue-fontawesome] FAQ
+
+{{ page.meta.description }}
+
 
 
 アイコンをクリックすると落ちる
