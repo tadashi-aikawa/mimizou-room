@@ -91,3 +91,40 @@ C:\Program Files (x86)\JetBrains\IntelliJ IDEA 2019.2\bin
 !!! hint "自分の環境ではJDKなどの問題もあり、`idea64.exe`を使っている"
 
 {{refer("https://pleiades.io/help/idea/opening-files-from-command-line.html")}}
+
+
+Run/Debug Configurations
+------------------------
+
+### WindowsでMakeコマンドを実行したい
+
+#### 前提条件
+
+Windowの場合、`Settings` > `Make`の設定で`Path to Make executable`に`make.exe`の絶対パスを指定する必要あり。
+
+```
+# 例
+C:\Users\tadashi-aikawa\scoop\shims\make.exe
+```
+
+方法は2通りある。
+
+#### Makefileテンプレートを使う
+
+| 項目              | 値                        |
+| ----------------- | ------------------------- |
+| Makefile          | Makefileのパス            |
+| Targets           | makeのターゲット(devなど) |
+| Working directory | Makefileの場所            |
+
+
+#### Batchテンプレートを使う
+
+Makefileテンプレートで動かないときはこちら..
+
+| 項目              | 値                        |
+| ----------------- | ------------------------- |
+| Script            | make                      |
+| Script parameters | makeのターゲット(devなど) |
+| Working directory | Makefileの場所            |
+
