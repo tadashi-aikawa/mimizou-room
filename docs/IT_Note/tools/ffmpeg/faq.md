@@ -47,3 +47,9 @@ ffmpeg -i input.mp4 -filter_complex "[0:v]scale=360:-1 [s]; [s] split [a][b];[a]
 ```
 
 
+画像をfaviconに変換したい
+-------------------------
+
+```
+ffmpeg -i hoge.png -vf "scale=256:-1" hoge.ico
+```
