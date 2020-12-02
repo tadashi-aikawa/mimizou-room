@@ -13,7 +13,8 @@ theme:
     accent: "deep purple"
   language: "ja"
   features:
-    - tabs
+    - navigation.instant
+    - navigation.tabs
   custom_dir: theme/
   logo: assets/images/mimizou.png
   favicon: assets/images/mimizou.png
