@@ -66,7 +66,7 @@ glob表現が不要ならfilesで十分。
 `@click.stop`を使う。
 
 ```html
-<div @click.stop>hoge</div>
+<div @click.stop="onClick">hoge</div>
 ```
 
 通常は[`event.stopPropagation()`](https://developer.mozilla.org/ja/docs/Web/API/Event/stopPropagation)を使うが、Vueではイベント修飾子という特殊な構文がある。
