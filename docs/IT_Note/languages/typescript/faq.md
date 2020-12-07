@@ -57,6 +57,23 @@ glob表現が不要ならfilesで十分。
 
 {{refer("http://js.studio-kingdom.com/typescript/project_configuration/tsconfig_json")}}
 
+
+テンプレート系
+--------------
+
+### クリック判定を親に伝播させたくない
+
+`@click.stop`を使う。
+
+```html
+<div @click.stop>hoge</div>
+```
+
+通常は[`event.stopPropagation()`](https://developer.mozilla.org/ja/docs/Web/API/Event/stopPropagation)を使うが、Vueではイベント修飾子という特殊な構文がある。
+
+{{link("https://jp.vuejs.org/v2/guide/events.html#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%BF%AE%E9%A3%BE%E5%AD%90")}}
+
+
 エラー系
 --------
 
