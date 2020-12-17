@@ -13,6 +13,22 @@
 * 横方向中央なら `text-align: center`
 * 縦方向中央なら `height` と `line-height` を同じにする (1行なら)
 
+### 縦の一番下に配置したい
+
+flexboxを使って、`flex: 1`の透明な壁をつくる。
+
+```html
+<div style="display: flex; flex-flow: column; width: 100px; height: 150px; border: 1px solid">
+  <div>hoge</div>
+  <div>huga</div>
+  <div style="flex: 1"></div>
+  <div>last</div>
+</div>
+```
+
+<iframe width="100%" height="250" src="//jsfiddle.net/houdzm4n/3/embedded/result,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+
 ### HTMLの記載順とDOMの配置順を変えたい
 
 `display: flex;`と`order`を使う。
