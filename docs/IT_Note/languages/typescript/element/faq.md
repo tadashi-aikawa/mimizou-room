@@ -7,23 +7,26 @@ description: Element UIのFAQ
 {{ page.meta.description }}
 
 
+el-popover
+----------
 
-el-popoverを使うとエラーになる
-------------------------------
-
-### `Cannot set property 'scrollTop' of undefined` になる場合
+### `Cannot set property 'scrollTop' of undefined` エラーになる
 
 el-popoverの中で`slot="reference"`が指定されているかを確認してください
 
 
-el-selectの要素が正しく選択されない
------------------------------------
+el-select
+---------
+
+### 要素が正しく選択されない
 
 `value`や`v-model`にObjectを指定した場合、`value-key`が正しく設定されているか確認する。
 
 
-el-inputでEnterが押された時に処理を実行したい
----------------------------------------------
+el-input
+--------
+
+### Enterが押された時に処理を実行したい
 
 `@keyup.enter.native="callbackFunction"`でいける。  
 `.native`がミソ。
