@@ -2,7 +2,7 @@
 description: Element UIのFAQ
 ---
 
-# [Vue] FAQ
+# [Element] FAQ
 
 {{ page.meta.description }}
 
