@@ -8,6 +8,11 @@
 
 親要素に `text-align: center` を追加する。
 
+他にも色々な方法がある。
+
+{{link("https://web.dev/centering-in-css/")}}
+
+
 ### テキストを中央寄せしたい
 
 * 横方向中央なら `text-align: center`
@@ -18,7 +23,7 @@
 flexboxを使って、`flex: 1`の透明な壁をつくる。
 
 ```html
-<div style="display: flex; flex-flow: column; width: 100px; height: 150px; border: 1px solid">
+<div style="display: flex; flex-flow: column; width: 100px; height: 150px;>
   <div>hoge</div>
   <div>huga</div>
   <div style="flex: 1"></div>
@@ -27,6 +32,21 @@ flexboxを使って、`flex: 1`の透明な壁をつくる。
 ```
 
 <iframe width="100%" height="250" src="//jsfiddle.net/houdzm4n/3/embedded/result,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+### 要素に一定の間隔を開けたい
+
+`display: flex`か`display: grid`で`gap`を使う。
+
+```html
+<div style="display: flex; gap: 30px">
+  <div>hoge</div>
+  <div>hoga</div>
+  <div>hoho</div>
+</div>
+```
+
+<iframe width="100%" height="180" src="//jsfiddle.net/znw45obe/1/embedded/result,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 
 
 ### HTMLの記載順とDOMの配置順を変えたい
