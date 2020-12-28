@@ -27,7 +27,7 @@ JavaScriptの経験があるなら`The TypeScript Handbook`を抑えておけば
 
 本サイトでもリリースノートを自分なりにまとめたページを公開している。
 
-{{link("https://mimizou.mamansoft.net/it_note/languages/typescript/releases/")}}
+{{link("https://mimizou.mamansoft.net/it-note/languages/typescript/releases/")}}
 
 ### 要点を抑えて基礎を効率的に学びたい
 
