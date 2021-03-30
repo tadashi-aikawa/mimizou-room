@@ -8,7 +8,7 @@ authors = ["tadashi-aikawa <syou.maman@gmail.com>"]
 python = "^3.7"
 mkdocs = "^1.1.2"
 mkdocs-material = "^6.1.0"
-pygments = "^2.6.1"
+pygments = "^2.7.4"
 mkdocs-macros-plugin = "^0.4.9"
 requests-html = "^0.10.0"
 
